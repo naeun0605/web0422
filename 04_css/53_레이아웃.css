@@ -99,6 +99,73 @@
 
 /* 레이아웃2 : flexible (현재ver) */
 /* display:flex */
-.container4 {
-    display: flex;
+.df {
+    display: flex; /* df쓰고 Tab */
 }
+
+/* 레이아웃3 : 가로+세로*/
+
+.header {
+    width: 200px;
+    height: 700px;
+    background: red;
+}
+
+.contents {
+    width: 1000px;
+    height: 700px;
+    background: blue;
+}
+
+    
+
+ /* 
+    선택자
+    1. 요소(태그, 타입)
+    2. 클래스
+    3. 하위(자손) : 이것 사용하면 같은 이름을 중복해서 사용할 수 있다. 부모요소 자손(자식+손자)요소로 쓴다. 
+    ex1) .container4 .section 
+    ex2) .container .notice
+    4. 자식 : 부모요소 > 자식요소(손자X)
+ */
+
+ .container4 {
+    width: 1200px;
+    margin: 0 auto;
+ }
+
+ .section {
+    width: 1200px;
+    height: 850px;
+    background: lavender;
+ }
+
+ .header2 {
+    width: 200px;
+    height: 850px;
+    background: olive;
+ }
+
+ .contents2 {
+    width: 1000px;
+    height: 850px;
+    background: palegreen;
+ }
+
+ .slide {
+    width: 1000px;
+    height: 400px;
+    background: maroon;
+ }
+
+ .banner {
+    width: 1000px;
+    height: 200px;
+    background: navy;
+ }
+
+ .notice {
+    width: 1000px;
+    height: 250px;
+    background: red;
+ }
