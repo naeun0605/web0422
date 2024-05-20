@@ -4,21 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./../04_css/53_레이아웃.css">
+    <link rel="stylesheet" href="./../04_css/53_레이아웃4.css">
 </head>
 <body>
-    <!-- 세로 배치 -->
-    <!-- container4의 가로크기가 1200px -->
-    <div class="container4">
-        <!-- 1. margin 0 auto 한번만 써서 한번에 가로중앙배치 가능 -->
-        <!-- 2. 콘텐츠를 하나로 그룹핑 -->
-        <!-- 3.  부모 크기와 같은 자식 요소의 크기는 생략가능-->
-        <!-- .section과 .footer 가로크기는 부모크기(container4-1200)의 100% (왜냐하면 블록레벨 요소의 가로크기는 100%이므로) -->
-        <!-- width를 지정하지 않으면 부모 크기의 100% 블록레벨요소이므로 -->
-        <div class="df section">
-            <!-- 가로 배치: 부모 요소에 display:flex; -->
-            <div class="header2">헤더</div>
-            <div class="contents2">
+
+    <div class="wrap">
+ 
+        <div class="section">
+            <!-- 가로 배치: 부모 요소(.section)에 display:flex; -->
+            <div class="header">헤더</div>
+            <div class="contents">
                 <!-- 세로 배치 -->
                 <div class="slide">슬라이드</div>
                 <div class="banner">배너</div>

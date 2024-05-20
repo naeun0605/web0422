@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* @ : '엣' 이라고 읽음 */
+
+.contents {
+    display: flex;
+}
+
+.contents div{
+    width: 400px;
+    height: 200px;
+}
+/* 위 아래 같은 문장이지만, 위의 방식이 더 좋은 방식 */
+div div {
+    width: 400px;
+    height: 200px;
+}
+
+.tabs {
+    background: #eee;
+    height: 200px;
+    width: 400px;
+}
+
+.banner {
+    background: #ccc;
+    height: 200px;
+    width: 400px;
+}
+
+.shortcut {
+    background: #aaa;
+    height: 200px;
+    width: 400px;
+}
+
