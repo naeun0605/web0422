@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* 
+    text-align : 글자 맞춤(왼쪽, 가운데, 오른쪽
+    line-height : 줄간격
+    padding : 인라인 요소 가운데 배치할 경우 제일 좋음
+
+    인라인 요소와 텍스트 가로 정렬 text-align
+    1. height를 지정하지 않고, padding의 위 아래 같은 크기를 지정한다. 
+    2. line-height 속성 값을 height 속성 크기와 같은 크기로 지정한다. (높이를 지정해야하는 경우 사용, 단 텍스트가 한 줄 일 경우에만 가능하다.)
+*/
+div {
+    background: lightsteelblue;
+    margin:12px;
+}
+
+div:nth-of-type(1){
+    text-align: left;
+}
+
+div:nth-of-type(2){
+    text-align: center;
+    line-height: 100px;
+}
+
+div:nth-of-type(3){
+    text-align: right;
+    padding: 50px 0;
+    /* padding쓸 때는 height 쓰면 안됨! */
+}   

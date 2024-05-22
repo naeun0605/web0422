@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+div {
+    width: 100px;
+    height: 100px;
+    background: lightpink;
+    margin:20px;
+}
+
+div:nth-of-type(1) {
+    border-radius : 20px;
+}
+
+div:nth-of-type(2) {
+    border-top-left-radius : 20px;
+    border-top-right-radius : 20px;
+    border-bottom-left-radius : 20px;
+    border-bottom-right-radius : 20px;
+}
+
+div:nth-of-type(3) {
+    border-radius : 10px 20px;
+    /* 왼쪽상단, 오른쪽하단이 10px */
+    /* 오른쪽상단, 왼쪽하단이 20px */
+}
+
+div:nth-of-type(4) {
+    border-radius : 10px 20px 30px;
+    /* 왼쪽상단이 10px */
+    /* 오른쪽상단, 왼쪽하단이 20px */
+    /* 오른쪽하단이 30px*/
+}
+
+div:nth-of-type(5) {
+    border-radius : 10px 20px 30px 40px;
+    /* 왼쪽상단이 10px */
+    /* 오른쪽상단이 20px */
+    /* 오른쪽하단이 30px*/
+    /* 왼쪽하단이 40px*/
+}
+
+div:nth-of-type(6) {
+    border-radius : 50px; /* 50%로 써도 똑같은데 부모 크기에 영향을 받는다, 가로 세로 크기가 다를 경우 문제 발생*/
+}
+
+div:nth-of-type(7) {
+    width: 50px;
+    border-radius : 50px 0 0 50px;
+}
+
+div:nth-of-type(8) {
+    width: 50px;
+    height: 50px;
+    border-radius : 50px 0 0 0;
+}
