@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/* display:flex;인 부모 요소에 지정할 수 있는 속성
+1. flex-direction:기본값 row(행);
+2. flex-wrap
+3. flex-flow: row nowrap; (속기형)
+4. 주축(교차축)정렬
+    flex-direction:row이면 주축이 가로(교차축은 세로)
+    flex-direcion:column이면 주축이 세로(교차축은 가로)
+    justify-content(주축에 대한 정렬): flex-start, flex-end, center
+    align-items(교차축에 대한 정렬)
+    align-content : 교차축에 대한 정렬
+
+
+*/
+
+.box {
+    display: flex; /* flex 방식 쓸거니까 부모에다가 써주기 */
+    flex-wrap:wrap; /* 줄바꿈, 기본값은 nowrap */
+    background: lightsteelblue;
+    height:200px;
+    width: 1500px; 
+    margin:12px;
+}
+ 
+.box1 {
+    /* flex-direction:row(기본값) */
+    justify-content: center;
+    align-content: center;
+}
+
+.box2 {
+    flex-direction:colunm;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+/* 부모 div안에 있는 자식 div => 부모는 .box니까 .box div로 적어도 같은 의미 */
+div div {
+    width: 360px;
+    height: 30px;   
+    margin-right: 20px;
+    background: lightpink;
+    margin-bottom:20px
+}
+
+.box div:nth-of-type(4)
+{
+    margin-right: 0;
+}
+
+.box div:nth-of-type(8)
+{
+    margin-right: 0;
+}
