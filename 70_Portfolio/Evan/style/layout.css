@@ -6,33 +6,77 @@
     
 */
 
+
+/* body안의 모든 요소 
+body * {outline: 1px solid lime;} 직접 변하는 모습을 보면서 작업하겠다. 
+*/
+
+
 /* * {outline: 1px solid lime;} */
 /* html, body, nav, h1, h2, h3, main, section, div, header, footer */
 
-/* body안의 모든 요소 */
-body * {outline: 1px solid lime;} /* 직접 변하는 모습을 보면서 작업하겠다. */
+/* reset (초기화) */
+body, ul, h1, h2 
+{
+    margin: 0;
+}
+
+ul
+{
+    padding:0;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    /* 링크 밑줄 제거 */
+
+}
+
 
 body { 
     margin: 0;
 }
 
+/* layout(배치)*/
+/* 박스모델 속성, display, position */
 nav {
     height:100;
+    line-height: 100px;
+        /* height와 같은 크기의 line-height를 주면 kim Na Eun이 중앙으로 옴 */
+
 }
 
+nav li
+{
+    display:inline-block; 
+    /* inline으로 해도되는데 inline-block로 해야 언제든지 width, height지정가능 */
+    /* display:flec로 하려면 nav ul에 써야함 */
+    /* nav ul { display: flex;} */
+}
+nav section
+{
+    display: flex;
+    justify-content:flex-end;
+    /* align-items: center;
+    height: 200px; */
+}
 header {
     height: 200px;
-    background: url(./../assets/bg-light.png);
+    line-height: 200px;
+    /* height와 같은 크기의 line-height를 주면 kim Na Eun이 중앙으로 옴 */
 }
 
 section {
     width: 940px;
     margin: 0 auto;
+    
 }
 
 .home-card
 {
     display: flex;
+    justify-content: space-between;
 }
 
 .home-icon
@@ -127,4 +171,12 @@ nav a
     color: #444;
 }
 
+/* header */
+header
+{
+    background: url(./../assets/bg-light.png);
+}
+
+/* section */
+/* footer */
 
