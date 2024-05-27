@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/* 여백
+margin : 최대 4개까지 쓸 수 있음 값1 값2 값3 값4
+margin: 값1; -> 상하좌우 모두 값 1
+margin: 값1 값2; -> 상하는 값1, 좌우는 값2
+margin: 값1 값2 값3; -> 상은 값1, 좌우는 값2, 하는 값3
+margin: 값1 값2 값3 값4; 상은 값1, 우는 값2, 하는 값3, 좌는 값4
+
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+padding
+padding: 값1; -> 상하좌우 모두 값 1
+padding: 값1 값2; -> 상하는 값1, 좌우는 값2
+padding: 값1 값2 값3; -> 상은 값1, 좌우는 값2, 하는 값3
+padding: 값1 값2 값3 값4; 상은 값1, 우는 값2, 하는 값3, 좌는 값4
+*/
+
+body {
+    /* 0만 단위 생략 가능 */
+    margin: 0;
+}
+
+.wrap div {
+    width: 340px;
+    height: 620px;
+    background: lightblue ;
+    margin : 24px; 
+   /* 8의 배수 : 8,16,24,32,40,48,... */
+    /* 위아래로 적용되는 것은 큰쪽으로만 적용된다? */
+    
+
+}
+
+.wrap {
+    display: flex;
+    margin: auto; /* 이 효과를 적용하려면 width를 반드시 써야함 */
+    width: 1140px;
+}
+
+
+ .box1 {
+    margin : 30px
+}
+
+.box2 {
+    margin : 60px
+}
+
+/* 이렇게 하면 위 아래는 두개 중에 큰 60으로 여백 지정됨 합산X 
+   좌우는 합산해서 적용됨*/
+
+.box3 {
+    margin: 30px;
+} 
+
+
+/* 
+.box1 {
+    margin-right:20px
+}
+
+.box2 {
+    margin: 0 20px;
+}
+
+/* .box2 {
+    margin-right: 20px;
+    margin-left: 20px;
+    */
+
+.box3 {
+    margin-left: 20px;
+} 
+
+
+/* 
+    여백
+    margin: 상하좌우;
+    margin: 상하 좌우;
+    margin: 상 좌우 하;
+    margin: 상 우 하 좌;
+
+    예시>
+    margin: 10px; -> 상하좌우 모두 10px
+    margin: 10px 20px; -> 상하는 10px, 좌우는 20px
+    margin: 10px 20px 30px; -> 상은 10px, 좌우는 20px, 하는 30px
+    margin: 10px 20px 30px 40px; -> 상은 10px, 우는 20px, 하는 30px, 좌는 40px
+
+    패딩
+    padding: 상하좌우;
+    padding: 상하 좌우;
+    padding: 상 좌우 하;
+    padding: 상 우 하 좌;
+*/

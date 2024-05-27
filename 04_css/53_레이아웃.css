@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+/*
+.div1, .div2, .div3, .div4 {
+    width: 1200px;
+}
+*/
+
+
+/* 레이아웃1의 전체 크기 */
+.container1{
+    /* display : block => div의 기본값은 block */
+    width:1200px;
+    margin:0 auto; /* 콘텐츠를 가로 가운데 배치 margin:위아래 좌우*/
+}
+
+/* 레이아웃1 - 세로 */
+/* div1~4는 레이아웃1의 각 박스 크기와 배경색 */
+.div1 {
+    background: aquamarine;
+    height: 100px;
+}
+.div2 {
+    background: beige;
+    height: 300px;
+}
+.div3 {
+    background: coral;
+    height: 200px;
+}
+.div4 {
+    background: darkorchid;
+    height: 100px
+}
+
+/* 레이아웃2 - 가로 */
+/*  Layout 세팅 */
+    /* 1. Floating(고전적) layout*/
+    /* 2  Flexible layout */
+    /* 3. grid layout */
+    /* 4. Positioning */
+    /* 5. 블록 레벨 속성을 인라인 속성으로 바꾼다.
+
+    5번 display(표시방식)
+    display : block; => 인라인 요소의 속성을 블록 레벨 요소의 속성으로 바꾼다.
+    display : inline; => 블록 레벨 속성을 인라인 속성으로 바꾼다.
+    display : inline-block; => 인라인 요소 + 블록 레벨 요소 두 가지 속성으로 바꾼다.
+    display : none; => 화면에서 요소를 제거
+
+    블록 레벨 요소
+     display : block;
+    - height 배치(위에서 아래, 줄바꿈)
+    - width는 기본값100%(auto), height는 컨텐츠 크기(auto)
+    - width/height 크기가 지정됨
+
+    인라인 요소
+    * display : inline;
+    - width배치 (왼쪽에서 오른쪽, 줄바꿈 안됨)
+    - width/height는 컨텐츠 크기
+    - width/height 크기 지정되지 않음
+
+    * display : inline-block;
+    - width배치 (왼쪽에서 오른쪽, 줄바꿈 안됨)
+    - width/height는 컨텐츠 크기
+    - width/height 크기 지정됨
+
+
+
+/* div5~7은 레이아웃2의 각 박스 크기와 배경색 */
+/* 레이아웃2 : inline-block */
+
+/* box_size, box-Size */
+.boxSize /* 카멜표기법 : 단어1단어2 => 단어1의 첫글자는 소문자, 단어2의 첫글자는 대문자 */ {
+    width: 400px;
+    height: 200px;
+}
+.container2{
+    display:inline-block; /* display를 inline-block으로 하면 가로배치 */
+}
+.div5 {
+    background: firebrick;
+}
+
+.div6 {
+    background: greenyellow;
+}
+
+.div7 {
+    background: hotpink;
+}
+
+/* 레이아웃2 : float (과거ver) */
+/* float : left  => 왼쪽을 기준으로 가로 배치 */ 
+/* float : right => 오른쪽을 기준으로 가로 배치 */
+
+.container3 {
+    float : left;
+}
+
+/* 레이아웃2 : flexible (현재ver) */
+/* display:flex */
+.df {
+    display: flex; /* df쓰고 Tab */
+}
+
+/* 레이아웃3 : 가로+세로*/
+
+.header {
+    width: 200px;
+    height: 700px;
+    background: red;
+}
+
+.contents {
+    width: 1000px;
+    height: 700px;
+    background: blue;
+}
+
+    
+
+ /* 
+    선택자
+    1. 요소(태그, 타입)
+    2. 클래스
+    3. 하위(자손) : 이것 사용하면 같은 이름을 중복해서 사용할 수 있다. 부모요소 자손(자식+손자)요소로 쓴다. 
+    ex1) .container4 .section 
+    ex2) .container .notice
+    4. 자식 : 부모요소 > 자식요소(손자X)
+ */
+
+ .container4 {
+    width: 1200px;
+    margin: 0 auto;
+ }
+
+ .section {
+    width: 1200px;
+    height: 850px;
+    background: lavender;
+ }
+
+ .header2 {
+    width: 200px;
+    height: 850px;
+    background: olive;
+ }
+
+ .contents2 {
+    width: 1000px;
+    height: 850px;
+    background: palegreen;
+ }
+
+ .slide {
+    width: 1000px;
+    height: 400px;
+    background: maroon;
+ }
+
+ .banner {
+    width: 1000px;
+    height: 200px;
+    background: navy;
+ }
+
+ .notice {
+    width: 1000px;
+    height: 250px;
+    background: red;
+ }

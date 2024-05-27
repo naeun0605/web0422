@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+.wrap {
+    width: 1200px;
+}
+
+.section {
+    display: flex;
+}
+
+/* 플렉스 아이템 : width : auto; */
+.header {
+    width: 200px;
+    background: #999;
+}
+
+.slide {
+    background: #eee;
+    height: 400px;
+}
+
+.banner {
+    background: #ccc;
+    height: 200px;
+}
+
+.notice {
+    background: #aaa;
+    height: 250px;
+}
+
+.footer {
+    background: #111;
+    height: 100px;
+}
