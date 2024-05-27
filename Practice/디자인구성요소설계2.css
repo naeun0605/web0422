@@ -1,0 +1,132 @@
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+body,h1,h2,ul {
+    margin: 0;
+}
+
+ul {
+    padding:0;
+    list-style:none;
+}
+h1,h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 4px;
+}
+
+h2 {
+    padding: 24px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 24px;
+    text-align: left;
+    font-size: 24px;
+    letter-spacing: normal;
+}
+
+/* header */
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 54px;
+    line-height: 54px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.logo {
+    width: 200px;
+}
+nav {
+    width: 370px;
+}
+
+/* section */
+.wrap {
+    width: 1500px;
+    margin: auto;
+}
+section {
+    margin-bottom: 44px;
+}
+section:last-child {
+    margin-bottom: 12px;
+}
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+section li {
+    margin-bottom: 20px;
+}
+section li:not(:nth-child(4n)) {
+    margin-right: 20px;
+}
+
+/* main image */
+.mainimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1500px;
+    height: 800px;
+    margin-bottom: 64px;
+}
+.mainimg h2 {
+    border:none;
+    font-size: 36px;
+    color: #fff;
+    letter-spacing: 4px;
+}
+.mainimg span {
+    background: rgba(0,0,0,.5);
+    padding: 8px 16px;
+    margin-right: 16px;
+    font-weight: 700;
+}
+
+
+/* project */
+.project li {
+    width: 360px;
+    height: 240px;
+    line-height: 240px;
+}
+
+/* about */
+.about li {
+    width: 360px;
+    height: 460px;
+    line-height: 460px;
+}
+
+/* form */
+.form {
+    height: 330px;
+    line-height: 330px;
+    margin-bottom: 48px;
+}
+
+/* map */
+.map {
+    height: 842px;
+    line-height: 842px;
+}
+
+footer {
+    height: 86px;
+    line-height: 86px;
+}
+
+/* bg-color */
+header {background: #d5d5d5;}
+h1,nav,li,.form,.map {background: #d9d9d9;}
+nav {background: #ddd;}
+.mainimg {background: #ccc;}
+li {background: #ddd;}
+footer {background: #333;}
