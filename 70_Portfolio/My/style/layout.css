@@ -51,9 +51,22 @@ nav li
 {
     display:inline-block; 
     /* inline으로 해도되는데 inline-block로 해야 언제든지 width, height지정가능 */
-    /* display:flec로 하려면 nav ul에 써야함 */
+    /* display:flex로 하려면 nav ul에 써야함 */
     /* nav ul { display: flex;} */
+
 }
+
+nav li:first-child::after {
+    content:"";
+    display:inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0 8px 4px;
+    background: #999;
+}
+
+
 nav section
 {
     display: flex;
@@ -123,9 +136,7 @@ Color :
 
 
 /* bg-color */
-nav { 
-    background:#eee;
-}
+
 
 .home-icon {
     background: #ddd;

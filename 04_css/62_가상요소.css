@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* 선택자::before =>이전  */
+/* 선택자::after => 이후 */
+
+/* p::before {
+    content:"";
+    color:red;
+    display:inline-block;
+    font-size: 8px;
+    margin-right: 8px;
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+} */
+
+p::before {
+    content:"●";
+    font-size: 10px;
+    margin-right: 8px;
+}
+
+p::after {
+    content:"😊";
+}

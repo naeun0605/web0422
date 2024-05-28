@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+        /* 
+        a:link {color:maroon;}
+        a:visited {color:red;}
+        a:hover {color: blue;}
+        a:active {color: yellow;} 
+        */
+
+        a {color: lightpink; text-decoration: none;}
+        a:hover {color: lightblue; text-decoration: underline;} 
