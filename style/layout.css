@@ -104,7 +104,7 @@ header
 {
     /* 패럴랙스 스크롤링 기법 */
     /* 핵심사항 ; background-attachment를 fixed로 하는 것! */
-    background: url(assets/bg-light.png) no-repeat 50% 50% /cover fixed;
+    background: url(../assets/bg-light.png) no-repeat 50% 50% /cover fixed;
 }
 
 /* section */
