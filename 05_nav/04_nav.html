@@ -11,41 +11,24 @@
 
 
         header {
-            display: flex;
-            justify-content: flex-end;
-            /* center / flex-start / flex-end */
-            align-items: flex-start;
-            /* center / flex-start/ flex-end */
-            /* 블록 레벨 요소의 가로 가운데 배치 하려면 width가 있는 상태에서 margin: 0 auto;처리 한다! */
-            width: 1200px;
-            height: 100px;
-            margin: 0 auto;
-            /* 가운데 배치 */
+            width: 200px;
+            height: 650px;
             border: 1px solid;
-            padding : 30px;
         }
 
         .gnb {
-            margin-top : 20px;
-            margin-bottom: 30px;
-            border: 1px solid;
+            margin: 16px;
         }
 
         /* 1depth */
-        .main {
-            display: flex;
-        }
-
         .main>li {
-            width: 160px;
-            height: 30px;
-            text-align: center; /* 모든 메뉴를 가로 가운데 배치 */
-            line-height:30px; /* 메인 메뉴를 세로 가운데 배치하기 위해 line-height크기를 height와 같은 크기로 지정 */
+            background: #333;
+            line-height: 40px;
+            border-bottom: 1px solid #111;
+            text-align: center;
+            /* 1depth에 주면 글자속성은 상속받아서 2depth에도 적용됨 */
         }
 
-        .main>li:hover {
-            background: #333;
-        }
 
         /* 2depth */
         .sub {
@@ -53,27 +36,30 @@
             /* 평상시에는 안보이게 숨기려고 */
             /* 높이값을 0으로 했지만 넘쳐서 보이므로 overflow:hidden처리 */
             overflow: hidden;
-            visibility : hidden;
-            opacity : 0;
-            /* padding : 10px 0 20px; */
-            background: rgba(0, 0, 0, 0.5);
-            /* 소숫점 앞에 0은 생략 가능 */
-            transition : .3s;
-            /* 0.3초 동안 높이가 0에서 120으로 바뀌는 과정을 보여줌 */
-            line-height : 2;
+            visibility: hidden;
+            opacity: 0;
+            background: #777;
+            transition: .3s;
+            line-height: 30px;
         }
 
 
         .main>li:hover .sub {
-            height: 120px;
-            visibility : visible;
+            height: 150px;
+            visibility: visible;
             opacity: 1;
 
         }
 
-        .sub>li:hover {
-            background: #111;
+
+        .sub>li:hover  {
+            background: #333;
         }
+
+        .sub li:first-child {
+            margin-top:10px;
+        }
+       
     </style>
 </head>
 
