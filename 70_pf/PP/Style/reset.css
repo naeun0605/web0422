@@ -7,7 +7,8 @@ body, h1, h2, h3, ul
 
 ul
 {
-    padding: 0;
+    padding-left: 0;
+    /* ul은 왼쪽 패딩이 있으니까 없애준 것 padding:0로 써도 똑같음*/
     list-style:none;
 }
 
@@ -17,3 +18,4 @@ a
     /* 밑줄 제거 */
 }
 
+body {background: #fff;}
