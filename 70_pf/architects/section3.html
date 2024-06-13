@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반려동물 용품 쇼핑몰</title>
+    <style>
+        @import url(style/reset.css);
+        @import url(style/typo.css);
+
+        /* 섹션3 영역 */
+        section {
+            width: 1480px;
+            margin:0 auto;
+            padding-top:96px;
+            padding-bottom:96px;
+            /* padding : 96px 0 */
+            /* 어려우면 outline 그어보기 */
+        }
+
+        h2 {
+            border-bottom : 1px solid #ccc;
+            padding-bottom:24px;
+            margin-bottom:24px;
+        }
+
+        section > p {
+            margin-bottom: 48px;
+        }
+        
+        ul {
+            display: flex;
+            background: yellow;
+        }
+
+        
+        li{
+            width: 355px;
+            margin-right:20px;
+        }
+        /* 블록 레벨 요소의 width는 부모 크기 요소의 100퍼니까 부모인 li에만 적어주면 div에는 width안적어도됨 */
+
+        li:nth-child(4n) {margin-right:0px;} /* 마지막 꺼에는 오른쪽 여백 없애기 */
+
+        div {
+            height: 240px;
+            background: lightpink;
+        }
+
+        h3 {
+            font-size: 2.4rem; /* 24px */
+            margin: 24px 0;
+        }
+
+        /* li > p 도가능  >는 자식, 한 칸 떼면 자손(자식+손자)*/
+        li p {
+            margin: 24px 0;
+        }
+
+        a {
+            display:block;
+            background: #ccc;
+            /* a는 인라인요소니까 콘텐츠 크기만큼만 차지함 그래서 블록으로 만들어주기  */
+            text-align: center; /* 글씨 가운데 정렬 */
+            padding:12px 0; /* 잘 모르겠으면 여백은 8의 배수로 시작, 위아래만 여백 주고 좌우는 여백 주지 않을 거임*/
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 섹션3 영역 -->
+    <section>
+        <h2>이벤트</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <ul>
+            <li>
+                <div><!-- 이미지 삽입 예정 --></div>
+                <h3>title title</h3>
+                <p>이벤트 날짜 D-남은일수</p>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                <a href="#">자세히 버튼</a>
+            </li>
+            <li>
+                <div><!-- 이미지 삽입 예정 --></div>
+                <h3>title title</h3>
+                <p>이벤트 날짜 D-남은일수</p>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                <a href="#">자세히 버튼</a>
+            </li>
+            <li>
+                <div><!-- 이미지 삽입 예정 --></div>
+                <h3>title title</h3>
+                <p>이벤트 날짜 D-남은일수</p>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                <a href="#">자세히 버튼</a>
+            </li>
+            <li>
+                <div><!-- 이미지 삽입 예정 --></div>
+                <h3>title title</h3>
+                <p>이벤트 날짜 D-남은일수</p>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                <a href="#">자세히 버튼</a>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>
