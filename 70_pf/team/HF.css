@@ -28,9 +28,9 @@ a {
 header {
     z-index: 3;
     border-bottom: 1px solid rgba(0, 0, 0, .3);
-    background: #F6E9CA;
+    background: rgba(246, 233, 202, 0.9);
     width: 100%;
-    height: 120px;
+    height: 130px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -57,21 +57,23 @@ header>div>h1 a {
 /* .Rtop 1depth*/
 .Rtop {
     width: 1903px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid #4A433B;
+    padding-top: 2px;
+    border-bottom: 1px solid rgba(74, 67, 59, 0.5);
+    padding-right: 20px;
 }
 
 .top {
     display: flex;
     justify-content: flex-end;
+    align-items: baseline;
 }
 
 .top>li {
     width: 80px;
-    height: 35px;
-    line-height: 35px;
+    height: 45px;
+    line-height: 45px;
     text-align: center;
+    margin-left: 10px;
 }
 
 .top>li a {
@@ -83,6 +85,21 @@ header>div>h1 a {
     color: #101010;
 }
 
+.top>li:nth-last-of-type(1) {
+    width: 100px;
+    height: 45px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.top>li:nth-last-of-type(1) div {
+    margin-left: 8px;
+    width: 20px;
+    height: 45px;
+    background: url(https://oceanflavorstarcandy.github.io/web0422//70_pf/team/Hotel-Shilla/assets/images/HF/language_select.png) no-repeat 50% 50%;
+}
+
 /* .main 1depth */
 .main {
     width: 1200px;
@@ -92,9 +109,10 @@ header>div>h1 a {
 
 .main>li {
     width: 180px;
-    height: 76px;
-    line-height: 76px;
+    height: 75px;
+    line-height: 75px;
     text-align: center;
+    position: relative;
 }
 
 .main>li:hover {
@@ -109,6 +127,24 @@ header>div>h1 a {
     font: 700 20px #101010;
 }
 
+.main>li:nth-of-type(1) div {
+    width: 15px;
+    height: 17px;
+    background: url(https://oceanflavorstarcandy.github.io/web0422//70_pf/team/Hotel-Shilla/assets/images/HF/icon_search.png) no-repeat;
+    position: absolute;
+    top: 27px;
+    left: 30px;
+}
+
+.main>li:nth-of-type(2) div {
+    width: 20px;
+    height: 20px;
+    background: url(https://oceanflavorstarcandy.github.io/web0422//70_pf/team/Hotel-Shilla/assets/images/HF/icon_schedule.png) no-repeat;
+    position: absolute;
+    top: 27px;
+    left: 44px;
+}
+
 /* .sub 2depth */
 .sub {
     height: 0px;
@@ -117,6 +153,7 @@ header>div>h1 a {
     opacity: 0;
     padding: 10px 0 10px;
     background: #ffffff;
+    border: 1px solid rgba(133, 111, 86, .5);
     transition: .5s;
     line-height: 4;
 }
@@ -135,6 +172,24 @@ header>div>h1 a {
     background: #F6E9CA;
 }
 
+/* 더 신라숍 버튼 */
+header>div>div:last-child {
+    background: #4A433B;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+}
+
+header>div>div:last-child a {
+    color: #ffffff;
+    font: 300 16px "Noto Sans KR",sans-serif;
+}
+
 /* footer */
 footer {
     z-index: 3;
@@ -148,6 +203,10 @@ footer {
 .centerbox {
     width: 1903px;
     position: relative;
+}
+
+.centerbox>div {
+    padding: 0 160px;
 }
 
 .familysite {
@@ -185,8 +244,8 @@ footer {
 .familysite>ul>li:nth-child(2) li {
     width: 72px;
     height: 80px;
-    line-height: 80px;
-    text-align: center;
+    display: flex;
+    align-items: center;
     margin-right: 20px;
 }
 
@@ -195,8 +254,7 @@ footer {
     color: #ffffff;
 }
 
-footer>div>div:nth-of-type(2) {
-    /* width: 1920px; */
+.centerbox>div:nth-of-type(2) {
     height: 300px;
 }
 
@@ -205,24 +263,16 @@ footer>div>div:nth-of-type(2) {
     line-height: 2;
 }
 
-.Ltext p {
+.Ltext>div {
+    margin-bottom: 20px;
+    width: 170px;
+    height: 54px;
+}
+
+.Ltext>p {
     color: #ffffff;
     font: 300 15px "Noto Sans KR",sans-serif;
     line-height: 1.5;
-}
-
-.Ltext a {
-    font: 400 20px "Asul",sans-serif;
-    color: #ffffff;
-    line-height: 2;
-    margin-right: 10px;
-}
-
-.Ltext>p:nth-child(1) {
-    font: 400 16px "Asul",sans-serif;
-    color: #ffffff;
-    line-height: 4;
-    margin-bottom: 12px;
 }
 
 .Ltext p:last-child {
@@ -233,18 +283,18 @@ footer>div>div:nth-of-type(2) {
 .Rlist {
     position: absolute;
     top: 112px;
-    right: 56px;
+    right: 172px;
     display: flex;
 }
 
 .Rlist>ul {
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 .Linklist03 {
     border-left: 1px solid rgba(255, 255, 255, 0.5);
-    padding-left: 40px;
-    margin-left: 20px;
+    padding-left: 80px;
+    margin-left: 40px;
 }
 
 .Rlist li {
@@ -275,9 +325,25 @@ footer>div>div:nth-of-type(2) {
 .bottom li {
     font: 200 15px "Noto Sans KR",sans-serif;
     color: #ffffff;
-    width: 200px;
+    width: 180px;
     height: 90px;
     line-height: 90px;
     margin-left: 10px;
     text-align: center;
+}
+
+/* top-scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+.top-button a {
+    z-index: 4;
+    display: inline-block;
+    position: absolute;
+    top: -80px;
+    right: 160px;
+    width: 60px;
+    height: 60px;
+    background: url(https://oceanflavorstarcandy.github.io/web0422//70_pf/team/Hotel-Shilla/assets/images/HF/icon_top.png) no-repeat;
 }
