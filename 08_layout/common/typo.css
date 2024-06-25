@@ -12,6 +12,10 @@ body {
     line-height: 1.6;
 }
 
+h2 {
+    font-size: 1.8rem; /* 본문이 15니까 본문보다는 크게 */
+}
+
 /* font의 위계 */
 /* 1depth, mainmenu */
 .main>li>a {
