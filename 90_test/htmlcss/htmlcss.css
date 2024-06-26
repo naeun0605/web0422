@@ -1,0 +1,339 @@
+@charset "utf-8";
+
+/* 콘텐츠 구성은 로고, 2depth 내비게이션, 슬라이드 이미지, 공지사항, 갤러리, 콘텐츠 이미지(배너, 바로가기), 하단 로고, 주소 및 저작권 표기, SNS */
+
+/* reset */
+* {
+    /* border와 padding 값이 width/height에 포함 */
+    box-sizing: border-box;
+}
+
+body,h1,h2,ul,p {
+    margin: 0;
+}
+body {
+    background: #fff;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666666;
+}
+
+/* header */
+header {
+    position: relative; /* Q.이렇게 하면 자기자신이 기준인데 이걸 왜 해준거에요 ? */
+    /* 헤더를 밑에 슬라이드처럼 화면 꽉차게 하고싶은데  작품 크기는 1200 * 700(px)로 하라해서 1200px로 해도 안되고, width:100%로 해도 안되는데 왜이러죠*/
+}
+
+header .container {
+    display: flex;  
+    justify-content: space-between;
+    align-items: center; /* 주석으로 없애면 LOGO글자만 왼쪽으로 치우치는데 LOGO글자 가운데 배치는 밑에 .logo에서 했잖아요  */
+    /* 블록레벨요소의 가로 가운데 배치: width, margin */
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    background: lightpink;
+}
+/* 로고 */
+.logo {
+    width: 100%;
+    text-align: center;
+    
+}
+
+/* 내비게이션 */
+.gnb {
+    align-self: flex-end;
+    background: lightpink;
+}
+
+/* 1depth */
+.main {
+    display: flex;
+    height: 30px;
+}
+
+.main>li {
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    /* line-height: 30px;  주석처리 하니까 오히려 정중앙배치되는데 왜 쓴거에요 ?*/
+}
+
+.main>li:hover {
+    background: rgb(238, 72, 80);
+}
+
+/* 서브바 */
+.main::before {
+    content: "";
+    position: absolute; /* Q */
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    opacity: 0;
+    transition: .3s;
+    background: rgba(230, 114, 114, 0.5);
+}
+
+/* .main에 마우스 올리면 서브바 보이게 하는거 */
+.main:hover::before {
+    z-index: 100;
+    height: 150px;
+    opacity: 1;
+    /* width: 1200px;
+    margin: 0 auto; */
+    /* header만큼만 보이게 하고싶은데 header width인 1200에 맞추니까 왼쪽에 치우쳐서  가운데 정렬하려는데 margin:0auto 안통함*/
+}
+
+/* 2depth */
+.sub {
+    z-index: 99;
+    position: relative; /* Q */
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px 0 20px;/* 상 좌우 하 인데 좌우에도 border그어보면  상, 하 여백 10차이가 왜이렇게 큰지*/
+    /* transition: .3s; */
+    line-height: 2;
+}
+
+/* .main(1depth)애 마우스 올리면 2depth가 아래처럼 변경됨*/
+.main:hover .sub {
+    z-index: 101;
+    height: 200px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub li a {
+    padding: 4px 16px;
+}
+
+.sub li:hover a {
+    background: rgb(238, 72, 80);
+}
+ 
+
+/* 슬라이드 이미지 */
+/* 슬라이드 이미지 가운데로  */
+.slide { 
+    width: 1920px; 
+    overflow: hidden; 
+    } 
+
+.slide ul { 
+    position: relative;
+    display: flex; 
+    width: 400%; 
+    animation: slide 10s infinite;
+} 
+
+/* animation */
+@keyframes slide { 
+    0% { left: 0; } 
+    10% { left: -100%; } 
+    33% { left: -100%; } 
+    43% { left: -200%; } 
+    66% { left: -200%; } 
+    76% { left: -300%; } 
+    99.99% { left: -300%; } 
+    100% { left:0; } 
+}
+
+
+/* 링크 영역 */
+#link {
+    height: 100px;
+    padding: 20px;
+    background: bisque;
+}
+#link ul {
+    display: flex; /* 5개 링크 가로배치 */
+    justify-content: space-evenly;
+}
+#link li a {
+    display: flex; /* 위에서 가로배치 시켰는데 왜 또 하는지.. 주석처리해도 똑같음 */
+    align-items: center; /* 얘도 주석처리해도 똑같음 */
+}
+/* 아이콘 이미지 */
+#link ul li a span {
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    margin-right: 24px;
+}
+
+/* 배너 영역 */
+#banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: aliceblue;
+}
+
+/* 배너 이미지 */
+/* 플렉스 아이템 요소는 display:block; 이다. */
+#banner span {
+    padding-left:40px;
+    width: 630px;
+    height: 166px;
+}
+
+/* 배너 타이틀 및 설명글 */
+/* 세로 가운데 정렬 Q */
+#banner>div {
+    width: 800px;
+    height: 150px;
+    text-align: center;
+    background: rgb(152, 196, 181);
+    color:#fff
+}
+
+#banner>div h2 {
+    margin-bottom: 16px;
+}
+
+/* 공지사항 및 갤러리 */
+#tab_wrap {
+    height: 300px;
+}
+
+.tabs {
+    outline :1px solid;
+    position: relative; /* Q */
+    /* left: 50px; */
+    top: 30px;
+    width: 100%;
+    height: 220px;
+}
+
+.tabs input {
+    display: none; /* 체크박스 안보이게 하려고 */
+}
+
+/* 탭의 버튼 */
+.tabs label {
+    position: relative; /* 주석처리하면 창 기준이라 왼쪽에 딱 붙어서 오른쪽으로 옮겨주려고 쓴거죠? */
+    left: 24px;
+    top: 1px;
+    display: inline-block; /* 주석처리하면 왜 위로 올라가는거죠.. */
+    /* label의 높이는 4px */
+    padding: 4px 24px;
+    background: #999;
+    color: #777;
+    /* 손 모양 */
+    cursor: pointer;
+}
+
+/* .tabs 안의 하위요소인 체크된 input 아래 동생 label을 선택 */
+.tabs input:checked+label {
+    z-index: 99; 
+    background: #fff;
+    color: #111;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+
+/* 탭의 콘텐츠 */
+.tabs>div {
+    display: none; /* 주석처리하면 갤러리의 이미지가 보임 */
+    /* position:absolute;이면 width는 콘텐츠 크기 */
+    position: absolute;
+    width: 100%;
+    /* 32px은 label의 높이 */
+    height: calc(100% - 32px);
+    padding: 16px 24px;
+    border: 1px solid #ccc;
+}
+
+/* 체크된 input의 아래 label 아래 div만 보이게한다. */
+.tabs input:checked+label+div {
+    display: block;
+}
+
+/* 공지사항의 콘텐츠 */
+.tab1 li {
+    line-height: 2.3;
+    border-bottom: 1px dotted #ccc;
+}
+.tab1 li a {
+    display: inline-block;  /* 주석처리하면 글자랑 0000이 붙는데 왜 그런지... */
+    width: 422px;
+}
+
+/* 갤러리의 콘텐츠 */
+.tab2 ul {
+    display: flex;
+    justify-content: space-between;
+    line-height: 2.3;
+    margin-top: 8px;
+}
+.tab2 span {
+    padding:16px;
+    display: block;
+    width: 150px;
+    height: 100px;
+    background: #ccc;
+}
+
+/* 푸터 영역 */
+footer {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    background:lightpink;
+    color: #fff;
+}
+footer a {
+    color:#fff;
+}
+
+/* 하단 로고 */
+footer .flogo {
+    width:190px;
+    text-align: center;
+}
+
+/* 하단 메뉴 */
+footer ul {
+    display: flex;
+    margin-bottom: 16px;
+}
+footer ul a {
+    text-decoration: underline;
+}
+/* 
+    가상클래스
+        선택자1:not(선택자2) - 선택자2를 제외한 선택자1
+        li:not(:last-child) - 마지막 li를 제외한 li
+*/
+footer ul li:not(:last-child) a::after {
+    content: "|";
+    margin: 0 8px;
+}
+
+/* footer ul li a::after {
+    content: "|";
+    margin: 0 8px;
+}
+footer ul li:last-child a::after {
+    content: "";
+    margin: 0;
+} */
+
+/* 주소 및 저작권 */
+footer p {
+    width: 850px;
+}

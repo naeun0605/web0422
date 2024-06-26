@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>폼</h1>
+    <p>폼은 검색창, 로그인 또는 회원가입 페이지 제작시에 사용된다. input 태그의 22가지 type에 따라 입력란, 확인란, 라디오 버튼, 전송 버튼, 초기화 버튼, ...등이 있다. input은 인라인 요소이다.</p>
+
+    <form action="login.jsp">
+        <!-- 한 줄 텍스트 입력 -->
+         <!-- value는 초기값을 지정
+          1. 입력란에 사용시 => 초기값
+          2. 실제 데이터 베이스 전송될 값
+          3. 버튼으로 사용시 => 버튼이름
+          -->
+          <!-- for 는 id랑 연결해주는 속성으로, id와 for이름이 같아야함 -->
+           <!-- 이게 표준방법 -->
+        <label for="user_id">아이디 </label>
+        <input id="user_id" type="text" placeholder="아이디를 입력해 주세요."> <br>
+        <!-- 비밀번호 입력 -->
+        <label for="user_pw">비밀번호</label>
+         <input id="user-pw "type="비밀번호를 입력해 주세요."><br>
+        <!-- 브라우저에 표시되지 않는 텍스트 입력 -->
+        <input type="hidden"><br>
+        
+        <!-- 이메일 입력 -->
+        이메일 <input type="email"><br>
+        <!-- 검색 -->
+        검색 <input type="search"><br>
+        <!-- 전화번호 입력 -->
+        전화번호 <input type="tel"><br>
+        <!-- 웹주소 입력 -->
+        웹주소 <input type="url">
+        <hr> <!-- hr : 블록레벨요소 -->
+        <!-- 여러 개 중에서 여러 개 선택, 네모에 체크 -->
+         <!-- 확인란과 라디오 버튼의 value는 서버로 전송될 값 -->
+          <!-- 라벨 태그로 직접 감싸면 for속성 생략 가능 -->
+        <label><input type="checkbox" name="checkgroup" value="rule1"> 회칙1 읽음</label>
+        <label><input type="checkbox" name="checkgroup" value="rule2"> 회칙2 읽음</label>
+        <label><input type="checkbox" name="checkgroup" value="rule3"> 회칙3 읽음</label>
+        <!-- 여러 개 중 1개만 선택, 동그라미 선택-->
+         <!-- name속성이 같아야 라디오 버튼이 그룹핑 된다. -->
+        <label><input type="radio" name="radoiogroup" value="yes"> 동의함</label>
+        <label><input type="radio" name="radoiogroup" value="no"> 동의 안함</label>
+        <hr>
+        <!-- 전송(제출) -->
+        <input type="submit" value="로그인/회원가입">
+        <!-- 초기화 -->
+        <input type="reset" value="reset">
+        <!-- 버튼 타입의 경우 value는 버튼의 이름 지정 -->
+        <input type="button" value="더보기 버튼">
+        <!-- 이미지 버튼(전송과 초기화 제외) -->
+        <input type="image" src="./../assets/etc_btn.svg" alt="기타버튼">
+        <button type="submit">로그인</button>
+        <button type="reset">reset</button>
+        <button type="button">더보기 버튼</button>
+        <!-- 대부분 submit,reset은 input태그 사용, 나머지는 대부분 button태그 사용 -->
+        <!-- 파일 첨부 -->
+        <input type="file">
+        <hr>
+        
+        <!-- 스핀 버튼, 카운트 -->
+        <input type="number">
+        <!-- 범위 -->
+        <input type="range">
+        <hr>
+        <!-- 2024-06-14, safari(x) -->
+        <input type="date">
+        <!-- 2024년-06-14, 오전 09:50, safari (x), firefox(x) -->
+        <input type="datetime-local">
+        <!-- 2024년 06월, safari(x), firefox(x)-->
+        <input type="month">
+        <!-- 오전 10:10, safari(x), firefox(x) -->
+        <input type="time">
+        <!-- 2024년, 24번째  -->
+        <input type="week">
+        <hr>
+        <!-- safari(X) -->
+        <input type="color">
+
+        <select name="" id="">
+            <option value>국제전화코드</option>
+            <option value="">한국 (+82)</option>
+            <option value="">일본 (+81)</option>
+            <option value="">중국 (+86)</option>
+            <option value="">미국 (+1)</option>
+        </select>
+    </form>
+</body>
+
+</html>
+ 

@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/* 공지사항 및 갤러리 */
+#tab_wrap {
+    height: 300px;
+}
+
+.tabs {
+    position: relative;
+    /* relative라는 건 자식 중에 absoulute가 있을 확률 높음 */
+    left:50px;
+    top:30px;
+    width: 550px;
+    height: 220px;
+}
+
+.tabs label {
+    left: 30px;
+
+    display: inline-block;
+    padding: 4px 24px;
+    background: #999;
+    color: #777;
+    cursor: pointer; /* 라벨에 손가락 모양 나오게하기 */
+}
+
+.tabs>div {
+    display: none;
+    position: absolute;
+    /* position:absolute이면 width는 컨텐츠 크기 */
+    width: 100%;
+    height: calc(100% - 32px); /* 공지사항, 갤러리 버튼 크기 빼줌 */
+    padding: 16px;
+    border: 1px solid #ccc;
+}
+
+.tabs input {
+    display: none;
+    /* 동그란 체크 없앤거 */
+}
+
+.tabs label {
+    position: relative;
+    left:30px;
+    top:1px;
+}
+
+/* .tabs 안의 하위요소인 체크된 input 아래 동생 label을 선택 */
+.tabs input:checked+label {
+    z-index: 99; /* 1보다 크면 됨 */
+    background: #fff;
+    color: #1111;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+
+/* 체크된 input의  */
+.tabs input:checked+label+div {
+    display: block;
+}
+
+/* 공지사항 */
+.tab1 li{
+    /* li사이 간격 늘리기, 여백으로도 할 수 있음 */
+    line-height: 2.3;
+    border-bottom: 1px solid #ccc;
+}
+.tab1 li a {
+    /* span은 인라인이므로 width적용되지 않으므로 inline-block적용시키기 */
+    display:inline-block;
+    width: 430px;
+}
+
+/* 갤러리 */
+
+.tab2 ul {
+    display: flex;
+    justify-content: space-between;
+    line-height: .2;
+    margin-top: 8px;
+}
+
+.tab2 span {
+    display:block;
+    width: 150px;
+    height: 100px;
+    background: #ccc;
+}
+

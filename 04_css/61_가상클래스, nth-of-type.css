@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+ /* :first-of-type = :nth-of-type(1) */
+        /* :last-of-type = nth-of-type(???) -> 늘어나면 마지막이 계속 바뀌므로 */
+        /* :last-of-type = nth-last-of-type(1) */
+
+        /* p의 부모 즉, div의 자식 요소 중 첫 번째 p요소를 선택하여 글자색을 lightblue으로 지정한다. */
+        p:first-of-type{
+            color:lightblue;
+        }
+        
+        /* p의 부모 즉, div의 자식 요소 중 마지막 p요소를 선택하여 글자색을 lightpink으로 지정한다. */
+        p:last-of-type{
+            color: lightpink;
+        }
+        
+    /* 자식선택자:nth-of-type(n) => type을 구분함*/
+    /* 자식선택자:nth-child(n) => type(태그, 요소)을 구분하지 않음 */
+
+    /* 첫 번째 자식요소 p를 의미 */
+    /* p의 부모 즉, div의 자식 요소 중 첫 번째 p요소를 선택하여 글자색을 빨강으로 지정한다. */
+        p:nth-of-type(1) {
+            color: blue;
+        }
+
+    /* p의 부모 즉, div의 자식 요소 중 짝수번째 p요소를 선택하여 글자를 이탤릭체로 지정한다. */
+    p:nth-of-type(2n) {
+            font-style: italic;
+        }
+        /* 
+        p:nth-child(1){
+            color: red;
+        }
+        라고 적으면 p의 부모 즉, div의 자식 요소 중 첫 번째 요소를 빨강으로 하라는 의미인데, 첫 번째 요소가 p가 아니라 h2이므로 h2라고 적어야함
+        */
+
+        p:first-child{
+            background: yellow;
+        }
+        /* 첫번째 요소가 p가 아니라 적용되지 않음 따라서 h2로 적기 */
+
+        /* h2의 부모 즉, div의 자식 요소 중 첫번째 h2요소를 선택하여 yellowgreen으로 지정한다. */
+        h2:first-child{
+            background: yellowgreen;
+        }
+
+        /* p의 부모 즉, div의 자식 요소 중 마지막 p요소를 선택하여 maroon으로 지정한다. */
+        p:last-child{
+            background: maroon;
+        }
+     
+        /* p의 부모 즉, div의 자식 요소 중 홀수번째 p요소를 선택하여 굵기를 bold로 지정한다. */
+        p:nth-child(2n+1){
+            font-weight: bold;
+        }

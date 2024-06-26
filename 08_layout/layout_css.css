@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+/* reset */
+* {
+    /* border와 padding 값이 width/height에 포함 */
+    box-sizing: border-box;
+}
+
+body,h1,h2,ul,p {
+    margin: 0;
+}
+body {
+    background: #fff;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666666;
+}
+
+/* header */
+header {
+    position: relative; /* Q.이렇게 하면 자기자신이 기준인데 이걸 왜 해준거에요 ? */
+}
+
+header .container {
+    display: flex;  
+    justify-content: space-between;
+    align-items: center; /* 주석으로 없애면 LOGO글자만 왼쪽으로 치우치는데 LOGO글자 가운데 배치는 밑에 .logo에서 했잖아요  */
+    /* 블록레벨요소의 가로 가운데 배치: width, margin */
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+/* 로고 */
+.logo {
+    width: 190px;
+    text-align: center;
+}
+
+/* 내비게이션 */
+.gnb {
+    align-self: flex-end;
+    background: lightpink;
+}
+
+/* 1depth */
+.main {
+    display: flex;
+    height: 30px;
+}
+
+.main>li {
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    /* line-height: 30px;  주석처리 하니까 오히려 정중앙배치되는데 왜 쓴거에요 ?*/
+}
+
+.main>li:hover {
+    background: rgb(238, 72, 80);
+}
+
+/* 서브바 */
+.main::before {
+    content: "";
+    position: absolute; /* Q */
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    opacity: 0;
+    transition: .3s;
+    background: rgba(230, 114, 114, 0.5);
+}
+
+/* .main에 마우스 올리면 서브바 보이게 하는거 */
+.main:hover::before {
+    height: 150px;
+    opacity: 1;
+    /* width: 1200px;
+    margin: 0 auto; */
+    /* header만큼만 보이게 하고싶은데 header width인 1200에 맞추니까 왼쪽에 치우쳐서  가운데 정렬하려는데 margin:0auto 안통함*/
+}
+
+/* 2depth */
+.sub {
+    
+    position: relative; /* Q */
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px 0 20px;/* 상 좌우 하 인데 좌우에도 border그어보면  상, 하 여백 10차이가 왜이렇게 큰지*/
+    /* transition: .3s; */
+    line-height: 2;
+}
+
+/* .main(1depth)애 마우스 올리면 2depth가 아래처럼 변경됨*/
+.main:hover .sub {
+    height: 300px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub li a {
+    padding: 4px 16px;
+}
+
+.sub li:hover a {
+    background: rgb(238, 72, 80);
+}
+ 
+
+/* 슬라이드 이미지 */
+/* 링크 영역 */
+#link {
+    height: 100px;
+    padding: 20px;
+    background: bisque;
+}
+#link ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+#link li a {
+    display: flex;
+    align-items: center;
+}
+/* 아이콘 이미지 */
+#link ul li a span {
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    margin-right: 24px;
+}
+

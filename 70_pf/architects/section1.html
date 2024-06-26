@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반려동물 용품 쇼핑몰</title>
+    <style>
+        @import url(style/typo.css);
+        h2 { letter-spacing/* 자간 */:4px; font-weight: 400;}
+        b {background: #000; color: #fff; padding : 8px 16px; margin-right: 16px; }
+
+        section {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            border: 1px solid red;}
+
+
+        div {
+            width: 1496px;
+            height: 745px;
+            background: #ccc;
+        }
+
+        h2 {
+            position:absolute;
+            left: 50%;
+            top: 50%; 
+            margin-left:-110px;
+            margin-top: -16px;
+
+            /* 
+            position:absolute;
+            left: 50%;
+            top: 50%; 
+            transform : translate(-50%, -50%) 
+            */
+        }
+        /* 이거 하면 h2는 투명인간 처리됨 */   
+        
+    </style>
+</head>
+<body>
+    <!-- section 태그는 그 안에 자식요소로 제목 태그가 반드시 존재해야 하며, 보통은 h2~h6 -->
+    <section>
+        <h2><b>PP</b>Paradise</h2>
+        <div> <!-- 배너 이미지 삽입 --></div>
+    </section>
+</body>
+</html>
