@@ -123,7 +123,7 @@ header .container {
 /* 슬라이드 이미지 */
 /* 슬라이드 이미지 가운데로  */
 .slide { 
-    width: 600px; 
+    width: 1920px; 
     overflow: hidden; 
     } 
 
@@ -131,11 +131,7 @@ header .container {
     position: relative;
     display: flex; 
     width: 400%; 
-    /* text-align: center; 중앙정렬안됨*/
-    /* margin: 0 auto; 중앙정렬안됨 */
-    /* align-items:center; 주축정렬 - 중앙정렬 안됨*/
-    justify-content: center;
-    animation: slide 9s infinite;
+    animation: slide 10s infinite;
 } 
 
 /* animation */
@@ -185,15 +181,16 @@ header .container {
 /* 배너 이미지 */
 /* 플렉스 아이템 요소는 display:block; 이다. */
 #banner span {
-    width: 120px;
+    width: 500px;
     height: 100px;
-    background: #ccc;
+    background: rgb(247, 185, 194);
 }
 
 /* 배너 타이틀 및 설명글 */
 #banner>div {
     width: 1000px;
-    padding-right: 200px;
+    text-align: center;
+    border: 1px solid;
 }
 #banner>div h2 {
     margin-bottom: 16px;
