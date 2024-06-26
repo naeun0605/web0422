@@ -1,36 +1,22 @@
 @charset "utf-8";
 
-/* @import는 상단에 기록해야한다. */
 @import url(reset.css);
 @import url(typo.css);
 @import url(header.css);
 @import url(footer.css);
 
 
-/* 슬라이드 */
-#slide {
-    height: 350px;
-    background: rgba(240, 68, 103, 0.5);
-}
-
-/* 메인 콘텐츠 */
-#main_contents {
-    width: 1340px;
-    margin: -100px auto 0;
-    border: 1px solid;
-}
-
 /* 링크 영역 */
 #link {
     height: 100px;
     padding: 20px;
-    background: bisque;
 }
 #link ul {
     display: flex;
     justify-content: space-evenly;
 }
-#link li a {
+
+#link li a{
     display: flex;
     align-items: center;
 }
@@ -52,8 +38,7 @@
 }
 
 /* 배너 이미지 */
-/* 플렉스 아이템 요소는 display:block; 이다. */
-#banner span {
+#banner a div {
     width: 120px;
     height: 100px;
     background: #ccc;
@@ -75,79 +60,97 @@
 
 #tab_wrap .tabs {
     position: relative;
-    left: 50px;
-    top: 30px;
+    /* relative라는 건 자식 중에 absoulute가 있을 확률 높음 */
+    left:50px;
+    top:30px;
     width: 550px;
     height: 220px;
 }
 
-#tab_wrap .tabs input {
-    display: none;
-}
-
-/* 탭의 버튼 */
 #tab_wrap .tabs label {
-    position: relative;
-    left: 24px;
-    top: 1px;
+    left: 30px;
+
     display: inline-block;
-    /* label의 높이는 4px */
     padding: 4px 24px;
     background: #999;
     color: #777;
-    /* 손 모양 */
-    cursor: pointer;
+    cursor: pointer; /* 라벨에 손가락 모양 나오게하기 */
+}
+
+#tab_wrap .tabs>div {
+    display: none;
+    position: absolute;
+    /* position:absolute이면 width는 컨텐츠 크기 */
+    width: 100%;
+    height: calc(100% - 32px); /* 공지사항, 갤러리 버튼 크기 빼줌 */
+    padding: 16px;
+    border: 1px solid #ccc;
+}
+
+#tab_wrap .tabs input {
+    display: none;
+    /* 동그란 체크 없앤거 */
+}
+
+#tab_wrap .tabs label {
+    position: relative;
+    left:30px;
+    top:1px;
 }
 
 /* .tabs 안의 하위요소인 체크된 input 아래 동생 label을 선택 */
 #tab_wrap .tabs input:checked+label {
-    z-index: 99;
+    z-index: 99; /* 1보다 크면 됨 */
     background: #fff;
-    color: #111;
+    color: #1111;
     border: 1px solid #ccc;
     border-bottom: none;
 }
 
-/* 탭의 콘텐츠 */
-#tab_wrap .tabs>div {
-    display: none;
-    /* position:absolute;이면 width는 콘텐츠 크기 */
-    position: absolute;
-    width: 100%;
-    /* 32px은 label의 높이 */
-    height: calc(100% - 32px);
-    padding: 16px 24px;
-    border: 1px solid #ccc;
-}
-
-/* 체크된 input의 아래 label 아래 div만 보이게한다. */
+/* 체크된 input의  */
 #tab_wrap .tabs input:checked+label+div {
     display: block;
 }
 
-/* 공지사항의 콘텐츠 */
-#tab_wrap .tab1 li {
+/* 공지사항 */
+#tab_wrap .tab1 li{
+    /* li사이 간격 늘리기, 여백으로도 할 수 있음 */
     line-height: 2.3;
-    border-bottom: 1px dotted #ccc;
+    border-bottom: 1px solid #ccc;
 }
 #tab_wrap .tab1 li a {
-    display: inline-block;
-    width: 422px;
+    /* span은 인라인이므로 width적용되지 않으므로 inline-block적용시키기 */
+    display:inline-block;
+    width: 430px;
 }
 
-/* 갤러리의 콘텐츠 */
+/* 갤러리 */
+
 #tab_wrap .tab2 ul {
     display: flex;
     justify-content: space-between;
-    line-height: 2.3;
+    line-height: .2;
     margin-top: 8px;
 }
+
 #tab_wrap .tab2 span {
-    display: block;
+    display:block;
     width: 150px;
     height: 100px;
     background: #ccc;
 }
 
 
+/* 슬라이드 */
+#slide {
+    height: 350px;
+    background: lightpink;
+}
+
+/* 메인 콘텐츠 */
+#main_contents {
+    width: 1340px;
+    margin: 0 auto;
+    border: 1px solid;
+}
 
