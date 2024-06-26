@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>슬라이드 좌->우</title>
+    <title>Vallery-Festival_김나은</title>
     <style>
+
+        body { 
+            margin: 0;
+        }
         /* 초기화 */
         ul { 
             margin: 0; 
@@ -16,25 +20,28 @@
         /* 슬라이드 */
         .slide { 
             width: 600px; 
+            
             overflow: hidden; 
         } 
         .slide ul { 
+            position: relative;
             display: flex; 
+           
             width: 400%; 
-            animation: slide 12s infinite reverse;
-            /* reverse를 추가해보면 132 */
+            
+            animation: slide 9s infinite reverse;
         } 
 
         /* animation */
         @keyframes slide { 
-            0% { transform: translate(0%, 0%); } 
-            10% { transform: translate(-25%, 0%); } 
-            33% { transform: translate(-25%, 0%); } 
-            43% { transform: translate(-50%, 0%); } 
-            66% { transform: translate(-50%, 0%); } 
-            76% { transform: translate(-75%, 0%); } 
-            99.99% { transform: translate(-75%, 0%); } 
-            100% { transform: translate(0%, 0%); } 
+            0% { left: 0; } 
+            10% { left: -100%; } 
+            33% { left: -100%; } 
+            43% { left: -200%; } 
+            66% { left: -200%; } 
+            76% { left: -300%; } 
+            99.99% { left: -300%; } 
+            100% { left:0; } 
         }
     </style>
 </head>
@@ -42,10 +49,12 @@
 <body>
     <div class="slide">
         <ul>
-            <li><img src="slide1.png" alt="슬라이드 이미지1"></li>
+            <li><img src="./" alt="슬라이드 이미지3"></li>
+
             <li><img src="slide2.jpg" alt="슬라이드 이미지2"></li>
-            <li><img src="slide3.jpg" alt="슬라이드 이미지3"></li>
+           
             <li><img src="slide1.png" alt="슬라이드 이미지1"></li>
+            <li><img src="slide3.jpg" alt="슬라이드 이미지3"></li>
         </ul>
     </div>
 </body>
