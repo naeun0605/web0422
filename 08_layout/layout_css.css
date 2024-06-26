@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-/* 콘텐츠 구성은 로고, 2depth 내비게이션, 슬라이드 이미지, 공지사항, 갤러리, 콘텐츠 이미지(배너, 바로가기), 하단 로고, 주소 및 저작권 표기, SNS */
-
 /* reset */
 * {
     /* border와 padding 값이 width/height에 포함 */
@@ -121,36 +119,6 @@ header .container {
  
 
 /* 슬라이드 이미지 */
-/* 슬라이드 이미지 가운데로  */
-.slide { 
-    width: 600px; 
-    overflow: hidden; 
-    } 
-
-.slide ul { 
-    position: relative;
-    display: flex; 
-    width: 400%; 
-    /* text-align: center; 중앙정렬안됨*/
-    /* margin: 0 auto; 중앙정렬안됨 */
-    /* align-items:center; 주축정렬 - 중앙정렬 안됨*/
-    justify-content: center;
-    animation: slide 9s infinite;
-} 
-
-/* animation */
-@keyframes slide { 
-    0% { left: 0; } 
-    10% { left: -100%; } 
-    33% { left: -100%; } 
-    43% { left: -200%; } 
-    66% { left: -200%; } 
-    76% { left: -300%; } 
-    99.99% { left: -300%; } 
-    100% { left:0; } 
-}
-
-
 /* 링크 영역 */
 #link {
     height: 100px;
@@ -158,12 +126,12 @@ header .container {
     background: bisque;
 }
 #link ul {
-    display: flex; /* 5개 링크 가로배치 */
+    display: flex;
     justify-content: space-evenly;
 }
 #link li a {
-    display: flex; /* 위에서 가로배치 시켰는데 왜 또 하는지.. 주석처리해도 똑같음 */
-    align-items: center; /* 얘도 주석처리해도 똑같음 */
+    display: flex;
+    align-items: center;
 }
 /* 아이콘 이미지 */
 #link ul li a span {
@@ -173,28 +141,3 @@ header .container {
     margin-right: 24px;
 }
 
-/* 배너 영역 */
-#banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    background: aliceblue;
-}
-
-/* 배너 이미지 */
-/* 플렉스 아이템 요소는 display:block; 이다. */
-#banner span {
-    width: 120px;
-    height: 100px;
-    background: #ccc;
-}
-
-/* 배너 타이틀 및 설명글 */
-#banner>div {
-    width: 1000px;
-    padding-right: 200px;
-}
-#banner>div h2 {
-    margin-bottom: 16px;
-}
