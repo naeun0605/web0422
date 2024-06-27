@@ -5,19 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>반려동물 용품 쇼핑몰</title>
+
     <style>
         @import url(style/reset.css);
         @import url(style/typo.css);
 
-        
+        section {
+            width: 1480px;
+            margin: 0 auto;
+            padding: 96px 0;
+        }
+
+        /* contact 아래 줄글 밑에 밑줄 긋기 */
+        h2 {
+            border-bottom : 1px solid #ccc;
+            padding-bottom:24px;
+            margin-bottom:24px;
+        }
+
+        p {
+            margin-bottom: 24px;
+        }
+
+        /* input은 인라인블록이라 한줄로 나열되므로 줄바꿈을 위해 block으로 변경
+        인라인 블록도 줄바꿈 안되는데 공간이 모자라면 줄바꿈됨 */
+        /* 인라인 요소도 크기가 모자라면 줄바꿈 되긴 함 ?*/
+
+        /* input은 상속받지 않으므로 자기 자신의 글자크기, 글자 색 등을 가짐 */
+        input {
+            /*
+            이렇게 써도되는데 input은 인라인 블록이라 width지정되니까 그냥 block으로 안바꿔주고 width만 지정해도됨
+            display:block;
+            width:100%
+            */ 
+            width:100%;
+            height: 40px;
+            font-size: 15px;
+            font-family: 'Noto-Sans-KR', sans-serif;
+            
+        }
+
     </style>
+
 </head>
 
 <body>
     <!-- 섹션4 영역 -->
     <section>
-        <h2>상품</h2>
-        
+
+        <h2>고객센터</h2>
+        <p>Lets get in touch and talk about your next project.</p>
+
+        <form action="custom.jsp">
+            <input type="text" name="user_name" placeholder="이름">
+            <input type="email" name="user_email" placeholder="이메일">
+            <input type="text" name="subject" placeholder="제목">
+            <input type="text" name="comment" placeholder="내용">
+            <!-- 버튼 태그도 가능, input으로 버튼도 가능 -->
+            <button type="submit">전송</button> <!-- button쓸때는 type반드시 submit -->
+        </form> <!-- action에는 아무거나 임의로 넣어주기 -->
+
+        <div class="map">
+            <!-- 지도 -->
+        </div>
+
     </section>
 </body>
 

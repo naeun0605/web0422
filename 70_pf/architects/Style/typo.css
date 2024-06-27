@@ -19,6 +19,7 @@ html {font-size:10px;}
 body {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 1.5rem;
+    color:#333;
     /* 폰트 사이즈가 10일때 애는 1.5rem이 됨 */
   }
 
