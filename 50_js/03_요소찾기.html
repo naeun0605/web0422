@@ -18,6 +18,10 @@
         .aqua {color:aqua;}
         li {color:pink;} 
         */
+
+        #green{
+            background: red;
+        }
     </style>
 </head>
 <body>
@@ -28,8 +32,8 @@
         <li class="red">목록2 - index 1</li>
         <li class="red">목록2 - indxe 2</li>
         <li>목록3</li>
-        <li id="green"></li>
-        <li class="aqua">목록0 - index 0</li>
+        <li id="green">목록1</li>
+        <li class="aqua">목록1 - index 0</li>
         <li class="aqua">목록1 - index 1</li>
         <li>목록3</li>
       </ul>
@@ -51,13 +55,23 @@
         document.getElementsByClassName("red")[1].style.color="red";
         document.getElementsByTagName("li")[5].style.borderTop="1px solid";
 
+        // document.getElementById("orange").style.color="orange";
+        // document.getElementsByClassName("red")[2].style.color="purple";
+        // document.getElementsByTagName("li")[0].style.color="lime";
+
         //단일 요소
         document.querySelector("ul").style.borderLeft="5px solid";
-        document.querySelector("#green").style.width="400px";
+        document.querySelector("#green").style.width="400px"; /* Q. #green의 영역에 배경색 주고 width바뀌는지 봤는데 주석처리해도 그대로인 이유는 뭔가요 */
         document.querySelector(".aqua").style.borderTop="solid";
+
+        document.querySelector("ul").style.borderRight="5px solid";
+        document.querySelector("#green").style.width="400px";
+        documemt.querySelector(".aqua").style.borderBottom="dotted"; /* Q. 얘는 적용이 왜 안되나요 그리고 얘를 주석처리하니까 밑에 .aqua의 인덱스2가 아쿠아색이 되는데 왜 그런거죠? */
 
         //같은 요소가 한 개 이상
         document.querySelectorAll(".aqua")[2].style.color="aqua";
+
+        document.querySelectorAll(".aqua")[2].style.color="yellow"; /* Q. 얘를 쓰니까 갑자기 위에 aqua색 지정도 안됩니다. */
 
         //객체: document
         //메소드: getElementById() - 동작

@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-   <h1>요소찾기</h1>
+   <h1>jquery 요소찾기</h1>
     <ul>
         <li id="orange">목록1</li>
         <li class="red">목록2 - index 0</li>
@@ -33,15 +33,19 @@
 
         $(".red").eq(0).css("color", "red");
 
-        $("ul").eq(5).css("borderTop", "1px solid");
+        $("ul").eq(5).css("borderTop", "1px solid"); /* Q. ul은 단일요소인데 여러개있는거처럼 순번지정해줘서 안먹는거 맞나요? */
 
         $("ul").css("borderLeft", "1px dotted");
 
-        $("ul").eq(0).css("borderTop", "1px dashed");
+        $("ul").eq(0).css("borderTop", "1px dashed"); /* Q. 근데 얘는 잘 실행되는데 뭐가 다른거죠 */
 
         //객체: $("문자열")
         //메소드: .eq(순번), css("속성(문자열)","값(문자열)")
         //문장 끝은 ;으로 기록한다.
+
+        $("#orange").css("color","purple");
+        $(".red").eq(1).css("color","pink");
+        $("ul").eq(4).css("borderBottom", "1px solid"); /* Q. 얘도 실행이 안됩니다 */
 
       </script>
 </body>
