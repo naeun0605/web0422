@@ -1,71 +1,251 @@
 @charset "utf-8";
+@import url("reset.css");
+@import url("typo.css");
 
-/* header */
+/* 스르륵 스르륵 효과 */
+html{
+    scroll-behavior: smooth;
+}
+
+/* 헤더*/
 header {
+    position:fixed; /* 상단 고정 */
+    width:100%;
+    /* position이 fixed나 absolute면 width가 콘텐츠 크기로 줄어든다! */
+    /* position이 relative는 width가 그대로 100% */
     display: flex;
     justify-content: space-between;
-    /* 하나는 왼쪽 하나는 끝쪽으로 감 */
-    height: 56px;
-    line-height: 56px;
-    padding: 0 36px;
-
+    align-items: center;
+    height: 54px;
+    padding: 0 30px;
+    /* 위아래는 0, 좌우는 30px여백 => 높이가 54로 확정되어있어서 위아래 padding주면 안됨*/
+    background: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-nav li{
-    display:inline-block; 
-    /* 가로배치하는 제일 간단한 방법 */
-    padding-left: 36px;
-}
-
-/* Section의 공통부분 */
-section {
-    width: 1500px;
-    margin: 0 auto;
-}
-
-h2 {
-    border-bottom: 1px solid #ccc;
-    padding: 24px 0;
-    margin-bottom: 48px;
-    margin-top: 64px;
-}
-
-/* section1 */
-.s1 {
-    height: 745px;
-
-}
-
-.s1 h2 {
-    border: none;
-    /* 밑줄제거 */
-    margin: 0;
-    /* 위쪽 여백 제거 */
-}
-
-.s2 ul {
+nav ul {
     display: flex;
-    /* 부모를 display: flex */
+    /* nav 안에 있는 ul이 가로배치 */
+}
+
+nav ul li {
+    margin-left: 40px;
+    /* li 사이끼리의 간격때문에 왼쪽에 마진 */
+}
+
+/* 섹션1 */
+#sec1 h2 {
+    letter-spacing
+    /* 자간 */
+    : 4px;
+    font-weight: 400;
+}
+
+#sec1 b {
+    background: #000;
+    color: #fff;
+    padding: 8px 16px;
+    margin-right: 16px;
+}
+
+#sec1 section {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+
+#sec1 div {
+    width: 1496px;
+    height: 745px;
+    background: #ccc;
+}
+
+#sec1 h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -110px;
+    margin-top: -16px;
+
+    /* 
+            position:absolute;
+            left: 50%;
+            top: 50%; 
+            transform : translate(-50%, -50%) 
+            */
+            /* 이거 하면 h2는 투명인간 처리됨 */
+}
+
+
+
+/* 섹션2*/
+/* 섹션2,3,4 공통*/
+section {
+    width: 1480px;
+    margin: 0 auto;
+    /* 가운데정렬 */
+    padding-top: 80px;
+    /* 
+                        justify-content:center;는 자식을 가운데 배치, display-flex가 있어야함
+                        margin:0 auto;는 자기자신을 가운데 배치 , width가 있어야함
+                    */
+}
+
+/* 섹션2,3 공통 */
+section li{
+    width: 355px;
+}
+#sec2 li:not(:nth-of-type(4n)) {
+    margin-right: 0;
+}
+/* 이렇게 not으로 쓰면 #sec2 li에 margin-right안줘도 됨 */
+
+
+
+#sec2 h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 24px;
+    margin-top: 72px;
+    margin-bottom: 48px;
+}
+
+#sec2 ul {
+    display: flex;
     flex-wrap: wrap;
 }
 
-/* section2 */
-.s2 li {
-    width: 360px;
+#sec2 li {
     height: 240px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /*  ? */
 }
 
-.s2 li:nth-of-type(4n) {
-    margin: 0;
-}
-
-.s2 h3 {
-    display: inline-block;
+#sec2 h3 {
+    position: absolute;
+    background: #000;
+    color: #fff;
     padding: 8px 24px;
 }
 
-/* section3 */
-/* section4 */
-/* footer */
+#sec2 div {
+    height: 100%;
+    /* div에 아무것도 없으니까 내용이 없으니까 100% */
+    background: #ccc;
+}
+
+
+/* 섹션3 */
+
+#sec3 h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+#sec3 p {
+    margin-bottom: 48px;
+}
+
+#sec3 ul {
+    display: flex;
+    background: yellow;
+}
+
+
+#sec3 li {
+    width: 355px;
+    margin-right: 20px;
+}
+
+/* 블록 레벨 요소의 width는 부모 크기 요소의 100퍼니까 부모인 li에만 적어주면 div에는 width안적어도됨 */
+
+
+#sec3 div {
+    height: 240px;
+    background: lightpink;
+}
+
+#sec3 h3 {
+    font-size: 2.4rem;
+    /* 24px */
+    margin: 24px 0;
+}
+
+/* li > p 도가능  >는 자식, 한 칸 떼면 자손(자식+손자)*/
+#sec3 li p {
+    margin: 24px 0;
+}
+
+#sec3 a {
+    display: block;
+    background: #ccc;
+    /* a는 인라인요소니까 콘텐츠 크기만큼만 차지함 그래서 블록으로 만들어주기  */
+    text-align: center;
+    /* 글씨 가운데 정렬 */
+    padding: 12px 0;
+    /* 잘 모르겠으면 여백은 8의 배수로 시작, 위아래만 여백 주고 좌우는 여백 주지 않을 거임*/
+}
+
+
+/* 섹션4 */
+
+/* contact 아래 줄글 밑에 밑줄 긋기 */
+#sec4 h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+#sec4 p {
+    margin-bottom: 24px;
+}
+
+/* input은 인라인블록이라 한줄로 나열되므로 줄바꿈을 위해 block으로 변경
+        인라인 블록도 줄바꿈 안되는데 공간이 모자라면 줄바꿈됨 */
+/* 인라인 요소도 크기가 모자라면 줄바꿈 되긴 함 ?*/
+
+/* input은 상속받지 않으므로 자기 자신의 글자크기, 글자 색 등을 가짐 */
+#sec4 input {
+    /*
+            이렇게 써도되는데 input은 인라인 블록이라 width지정되니까 그냥 block으로 안바꿔주고 width만 지정해도됨
+            display:block;
+            width:100%
+            */
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 8px 0;
+    padding-left: 8px;
+    border: 1px solid #ccc;
+}
+
+
+#sec4 button {
+    margin: 16px 0 48px;
+    /* 상 좌우 하 */
+    padding: 12px 20px;
+    background: #000;
+
+}
+
+#sec4 .map {
+    background: #ddd;
+    /* width: 845px; */
+    height: 845px;
+}
+
+/* 푸터*/
+footer {
+    display: flex;
+    /* 플렉스 아이템이 블록이되면 tac먹통 */
+    justify-content: center;
+    /* 수평중앙정렬 */
+    align-items: center;
+    /* 수직중앙정렬 */
+    height: 85px;
+    text-align: center;
+    /* 자식이 플렉스 아이템이 되면 먹통됨 */
+    /* padding: 30px 0; padding 위 아래 같게 주면 수직 가운데  */
+    background: #000;
+    color: #fff;
+}
