@@ -25,9 +25,8 @@ a, p, h1, h2, h3 {
 
 /* //reset */
 
-.tapBox ul{
-    display: flex;
-}
+
+
 
 input {
     padding-left:8px;
@@ -35,7 +34,6 @@ input {
 }
 
 button {
-    padding: 8px 16px;
     border:none;
     background: #000;
     color:#fff;
