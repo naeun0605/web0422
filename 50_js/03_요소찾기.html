@@ -21,16 +21,20 @@
     </style>
 </head>
 <body>
-    <!--  -->
+   <h1>요소찾기</h1>
     <ul>
         <li id="orange">목록1</li>
-        <li class="red">목록2</li>
+        <li class="red">목록2 - index 0</li>
+        <li class="red">목록2 - index 1</li>
+        <li class="red">목록2 - indxe 2</li>
         <li>목록3</li>
-        <li id="green">목록1</li>
-        <li class="aqua">목록2</li>
+        <li id="green"></li>
+        <li class="aqua">목록0 - index 0</li>
+        <li class="aqua">목록1 - index 1</li>
         <li>목록3</li>
       </ul>
 
+      <p class="aqua">나는 UL밖의 아쿠아 - index 2</p>
       <script>
         //변수 = 깂;
         //변수 = 변수;
@@ -42,23 +46,31 @@
         //문서의 아이디가 orange인 요소를 가져와서 style.color(글자색)에 "orange"를 할당한다.
         // . : 의
         // + 아이디는 한 문서내에서 유일하다.
+        // + index(순번)
         document.getElementById("orange").style.color="orange";
+        document.getElementsByClassName("red")[1].style.color="red";
+        document.getElementsByTagName("li")[5].style.borderTop="1px solid";
+
+        //단일 요소
+        document.querySelector("ul").style.borderLeft="5px solid";
+        document.querySelector("#green").style.width="400px";
+        document.querySelector(".aqua").style.borderTop="solid";
+
+        //같은 요소가 한 개 이상
+        document.querySelectorAll(".aqua")[2].style.color="aqua";
 
         //객체: document
         //메소드: getElementById() - 동작
         //속성: style.color = 특징
         //대입(할당) 연산자 : =
         //값(리터럴) : 문자열 데이터 -> "orange"
-        //문장 끝은 ;으로 기록한다.
+        //문장 끝은 ;으로 기록한다. (단, 선언적 함수와 제어문은 제외)
 
         //자바스크립트의 문장 내의 문자열은 반드시 "" 또는 ''로 묶는다.
         //자바스크립트는 대소문자 구별한다.
         //자바스크립트는 카멜 표기법(첫 글자는 소문자, 두 번째 단어부터 단어별 첫 글자는 대문자)을 사용한다.
         //단어와 단어는 .(도트)로 구분한다.\
 
-        document.getElementById("green").style.color="green";
-
-        document.getElementsClassName("red").style.color="red"; /* 시도해봤는데 안됨 */
       </script>
 </body>
 </html>
