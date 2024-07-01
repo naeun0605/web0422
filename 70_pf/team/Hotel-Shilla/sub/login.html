@@ -94,9 +94,10 @@
         <div class="full_login">
 
             <div class="login_chk">
+
+                <!-- 회원 탭 -->
                 <input type="radio" name="btn" id="btn1" checked>
                 <label for="btn1">회원</label>
-
                 <div class="member1">
                     <form action="login.jsp">
                         <input type="text" name="user_id" placeholder="아이디">
@@ -105,20 +106,21 @@
                     </form>
                 </div>
 
-                <input type="radio" name="btn" id="btn2">
+                <!-- 비회원 탭 -->
+                <input type="radio" name="btn" id="btn2" >
                 <label for="btn2">비회원(예약확인)</label>
-
                 <div class="member2">
                     <form action="login.jsp">
-                        <input type="text" name="user_id" placeholder="아이디">
-                        <input type="password" name="user_pw" placeholder="비밀번호">
-                        <button type="submit">로그인</button>
+                        <input type="text" name="user_number" placeholder="예약번호">
+                        <input type="text" name="user_name" placeholder="이름">
+                        <input type="text" name="user_phone" placeholder="010">
+                        <button type="submit">예약내역조회</button>
                     </form>
                 </div>
 
             </div>
 
-            <div class="member">
+            <div class="recommand_join">
                 <h2>아직 회원이 아니신가요?</h2>
                 <p>신라호텔 회원이 되시면 신라리워즈 회원으로서 더 큰 혜택과 편리함을 누리실 수 있습니다.</p>
                 <form action="join_jsp">

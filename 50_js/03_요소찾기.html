@@ -61,17 +61,19 @@
 
         //단일 요소
         document.querySelector("ul").style.borderLeft="5px solid";
-        document.querySelector("#green").style.width="400px"; /* Q. #green의 영역에 배경색 주고 width바뀌는지 봤는데 주석처리해도 그대로인 이유는 뭔가요 */
+        document.querySelector("#green").style.width="1000px"; /* Q1. #green의 영역에 배경색 주고 width바뀌는지 봤는데 주석처리해도 그대로인 이유는 뭔가요 */
         document.querySelector(".aqua").style.borderTop="solid";
 
         document.querySelector("ul").style.borderRight="5px solid";
-        document.querySelector("#green").style.width="400px";
-        documemt.querySelector(".aqua").style.borderBottom="dotted"; /* Q. 얘는 적용이 왜 안되나요 그리고 얘를 주석처리하니까 밑에 .aqua의 인덱스2가 아쿠아색이 되는데 왜 그런거죠? */
+        document.querySelector("#green").style.width="1000px";
+        documemt.querySelector(".aqua").style.borderBottom="dotted"; /* Q2. 얘는 적용이 왜 안되나요 그리고 얘를 주석처리하니까 밑에 .aqua의 인덱스2가 아쿠아색이 되는데 왜 그런거죠? */
 
         //같은 요소가 한 개 이상
-        document.querySelectorAll(".aqua")[2].style.color="aqua";
+        // document.querySelectorAll(".aqua")[2].style.color="aqua";
 
-        document.querySelectorAll(".aqua")[2].style.color="yellow"; /* Q. 얘를 쓰니까 갑자기 위에 aqua색 지정도 안됩니다. */
+        // document.querySelectorAll(".aqua")[2].style.color="yellow"; 
+        
+        /* Q3. 얘를 쓰니까 갑자기 위에 aqua색 지정도 안됩니다. */
 
         //객체: document
         //메소드: getElementById() - 동작
