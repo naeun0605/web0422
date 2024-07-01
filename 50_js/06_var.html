@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>변수(variable)</h1>
+    <p>변수는 데이터(값)를 저장하는 공간이다.</p>
+
+
+    <script>
+        var a = 5; //문(statement) => 키워드(var) 식별자(a) 대입(할당)연산자(=) 값(5);
+        // 변수 선언 및 할당
+        // 표현식은 결과 값이 있는 식 ex) 5
+
+        //식별자 : 첫 글자는 영문자, 두번째 글자붵 숫자와 조합, 대소문자 구별
+
+        //=은 대입(할당)연산자로 오른쪽의 값을 식별자에 넣는다.  
+
+
+        var b; //b를 변수로 선언한다
+        b = 2; //b에 2를 할당한다
+
+        var c = 5, d = 2, e, f;
+
+        var c = 5;
+        var d = 2;
+        var e;
+        var f;
+
+        //console.log(a,b,c,d,e,f);
+        //e, f는 undefined가 할당된다.(값을 할당하지 않으면 undefinde가 할당됨)
+
+        console.log("a =",a);
+        console.log("b =",b);
+        console.log("c =",c);
+        console.log("d =",d);
+        console.log("e =",e);
+        console.log("f =",f);
+
+        var a = 5;
+        var a2 = "오";
+        var a3 = true;
+        var a4 = function(){}; //익명함수
+
+        var a5 = document.querySelector('h1'); //document는 객체, querySelector은 메소드
+        a5.style.fontSize = "10px";
+        a5.style.border = "1px solid blue";
+
+        document.querySelector('p').style.fontSize = "30px";
+        document.querySelector('p').style.border = "1pd solid red";
+
+        var a6 = a;  //변수 = 변수;
+        console.log("a6 =", a6);
+
+        //변수 = 표현식(값, 변수, 연산자, 수식 등등..)
+        var a7 = 5 + 2;
+        console.log("a7 =", a7);
+        var a8 = a + 2;
+        console.log("a8 =", a8);
+   
+        //NaN(Not a Number)
+
+    </script>
+</body>
+</html>

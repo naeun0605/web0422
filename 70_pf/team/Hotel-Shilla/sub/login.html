@@ -6,55 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Shilla - Hotels & Resorts</title>
     <link rel="stylesheet" href="./../CSS/HF.css">
-
     <link rel="stylesheet" href="./../CSS/login.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Jomolhari&display=swap');
-
-        /* reset */
-        * {
-            box-sizing: border-box;
-        }
-
-        :root {
-            font-size: 12px;
-        }
-
-        body,
-        ul {
-            margin: 0 auto;
-        }
-
-        ul {
-            padding-left: 0;
-            list-style: none;
-        }
-
-        a,
-        p,
-        h1,
-        h2,
-        h3 {
-            margin: 0;
-            text-decoration: none;
-            color: #4A433B;
-            font: 400 16px "Noto Sans KR", sans-serif;
-        }
-
-        /* //reset */
-
-        input {
-            padding-left: 8px;
-        }
-
-        button {
-            padding: 8px 16px;
-            border: none;
-            background: #000;
-            color: #fff;
-        }
     </style>
 </head>
 
@@ -120,38 +76,47 @@
         </div>
     </header>
 
-    <!-- 작업하신걸 헤더랑 푸터 사이에 넣어주세요! -->
-    <section>
-        <div></div>
-    </section>
-
     <!-- section1-->
 
-    <div class="main">
+    <div class="main_login">
 
         <!-- login-des -->
-        <div class="login-des">
+        <div class="login_des">
             <h2>로그인</h2>
             <p>
                 신라 호텔에 오신 것을 환영합니다.<br>
                 로그인을 하시면 더욱 편리하게 이용하실 수 있습니다.
             </p>
-        </div> 
+        </div>
         <!-- login-des end-->
 
-
-        <!-- login-full -->    
+        <!-- full-login -->
         <div class="full_login">
-            <div class="login">
-                <form action="login.jsp">
-                    <!-- 아이디 -->
-                    <input type="text" name="user_id" placeholder="아이디">
-                    <!-- 비밀번호-->
-                    <input type="password" name="user_pw" placeholder="비밀번호">
-                    <button type="submit">로그인</button>
-                </form>
+
+            <div class="login_chk">
+                <input type="radio" name="btn" id="btn1" checked>
+                <label for="btn1">회원</label>
+
+                <div class="member1">
+                    <form action="login.jsp">
+                        <input type="text" name="user_id" placeholder="아이디">
+                        <input type="password" name="user_pw" placeholder="비밀번호">
+                        <button type="submit">로그인</button>
+                    </form>
+                </div>
+
+                <input type="radio" name="btn" id="btn2">
+                <label for="btn2">비회원(예약확인)</label>
+
+                <div class="member2">
+                    <form action="login.jsp">
+                        <input type="text" name="user_id" placeholder="아이디">
+                        <input type="password" name="user_pw" placeholder="비밀번호">
+                        <button type="submit">로그인</button>
+                    </form>
+                </div>
+
             </div>
-        
 
             <div class="member">
                 <h2>아직 회원이 아니신가요?</h2>
@@ -160,6 +125,7 @@
                     <button type="submit">회원가입</button>
                 </form>
             </div>
+
         </div>
         <!-- login-full end -->
 

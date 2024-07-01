@@ -27,7 +27,6 @@ a, p, h1, h2, h3 {
 
 
 
-
 input {
     padding-left:8px;
     display: block;
@@ -39,3 +38,90 @@ button {
     color:#fff;
 }
 
+
+/* .main_login {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: lightblue;
+} */
+
+.login_des {
+    width: 1903px;
+    height: 200px;
+    padding-left: 280px;
+    padding-top : 80px;
+}
+
+
+
+.full_login {
+    padding : 50px 0 0 50px;
+    width: 1903px;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+
+.login_chk {
+    position: relative;
+    width: 600px;
+    height: 200px;
+    padding: 2px;
+    border: 1px solid;
+}
+
+.login_chk label {
+    display: inline-block;
+    padding: 2px 24px;
+    background: #999; /* 비활성화 상태 */
+    color: #777;
+    cursor: pointer;
+}
+
+.login_chk div {
+    display: none;
+    position: absolute;
+    width: calc(100% - 4px);
+    height: calc(100% - 31px);
+    border: 1px solid;
+    padding: 16px;
+}
+
+.login_chk input[type="radio"] {
+    display: none;
+    /* 스타일 안보이게 숨김 */
+}
+
+.login_chk input:checked+label {
+    background: #333;
+    color: #fff;
+}
+
+.login_chk input:checked+label+div {
+    display: block;
+}
+
+/* bg-color */
+.member1 {
+    background: #ddd;
+}
+
+.member2 {
+    background: #ccc;
+}
+
+/* form */
+input {
+    padding-left: 8px;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    background: #000;
+    color: #fff;
+}
