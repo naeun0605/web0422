@@ -49,13 +49,13 @@ button {
 .login_des {
     width: 1903px;
     height: 200px;
-    padding-left: 280px;
+    padding-left: 350px;
     padding-top : 80px;
 }
 
 
 .full_login {
-    padding : 48px 0 0 48px;
+    padding : 40px 0 0 40px;
     width: 1903px;
     height: 300px;
     display: flex;
@@ -67,30 +67,35 @@ button {
     position: relative;
     width: 480px;
     height: 200px;
-    padding: 2px;
-    /* border: 1px solid; */
-    text-align: left;
-    background: #000;
+    background: #fff;
 }
 
 
 
 .login_chk label {
-    display: inline-block;
-    background: #999; /* 비활성화 상태 */
-    color: #777;
+    position:absolute;
+    background: #fff; /* 비활성화 상태 */
+    color: #999;
     cursor: pointer;
-    background: yellow;
-    width: 230px;
-    height: 30px;
+    width: 240px;
+    height: 40px;
+    text-align: center;
+    line-height: 30px;
+    border:1px solid;
+}
+
+#btn2 + label {
+    left:240px;
 }
 
 .login_chk div {
+    
     display: none;
     position: absolute;
     width: 480px;
     /* border: 1px solid; */
     padding: 48px;
+    top:30px;
 }
 
 .login_chk input[type="radio"] {
@@ -99,8 +104,8 @@ button {
 }
 
 .login_chk input:checked+label {
-    background: #333;
-    color: #fff;
+    background: #fff;
+    color: black;
 }
 
 .login_chk input:checked+label+div {
@@ -109,11 +114,13 @@ button {
 
 /* bg-color */
 .member1 {
-    background: #ddd;
+    background: #fff;
+    border:1px solid;
 }
 
 .member2 {
-    background: #ccc;
+    background: #fff;
+    border:1px solid;
 }
 
 .recommand_join{
