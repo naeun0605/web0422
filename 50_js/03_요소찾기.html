@@ -51,29 +51,6 @@
         // . : 의
         // + 아이디는 한 문서내에서 유일하다.
         // + index(순번)
-        document.getElementById("orange").style.color="orange";
-        document.getElementsByClassName("red")[1].style.color="red";
-        document.getElementsByTagName("li")[5].style.borderTop="1px solid";
-
-        // document.getElementById("orange").style.color="orange";
-        // document.getElementsByClassName("red")[2].style.color="purple";
-        // document.getElementsByTagName("li")[0].style.color="lime";
-
-        //단일 요소
-        document.querySelector("ul").style.borderLeft="5px solid";
-        document.querySelector("#green").style.width="1000px"; /* Q1. #green의 영역에 배경색 주고 width바뀌는지 봤는데 주석처리해도 그대로인 이유는 뭔가요 */
-        document.querySelector(".aqua").style.borderTop="solid";
-
-        document.querySelector("ul").style.borderRight="5px solid";
-        document.querySelector("#green").style.width="1000px";
-        documemt.querySelector(".aqua").style.borderBottom="dotted"; /* Q2. 얘는 적용이 왜 안되나요 그리고 얘를 주석처리하니까 밑에 .aqua의 인덱스2가 아쿠아색이 되는데 왜 그런거죠? */
-
-        //같은 요소가 한 개 이상
-        // document.querySelectorAll(".aqua")[2].style.color="aqua";
-
-        // document.querySelectorAll(".aqua")[2].style.color="yellow"; 
-        
-        /* Q3. 얘를 쓰니까 갑자기 위에 aqua색 지정도 안됩니다. */
 
         //객체: document
         //메소드: getElementById() - 동작
@@ -81,6 +58,47 @@
         //대입(할당) 연산자 : =
         //값(리터럴) : 문자열 데이터 -> "orange"
         //문장 끝은 ;으로 기록한다. (단, 선언적 함수와 제어문은 제외)
+
+        // document.getElementById("orange").style.color="orange";
+        // document.getElementsByClassName("red")[1].style.color="red";
+        // document.getElementsByTagName("li")[5].style.borderTop="1px solid";
+
+        //연습
+        // getElementsByCalssName, getElementsByTadName은 인덱스 넘버 써줘야함
+        // document.getElementById("orange").style.color="orange";
+        // document.getElementsByClassName('red')[2].style.color="red"; 
+        // document.getElementsByTagName("li")[5].style.border="1px solid";
+    
+
+        //단일 요소
+        // document.querySelector("ul").style.borderLeft="5px solid";
+        // document.querySelector(".aqua").style.borderTop="solid";
+        // document.querySelector("#green").style.width="1000px"; 
+
+        //연습
+        // document.querySelector("ul").style.borderLeft="5px solid pink";
+        // document.querySelector("#green").style.width="1000px";
+        // document.querySelector(".aqua").style.borderTop="solid";
+        Q1. querySelector는 단일요소일때 사용한다고 했는데 .aqua는 처음에 한개였는데 나중에 추가했던거 같아서 지금은 두개인 상태인데도 적용되는데 (맨위 .aqua가 됨) 단일요소일때만 적용되어야 하는거 아닌가요 ?? 이게 인덱스번호 안쓰면 첫번쨰 인덱스가 적용된다는 그건가요 ?? 
+        => getElementsByClassName이랑 getElementsByTagName이랑 querySelectorAll은 인덱스번호 안쓰면 적용안됨
+
+        // document.querySelector("ul").style.borderRight="5px solid";
+        // document.querySelector("#green").style.width="1000px";
+        // documemt.querySelector(".aqua").style.borderBottom="dotted"; 
+
+        //연습
+        // document.querySelector("ul").style.borderRight="5px solid";
+        // document.querySelector("#green").style.width="500px";
+        // document.querySelector(".aqua").style.borderBottom="dotted";
+
+        //같은 요소가 한 개 이상
+        // document.querySelectorAll(".aqua")[2].style.color="aqua";
+        // document.querySelectorAll(".aqua")[2].style.color="yellow"; 
+        
+        // 연습
+        // document.querySelectorAll(".aqua")[1].style.color="aqua";
+        // document.querySelectorAll(".aqua")[1].style.color="yellow";
+
 
         //자바스크립트의 문장 내의 문자열은 반드시 "" 또는 ''로 묶는다.
         //자바스크립트는 대소문자 구별한다.
