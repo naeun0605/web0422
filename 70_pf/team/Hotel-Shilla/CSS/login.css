@@ -39,27 +39,30 @@ button {
 }
 
 
-/* .main_login {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background: lightblue;
-} */
-
 /* 로그인 설명글 */
 .login_des {
     width: 1903px;
-    height: 200px;
+    height: 178px;
     padding-left: 350px;
     padding-top : 80px;
 }
 
+.login_des h2 {
+    width: 1903px;
+    height: 40px;
+    font-weight: 600;
+    color: #856F56;
+}
+
+.login_des p {
+    color:#777;
+}
 /* 로그인 및 회원가입 권유 박스 전체 */
 .full_login {
     padding : 40px 0 0 40px;
     width: 1903px;
-    height: 300px;
-    display: flex;
+    height: 500px;
+    display: flex; 
     justify-content: space-evenly;
 }
 
@@ -67,22 +70,28 @@ button {
 .login_chk {
     position: relative;
     width: 480px;
-    height: 200px;
+    height: 240px;
     background: #fff;
+    padding: 2px;
+
 }
 
 
 /* 회원, 비회원 쓰여진 탭부분 */
 .login_chk label {
     position:absolute; /* df를 쓰면 login_chk에 들은 모든것들이 가로 배치 되므로 position사용 */
-    background: red; /* 비활성화 상태 */
-    color: #999;
+    background: #fff; /* 비활성화 상태 */
+    color: #777;
     cursor: pointer;
     width: 240px;
-    height: 50px;
+    height: 48px;
     text-align: center;
-    line-height: 30px;
-    border:1px solid;
+    line-height: 48px;
+    /* border-left:1px solid #856F56;
+    border-bottom:1px solid #856F56; */
+    /* border-left:1px solid #856F56;
+    border-top:1px solid #856F56; */
+    z-index:99;
 }
 
 /* 비회원 탭을 오른쪽으로 240px만큼 이동 */
@@ -96,7 +105,7 @@ button {
     position: absolute; /* 로그인 전체 박스랑 겹쳤으므로 */
     width: 480px;
     /* border: 1px solid; */
-    padding: 48px;
+    padding-top: 48px;
     top:30px;
 }
 
@@ -109,31 +118,113 @@ button {
 .login_chk input:checked+label {
     background:#fff;
     color: black;
+    border-left:1px solid #856F56;
+    border-top:1px solid #856F56;
+    border-right:1px solid #856F56;
 }
 
 /* 눌러진 탭의 콘텐츠 영역 */
 .login_chk input:checked+label+div {
     display: block;
+    /* left:-50px;
+    top:50px; */
+}
+
+/* Q 얘는 왜 인식이 안되나요 .member가 input을 담고 있어서 안되는 건줄 알고 밑에 input부분 주석처리해도 안먹어요*/
+/* .member1 {
+    width: 480px;
+    height:214px;
+    background: red; 
+} */
+
+/*회원 탭 콘텐츠 안에 아이디, 비밀번호 */
+  .member1 input {
+    width: 480px;
+    height: 48px;
+}
+
+.pw {
+
+    margin: 20px 0 20px 0;
+}
+
+/* 회원 탭 콘텐츠 안에 로그인버튼 */
+.member1 button {
+    width: 480px;
+    height: 56px;
+    background: #856F56;
+    font-size: 18px;
+}
+
+/* .member2 {
+    width: 480px;
+    height: 234px;
+} */
+
+/* 비회원 탭 콘텐츠 안에 예약번호, 이름, 010*/
+.member2 input {
+    width: 480px;
+    height: 48px;
+}
+
+.name {
+    margin: 20px 0 20px 0;
+}
+
+/* 비회원 탭 콘텐츠 안에 예약내역조회버튼 */
+.member2 button {
+    width: 480px;
+    height: 56px;
+}
+
+.res_btn {
+    margin: 20px 0 20px 0;
+    background: #856F56;
+    font-size: 18px;
+}
+
+/* 오른쪽에 회원가입 권유 */
+.recommand_join{
+    width: 480px;
+    height: 176px;
+    padding-top : 64px;
+}
+
+.recommand_join h2{
+    font-size: 18px;
+    height: 30px;
+    padding-bottom:24px;
+    color : #856F56;
+    font-weight: 600;
+}
+
+.recommand_join p {
+    height: 70px;
+    font-size: 16px;
+}
+
+.recommand_join button{
+
+    width: 480px;
+    height: 56px;
+    background: #fff;
+    color: #856F56; 
+    border : 1px solid #856F56;
 }
 
 /* bg-color */
 /* 회원 탭의 콘텐츠 영역 */
 .member1 {
     background: #fff;
-    border:1px solid;
+    /* border:1px solid; */
 }
 
 /* 비회원 탭의 콘텐츠 영역 */
 .member2 {
     background: #fff;
-    border:1px solid;
+    /* border:1px solid; */
 }
 
-/* 오른쪽에 회원가입 권유 */
-.recommand_join{
-    width: 480px;
-    height: 200px;
-}
 
 /* form */
 input {
