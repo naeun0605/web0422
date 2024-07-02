@@ -13,9 +13,9 @@
     <script>
         var a = 5; //문(statement) => 키워드(var) 식별자(a) 대입(할당)연산자(=) 값(5);
         // 변수 선언 및 할당
-        // 표현식은 결과 값이 있는 식 ex) 5
+        // 표현식은 결과 값이 있는 식 ex) 5. =. ...
 
-        //식별자 : 첫 글자는 영문자, 두번째 글자붵 숫자와 조합, 대소문자 구별
+        //식별자 : 첫 글자는 영문자, 두번째 글자부터 숫자와 조합, 대소문자 구별
 
         //=은 대입(할당)연산자로 오른쪽의 값을 식별자에 넣는다.  
 
@@ -40,28 +40,50 @@
         console.log("e =",e);
         console.log("f =",f);
 
-        var a = 5;
+        var a1 = 5;
         var a2 = "오";
         var a3 = true;
         var a4 = function(){}; //익명함수
 
-        var a5 = document.querySelector('h1'); //document는 객체, querySelector은 메소드
-        a5.style.fontSize = "10px";
-        a5.style.border = "1px solid blue";
+        //document는 객체, querySelector은 메소드
+        // var a5 = document.querySelector('h1'); 
+        // a5.style.fontSize = "30px";
+        // a5.style.border = "1px solid blue";
+        
+        //연습
+        //var a5 = document.querySelector("h1");
+        //a5.style.fontSize = "100px";
+        //a5.style.border = "1px solid red";
 
-        document.querySelector('p').style.fontSize = "30px";
-        document.querySelector('p').style.border = "1pd solid red";
+        // document.querySelector('p').style.fontSize = "30px";
+        // document.querySelector('p').style.border = "1pd solid red";
+        
+        //연습
+        //document.querySelector("p").style.fontSize = "50px";
+        //document.querySelector("p").style.border = "2px dotted pink";
 
-        var a6 = a;  //변수 = 변수;
-        console.log("a6 =", a6);
+        //변수 = 변수;
+        //var a6 = a1;  
+        // console.log("a6 =", a6);
+
+        //연습
+        //var a6 = a1;
+        //console.log("a6 = ", a6);
 
         //변수 = 표현식(값, 변수, 연산자, 수식 등등..)
-        var a7 = 5 + 2;
-        console.log("a7 =", a7);
-        var a8 = a + 2;
-        console.log("a8 =", a8);
+        // var a7 = 5 + 2;
+        // console.log("a7 =", a7);
+        // var a8 = a + 2;
+        // console.log("a8 =", a8);
    
         //NaN(Not a Number)
+
+        //연습
+        var a7 = 5+2;
+        console.log("a7 =", a7);
+
+        var a8 = a1+2;
+        console.log("a8 =", a8);
 
     </script>
 </body>
