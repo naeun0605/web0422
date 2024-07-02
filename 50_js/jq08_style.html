@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>요소에 스타일 적용하기</h1>
+    <div>박스1</div>
+    <div>박스2</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- - Google CDN -->
+
+    <script>
+    /* 
+        객체.메서드(인수, 인수,...);
+        인수는 메서드마다 정해져있다.
+
+        CSS메서드를 사용하는 방법 2가지
+
+        방법1: element.css("속성", 값);
+
+        방법2: element.css({속성:값, 속성:값, ...});
+            객체 형식으로 작성할 경우 CSS의 속성명으로 작성하면 ""를 반드시 사용하고, 카멜 표기법으로 표기하면 ""를 생략 가능
+
+            const eleDiv = $('div').eq(0);
+            eleDiv.css("width" ,"100px"); 
+            eleDiv.css("height" ,"100px"); 
+            eleDiv.css("backgroundColor" ,"lightpink"); 
+
+            이거를 객체 형식으로 바꾼다면
+
+            eleDiv.css {
+                width:"100px", 
+                height:100, 
+                backgroundColor:"pink"
+                };
+                
+            => 속성명에 "" 생략가능 만약에 back-ground:pink로 쓰고싶으면 ""써서 "background-color"="pink"이렇게 써야한다.
+
+
+
+
+
+
+
+        element.css(인수1("css속성명"), 인수2("속성값")) <- css의 메서드는 인수 두개만 써야함
+        element.eq(숫자) <- eq는 인수 한개
+        
+
+        element.css("width", "100px"); //단위까지 쓰려면 문자열처럼 "" 묶어주기
+        element.css("width", 100);
+
+        객체
+            {
+                속성:값, 
+                속성:값, 
+                ...
+            }
+
+            객체는 속성과 메서드를 가지고 있다..
+            메서드는 속성이다.
+            함수를 값으로 한 속성을 메서드라고 한다.
+
+            속성들 중에 특별히 그 값이 함수인 속성을 메서드라고 한다.
+
+            
+        함수
+            function(){}
+    */
+
+    /* 
+        요소(element)찾기
+        $('선택자')
+    */
+
+    const eleDiv = $('div').eq(0);
+    eleDiv.css("width" ,"100px"); 
+    eleDiv.css("height" ,"100px"); 
+    eleDiv.css("backgroundColor" ,"lightpink"); 
+
+
+    </script>
+</body>
+</html>

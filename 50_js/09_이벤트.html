@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>이벤트</h1>
+    <p>이벤트(Event)는 어떤 사건을 의미합니다. 브라우저에서의 사건이란 사용자가 "클릭을 했을 때", "스크롤을 했을 때", "무언가 입력했을 때" 등의 상호작용으로 인해 일어나는 사건을 의미한다.이벤트는 일반적으로 함수에 연결되며, 이 함수를 이벤트 핸들러(Event Handler) 라고 합니다.</p>
+
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <p>여기에 표시됩니다.</p>
+
+    <script>
+        /* 
+            방법1
+            element.on이벤트 = 함수;
+            element.onclick = function(){실행코드;};
+
+            방법2 => 이거 추천!!
+            element.addEventListener("이벤트", function(){실행 코드});
+
+            이벤트 : click, mouseenter, mouseleave, resize, scroll, ...
+            이벤트 전파 : 자식에서 부모한테 전파된다. (=버블링)
+
+
+        */
+
+        //요소를 찾으면서 동시에 스타일을 적용시키는 방법
+        document.querySelector('.box1').style.width = "200px";   // "" 생략불가
+        document.querySelector('.box1').style.height = "200px";   // "" 생략불가
+        document.querySelector('.box1').style.border = "solid";
+        document.querySelector('.box1').style.margin = "5px"; 
+
+        document.querySelector('.box2').style.width = "200px"; 
+        document.querySelector('.box2').style.height = "200px";
+        document.querySelector('.box2').style.border = "solid";
+        document.querySelector('.box2').style.margin = "5px";
+
+
+
+
+        // 변수 선언으로 요소찾기
+        const eleBox1 = document.querySelector('.box1');
+        const eleBox2 = document.querySelector('.box2');
+
+        // 요소에 스타일 적용하는 방법 => 위 방법보다 더 바람직
+        eleBox1.style.width = "200px";
+        eleBox1.style.height = "200px";
+        eleBox1.style.border = "solid";
+        eleBox1.style.margin = "5px";
+
+        eleBox2.style.width = "200px";
+        eleBox2.style.height = "200px";
+        eleBox2.style.border = "solid";
+        eleBox2.style.margin = "5px";
+
+        //이벤트 처리 - 방법1로 사용 = eleBox1을 클릭하면 함수를 실행시킨다(배경을 분홍색으로 해라) = 익명함수로 표현
+        eleBox1.onmouseenter = function(){
+            eleBox1.style.background = "pink";
+        };
+
+        //함수호출 / 선언적 함수로 표현
+        eleBox1.onmouseleave = reset; //처음부터 호출못하게 ()생략
+        function reset(){
+            eleBox1.style.background = "transparent"; //투명
+            console.log(eleBox1.style.background);
+        }
+
+        //이벤트 처리 - 방법2로 사용 = 익명함수로 표현
+        eleBox2.addEventListener("mouseenter", function(){
+            eleBox2.style.background = "red";
+        });
+
+        //이벤트 처리 - 방법2로 사용 = 선언적 함수로 표현
+        eleBox2.addEventListener("mouseleave", reset2); 
+        function reset2(){
+            eleBox2.style.background = "transparent";
+        }
+
+    
+
+
+
+    </script>
+</body>
+</html>
