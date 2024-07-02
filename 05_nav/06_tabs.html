@@ -27,51 +27,62 @@
             font: 400 1.5rem/1.5 "Noto Sans KR", sans-serif;
         }
 
+        /* 탭 박스 전체 */
         .tabs {
-            position: relative;
+            position: relative; /* tab박스 전체랑 tab1, tab2가 겹침  */
             width: 400px;
             height: 200px;
             padding: 2px;
             border: 1px solid;
+            
         }
 
+        /* 공지사항, 갤러리 쓰여진 탭부분 */
         .tabs label {
-            display: inline-block;
+            display: inline-block; 
+            /* 가로배치를 위해 인라인블록을 쓴건가요? 근데 이걸 주석처리해도 가로배치는 그대로 되고 위치만 살짝 이동됩니다..ㅠ 어제 df를 쓸수없어서 포지션을 쓴다고 하셨잖아요 그러면 가로배치할 수 있는 방법이 총 세가지 인거죠*/
             padding: 2px 24px;
             background: #999;
             color: #777;
             cursor: pointer;
         }
 
+        /* 탭 아래 콘텐츠 부분 */
         .tabs div {
-            display: none;
-            position: absolute;
+            display: none; /* 갤러리의 컨텐츠 부분을 안보이게함 */
+            position: absolute; /* 탭박스 전체랑 tab1, tab2가 겹침 */
             width: calc(100% - 4px);
             height: calc(100% - 31px);
             padding: 16px;
         }
 
         .tabs input {
-            display: none;
+            display: none; /* 탭에 라디오 버튼 숨김 */
         }
 
+        /* 누른 탭 */
         .tabs input:checked+label {
             background: #333;
             color: #fff;
         }
 
+        /* 누른 탭에 해당하는 콘텐츠 내용 */
         .tabs input:checked+label+div {
             display: block;
+             /* Q2. 이거 주석처리하면 다 안보여지는데 왜 그런가요 */
         }
 
         /* bg-color */
+        /* 공지사항 탭 콘텐츠 */
         .tab1 {
             background: #ddd;
         }
 
+        /* 갤러리 탭 콘텐츠 */
         .tab2 {
             background: #ccc;
         }
+
     </style>
 </head>
 

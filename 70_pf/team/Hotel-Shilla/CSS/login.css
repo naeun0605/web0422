@@ -46,6 +46,7 @@ button {
     background: lightblue;
 } */
 
+/* 로그인 설명글 */
 .login_des {
     width: 1903px;
     height: 200px;
@@ -53,7 +54,7 @@ button {
     padding-top : 80px;
 }
 
-
+/* 로그인 및 회원가입 권유 박스 전체 */
 .full_login {
     padding : 40px 0 0 40px;
     width: 1903px;
@@ -62,7 +63,7 @@ button {
     justify-content: space-evenly;
 }
 
-
+/* 로그인 박스 */
 .login_chk {
     position: relative;
     width: 480px;
@@ -71,27 +72,28 @@ button {
 }
 
 
-
+/* 회원, 비회원 쓰여진 탭부분 */
 .login_chk label {
-    position:absolute;
-    background: #fff; /* 비활성화 상태 */
+    position:absolute; /* df를 쓰면 login_chk에 들은 모든것들이 가로 배치 되므로 position사용 */
+    background: red; /* 비활성화 상태 */
     color: #999;
     cursor: pointer;
     width: 240px;
-    height: 40px;
+    height: 50px;
     text-align: center;
     line-height: 30px;
     border:1px solid;
 }
 
+/* 비회원 탭을 오른쪽으로 240px만큼 이동 */
 #btn2 + label {
     left:240px;
 }
 
+/* 탭의 콘텐츠 영역 */
 .login_chk div {
-    
-    display: none;
-    position: absolute;
+    display: none; /* 비회원탭의 콘텐츠 영역을 안보이게함 */
+    position: absolute; /* 로그인 전체 박스랑 겹쳤으므로 */
     width: 480px;
     /* border: 1px solid; */
     padding: 48px;
@@ -100,29 +102,34 @@ button {
 
 .login_chk input[type="radio"] {
     display: none;
-    /* 스타일 안보이게 숨김 */
+    /* 탭에 라디오버튼 안보이게 숨김 */
 }
 
+/* 눌러진 탭 */
 .login_chk input:checked+label {
-    background: #fff;
+    background:#fff;
     color: black;
 }
 
+/* 눌러진 탭의 콘텐츠 영역 */
 .login_chk input:checked+label+div {
     display: block;
 }
 
 /* bg-color */
+/* 회원 탭의 콘텐츠 영역 */
 .member1 {
     background: #fff;
     border:1px solid;
 }
 
+/* 비회원 탭의 콘텐츠 영역 */
 .member2 {
     background: #fff;
     border:1px solid;
 }
 
+/* 오른쪽에 회원가입 권유 */
 .recommand_join{
     width: 480px;
     height: 200px;

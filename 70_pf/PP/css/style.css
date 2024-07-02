@@ -10,6 +10,7 @@ html{
 /* 헤더*/
 header {
     position:fixed; /* 상단 고정 */
+    z-index: 9999; /* 어차피 헤더는 제일 꼭대기에 있어야하므로 */
     width:100%;
     /* position이 fixed나 absolute면 width가 콘텐츠 크기로 줄어든다! */
     /* position이 relative는 width가 그대로 100% */
@@ -34,12 +35,29 @@ nav ul li {
 }
 
 /* 섹션1 */
-#sec1 h2 {
-    letter-spacing
-    /* 자간 */
-    : 4px;
-    font-weight: 400;
+#sec1 {
+    position:relative;
+    padding-top:54px;
 }
+
+#sec1 h2 {
+    letter-spacing : 4px; /* 자간 */
+    font-weight: 400;
+    position:absolute;
+    left: 50%;
+    top: 50%; 
+    transform : translate(-50%, -50%) 
+    /* 이거 하면 h2는 투명인간 처리됨 */
+
+
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -110px;
+    margin-top: -16px; */
+
+}
+
 
 #sec1 b {
     background: #000;
@@ -48,44 +66,22 @@ nav ul li {
     margin-right: 16px;
 }
 
-#sec1 section {
-    display: flex;
-    position: relative;
-    justify-content: center;
-}
-
 
 #sec1 div {
-    width: 1496px;
+    width: 1480px;
     height: 745px;
     background: #ccc;
-}
-
-#sec1 h2 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -110px;
-    margin-top: -16px;
-
-    /* 
-            position:absolute;
-            left: 50%;
-            top: 50%; 
-            transform : translate(-50%, -50%) 
-            */
-            /* 이거 하면 h2는 투명인간 처리됨 */
+    margin: 0 auto; /* 하고 안하고 뭔 차인지 해보기 */
 }
 
 
 
-/* 섹션2*/
-/* 섹션2,3,4 공통*/
+/* 섹션1,2,3,4 공통*/
 section {
+     /* 가운데정렬 */
     width: 1480px;
     margin: 0 auto;
-    /* 가운데정렬 */
-    padding-top: 80px;
+    padding-top: 96px;
     /* 
                         justify-content:center;는 자식을 가운데 배치, display-flex가 있어야함
                         margin:0 auto;는 자기자신을 가운데 배치 , width가 있어야함
@@ -96,17 +92,18 @@ section {
 section li{
     width: 355px;
 }
-#sec2 li:not(:nth-of-type(4n)) {
-    margin-right: 0;
+section li:not(:nth-of-type(4n)) {
+    margin-right: 20px;
 }
 /* 이렇게 not으로 쓰면 #sec2 li에 margin-right안줘도 됨 */
 
 
+/* 섹션2*/
 
 #sec2 h2 {
     border-bottom: 1px solid #ccc;
     padding-bottom: 24px;
-    margin-top: 72px;
+    /* margin-top: 72px; */
     margin-bottom: 48px;
 }
 
@@ -117,7 +114,7 @@ section li{
 
 #sec2 li {
     height: 240px;
-    margin-bottom: 20px; /*  ? */
+    margin-bottom: 20px; 
 }
 
 #sec2 h3 {
@@ -148,16 +145,7 @@ section li{
 
 #sec3 ul {
     display: flex;
-    background: yellow;
 }
-
-
-#sec3 li {
-    width: 355px;
-    margin-right: 20px;
-}
-
-/* 블록 레벨 요소의 width는 부모 크기 요소의 100퍼니까 부모인 li에만 적어주면 div에는 width안적어도됨 */
 
 
 #sec3 div {
@@ -189,6 +177,11 @@ section li{
 
 /* 섹션4 */
 
+
+#sec4 {
+    padding-bottom:8px;
+}
+
 /* contact 아래 줄글 밑에 밑줄 긋기 */
 #sec4 h2 {
     border-bottom: 1px solid #ccc;
@@ -214,7 +207,7 @@ section li{
     display: block;
     width: 100%;
     height: 40px;
-    margin: 8px 0;
+    margin: 16px 0;
     padding-left: 8px;
     border: 1px solid #ccc;
 }
@@ -230,7 +223,7 @@ section li{
 
 #sec4 .map {
     background: #ddd;
-    /* width: 845px; */
+    /* width: 1480px; */
     height: 845px;
 }
 
@@ -243,7 +236,7 @@ footer {
     align-items: center;
     /* 수직중앙정렬 */
     height: 85px;
-    text-align: center;
+    /* text-align: center; */
     /* 자식이 플렉스 아이템이 되면 먹통됨 */
     /* padding: 30px 0; padding 위 아래 같게 주면 수직 가운데  */
     background: #000;
