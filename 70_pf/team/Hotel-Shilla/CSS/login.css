@@ -56,24 +56,28 @@ button {
 
 .login_des p {
     color:#777;
+    padding-bottom:500px;
+    /* Q 얘의 영역확인해봤는데 영역이 이상해요 */
+    
 }
-/* 로그인 및 회원가입 권유 박스 전체 */
+
+/* 로그인 패이지 전체*/
 .full_login {
     padding : 40px 0 0 40px;
     width: 1903px;
-    height: 500px;
+    height: 734px;
     display: flex; 
     justify-content: space-evenly;
 }
+
 
 /* 로그인 박스 */
 .login_chk {
     position: relative;
     width: 480px;
     height: 240px;
-    background: #fff;
-    padding: 2px;
-
+    /* background: red; */
+    /* Q 로그인 설명글이랑 로그인박스 전체랑 여백주려고 padding-top했는데 안되서 영역확인해보려했는데 안먹어요 */
 }
 
 
@@ -143,9 +147,14 @@ button {
     height: 48px;
 }
 
+.id {
+    border: 1px solid #856F56;
+}
+
 .pw {
 
     margin: 20px 0 20px 0;
+    border: 1px solid #856F56;
 }
 
 /* 회원 탭 콘텐츠 안에 로그인버튼 */
@@ -156,6 +165,9 @@ button {
     font-size: 18px;
 }
 
+/* .etc {
+    background: red;
+} */
 /* .member2 {
     width: 480px;
     height: 234px;
@@ -167,8 +179,15 @@ button {
     height: 48px;
 }
 
+.res_num {
+    border: 1px solid #856F56;
+}
 .name {
     margin: 20px 0 20px 0;
+    border: 1px solid #856F56;
+}
+.phone {
+    border: 1px solid #856F56;
 }
 
 /* 비회원 탭 콘텐츠 안에 예약내역조회버튼 */
