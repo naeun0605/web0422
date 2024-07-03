@@ -13,6 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- - Google CDN -->
 
     <script>
+        const eleDiv = $("div").eq(0);
+
     /* 
         객체.메서드(인수, 인수,...);
         인수는 메서드마다 정해져있다.
@@ -21,8 +23,9 @@
 
         방법1: element.css("속성", 값);
 
+
         방법2: element.css({속성:값, 속성:값, ...});
-            객체 형식으로 작성할 경우 CSS의 속성명으로 작성하면 ""를 반드시 사용하고, 카멜 표기법으로 표기하면 ""를 생략 가능
+        객체 형식으로 작성할 경우 CSS의 속성명으로 작성하면 ""를 반드시 사용하고, 카멜 표기법으로 표기하면 ""를 생략 가능
 
             const eleDiv = $('div').eq(0);
             eleDiv.css("width" ,"100px"); 
@@ -38,11 +41,6 @@
                 };
                 
             => 속성명에 "" 생략가능 만약에 back-ground:pink로 쓰고싶으면 ""써서 "background-color"="pink"이렇게 써야한다.
-
-
-
-
-
 
 
         element.css(인수1("css속성명"), 인수2("속성값")) <- css의 메서드는 인수 두개만 써야함
@@ -75,10 +73,10 @@
         $('선택자')
     */
 
-    const eleDiv = $('div').eq(0);
-    eleDiv.css("width" ,"100px"); 
-    eleDiv.css("height" ,"100px"); 
-    eleDiv.css("backgroundColor" ,"lightpink"); 
+    //const eleDiv = $('div').eq(0);
+    //eleDiv.css("width" ,"100px"); 
+    //eleDiv.css("height" ,"100px"); 
+    //eleDiv.css("backgroundColor" ,"lightpink"); 
 
 
     </script>

@@ -10,28 +10,79 @@
     <div>박스1</div>
     <div>박스2</div>
 
+    element.style.css의 속성명 = "속성값";<br>
+    단, CSS속성명은 카멜표기법으로 한다.
+    
+
     <script>
-    /* 
-        element.style.css의 속성명 = "속성값";
-        단, CSS속성명은 카멜표기법으로 한다.
+    
 
-        카멜 표기법(Camel Case)[편집]
-        여러 단어를 연달아 사용할 때 각 단어의 첫 글자를 대문자로 적되,
-        맨 앞에 오는 단어는 소문자로 표기하는 것이다            
-    */
+    //const eleDiv = document.querySelectorAll('div')[0];
+    //document.querySelectorAll('div')[0].style.width = "100px"; 
+    //eleDiv.style.width = "100px";로 대체 가능
+    //document.querySelectorAll('div')[0].style.height = "100px"; 
+    //eleDiv.style.height = "100px";로 대체 가능
 
-    /* 
-        요소(element)찾기
-        document.querySelectorAll('선택자')
-    */
+    //document.querySelectorAll('div')[0].style.background = "lightpink";
+    //document.querySelectorAll('div')[1].style.background = "lightblue";
 
-    const eleDiv = document.querySelectorAll('div')[0];
-    document.querySelectorAll('div')[0].style.width = "100px"; // eleDiv.style.width = "100px";로 대체 가능
-    document.querySelectorAll('div')[0].style.height = "100px"; // eleDiv.style.height = "100px";로 대체 가능
-    document.querySelectorAll('div')[0].style.background = "lightpink";
-    document.querySelectorAll('div')[1].style.background = "lightblue";
+    //연습
+    //const eleDiv = document.querySelectorAll("div")[0];
+    //document.querySelectorAll("div")[0].style.width="100px";
+    //eleDiv.style.width="100px";
+    //eleDiv.style.height="100px";
+    //eleDiv.style.border="solid blue";
+    //eleDiv.style.background="lightpink";
+
+    
+    // 1. 요소를 찾으면서 동시에 스타일을 적용시키는 방법
+
+        // "" 생략불가
+        //document.querySelector('.box1').style.width = "200px";   
+        //document.querySelector('.box1').style.height = "200px";  
+        
+        //document.querySelector('.box1').style.border = "solid";
+        //document.querySelector('.box1').style.margin = "5px"; 
+
+        //document.querySelector('.box2').style.width = "200px"; 
+        //document.querySelector('.box2').style.height = "200px";
+        //document.querySelector('.box2').style.border = "solid";
+        //document.querySelector('.box2').style.margin = "5px";
+
+        //document.querySelector(".box1").style.width = "200px";
+        //document.querySelector(".box1").style.height = "200px";
+        //document.querySelector(".box1").style.border = "solid";
+
+        //document.querySelector(".box2").style.border = "dotted";
+        //document.querySelector(".box2").style.padding = "20px";
+
+
+
+        // 2. 변수 선언으로 요소찾고, 요소에 스타일 적용하는 방법 => 이게 더 바람직!
+
+        // 변수 선언으로 요소찾기
+        //const eleBox1 = document.querySelector('.box1');
+        //const eleBox2 = document.querySelector('.box2');
+
+        // 요소에 스타일 적용하는 방법 
+        //eleBox1.style.width = "200px";
+        //eleBox1.style.height = "200px";
+        //eleBox1.style.border = "solid";
+        //eleBox1.style.margin = "5px";
+        //eleBox2.style.width = "200px";
+        //eleBox2.style.height = "200px";
+        //eleBox2.style.border = "solid";
+        //eleBox2.style.margin = "5px";
+
+        //연습
+        //const eleBox1 = document.querySelector(".box1");
+        //const eleBox2 = document.querySelector(".box2");
+        //eleBox1.style.border="solid";
+        //eleBox2.style.border="1px solid red";
+        //eleBox2.style.margin="20px";
 
 
     </script>
 </body>
 </html>
+
