@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: solid;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>이벤트</h1>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <p>여기에 표시됩니다.</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- - Google CDN -->
+
+    <script>
+
+    //이벤트 처리방법 2가지 - 각각 익명함수, 선언적 함수로 총 4가지
+    //객체.이벤트(함수); /* 이벤트 메소드 이용 */
+    //객체.on("이벤트", 함수);
+
+
+     // 변수 선언으로 요소찾기
+    const eleBox1 = $('.box1');
+    const eleBox2 = $('.box2');
+
+    // 요소에 스타일 적용하는 방법 
+    // eleBox1.css(width,"200px");
+    // eleBox1.css(height,"200px");
+    // eleBox1.css(border,"solid");
+    // eleBox1.css(margin,"5px");
+
+    // eleBox2.css(width,"200px");
+    // eleBox2.css(height,"200px");
+    // eleBox2.css(border,"solid");
+    // eleBox2.css(margin,"5px");
+
+
+    //이벤트처리 2가지 방법
+
+    //방법1 : 객체.이벤트(함수); /* 이벤트 메소드 이용, 익명함수로 */
+    eleBox1.mouseenter(function(){
+        eleBox1.css({background:"pink"}); 
+        });
+
+
+    //방법2
+    eleBox1.mouseleave(reset);
+
+    //방법3
+    //eleBox2를 클릭하면 함수를 실행시킨다.
+    eleBox2.on("click",function(){
+        //eleBox1의 배경색을 green으로 지정한다.
+        eleBox1.css({background:"green"});
+    });
+
+    //방법4 : 선언적함수로
+    eleBox2.on("mouseleave", reset);
+
+    function reset(){
+        eleBox1.css({background:"transparent" });
+
+    }
+
+         
+
+
+    </script>
+</body>
+</html>
