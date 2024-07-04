@@ -1,0 +1,32 @@
+@charset "uft-8";
+
+@import url(reset.css);
+@import url(typo.css);
+
+
+/* 공통 */
+.inner{
+    width: 1120px;
+    margin:0 auto;
+}
+
+/* 섹션2 */
+/* li를 가로배치 하기 위해 부모한테 df적용 */
+/* df는 wrap이 no-wrap이 기본이라 사이즈가 크면 다음줄로 넘어감 */
+#s2 #tabs ul{
+    display: flex;
+}
+
+#s2 #tabs>div a{
+    /* a태그는 인라인이라 w,h 적용되지 않음 따라서 df,블록, 인라인블록으로 해야 지정가능 */
+    display: block;
+    width: 222px;
+    height: 168px;
+}
+
+#s2 #tabs>div a.rank1{
+    display: block; /* 위에서 써서 안써도됨 */
+    width: 570px;
+    height: 432px;
+}
+
