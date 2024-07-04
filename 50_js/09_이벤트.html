@@ -19,14 +19,14 @@
 
         //Q. 08_style.html참고해서 질문
 
-        //const eleBox1 = document.querySelector('.box1');
-        //const eleBox2 = document.querySelector('.box2');
-
+        const eleBox1 = document.querySelector('.box1');
+        const eleBox2 = document.querySelector('.box2');
+        
         //const eleBox1 = document.querySelector(".box1");
         //const eleBox2 = document.querySelector(".box2");
-        //eleBox1.style.border="solid";
-        //eleBox2.style.border="1px solid red";
-        //eleBox2.style.margin="20px";
+        eleBox1.style.border="solid";
+        eleBox2.style.border="1px solid red";
+        eleBox2.style.margin="20px";
 
         /* 
             방법1
@@ -49,57 +49,87 @@
 
         
 
-        //이벤트 처리 - 방법1 => 익명함수로 표현 
+        // 이벤트 처리 - 방법1 => 익명함수로 표현 
         //eleBox1.onmouseenter = function(){
-        //    eleBox1.style.background = "pink";
-        //};
-        //eleBox1에 마우스 올리면 함수를 실행시킨다(배경을 분홍색으로 해라)
+        //   eleBox1.style.background = "pink";
+       // };
+        // eleBox1에 마우스 올리면 함수를 실행시킨다(배경을 분홍색으로 해라)
 
-        //함수호출 => 선언적 함수로 표현
-        //eleBox1.onmouseleave = reset; //처음부터 호출못하게 ()생략
-        //function reset(){
+
+
+        //이벤트 처리 - 방법2 =>선언적 함수
+        //Q1. 선언적함수랑 익명함수의 장단점?
+
+        // 함수호출 => 선언적 함수로 표현
+        //처음부터 호출못하게 ()생략
+        // eleBox1.onmouseleave = reset; 
+        // function reset(){
         //    eleBox1.style.background = "transparent"; //투명
         //    console.log(eleBox1.style.background);
-        //}
+        // }
+      
 
-        //연습 
-        //eleBox1.onmouseenter = function(){
-        //    eleBox1.style.background="pink";
-        //};
-
-        //eleBox1.onmouseleave = reset;
-        //function reset()
-        //{
-        //    eleBox1.style.background = "transparent";
-        //    console.log(eleBox1.style.background);
-        //};
+        // eleBox2.onmouseenter = reset;
+        // function reset(){
+        //     eleBox2.style.background = "#aaa";
+        //     console.log(eleBox2.style.background);
+        // }
 
         // ==========================================================
 
 
-        //이벤트 처리 - 방법2 => 익명함수로 표현
+        //이벤트 처리 - 방법3 => 익명함수로 표현
         //eleBox2.addEventListener("mouseenter", function(){
         //    eleBox2.style.background = "red";
         //});
 
-        //이벤트 처리 - 방법2로 사용 = 선언적 함수로 표현
+
+        //이벤트 처리 - 방법4로 사용 = 선언적 함수로 표현
         //eleBox2.addEventListener("mouseleave", reset2); 
         //function reset2(){
          //   eleBox2.style.background = "transparent";
         //}
 
-        //eleBox2.addEventListent("mouseenter", function(){
-        //    eleBox2.style.background = "red";
-        //});
-
-        //eleBox2.addEventListenr("mouseleave", reset2);
-        //function reset2(){
-        //    eleBox2.style.background = "transparent";
-        //}
+   
+ 
 
 
 
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
     </script>
 </body>
 </html>
+
