@@ -26,19 +26,6 @@ a, p, h1, h2, h3 {
 /* //reset */
 
 
-
-input {
-    padding-left:8px;
-    display: block;
-}
-
-button {
-    border:none;
-    background: #000;
-    color:#fff;
-}
-
-
 /* 로그인 설명글 */
 .login_des {
     width: 1903px;
@@ -56,8 +43,8 @@ button {
 
 .login_des p {
     color:#777;
-    padding-bottom:500px;
-    /* Q 얘의 영역확인해봤는데 영역이 이상해요 */
+    /* padding-bottom:500px; */
+   
     
 }
 
@@ -76,8 +63,6 @@ button {
     position: relative;
     width: 480px;
     height: 240px;
-    /* background: red; */
-    /* Q 로그인 설명글이랑 로그인박스 전체랑 여백주려고 padding-top했는데 안되서 영역확인해보려했는데 안먹어요 */
 }
 
 
@@ -96,6 +81,7 @@ button {
     /* border-left:1px solid #856F56;
     border-top:1px solid #856F56; */
     z-index:99;
+    font-weight: 600;
 }
 
 /* 비회원 탭을 오른쪽으로 240px만큼 이동 */
@@ -105,7 +91,8 @@ button {
 
 /* 탭의 콘텐츠 영역 */
 .login_chk div {
-    display: none; /* 비회원탭의 콘텐츠 영역을 안보이게함 */
+    display: none; 
+    /* 비회원탭의 콘텐츠 영역을 안보이게함 */
     position: absolute; /* 로그인 전체 박스랑 겹쳤으므로 */
     width: 480px;
     /* border: 1px solid; */
@@ -121,7 +108,7 @@ button {
 /* 눌러진 탭 */
 .login_chk input:checked+label {
     background:#fff;
-    color: black;
+    color: #856F56;
     border-left:1px solid #856F56;
     border-top:1px solid #856F56;
     border-right:1px solid #856F56;
@@ -134,27 +121,33 @@ button {
     top:50px; */
 }
 
-/* Q 얘는 왜 인식이 안되나요 .member가 input을 담고 있어서 안되는 건줄 알고 밑에 input부분 주석처리해도 안먹어요*/
-/* .member1 {
-    width: 480px;
+
+.member1 {
+    width: 1480px;
     height:214px;
-    background: red; 
-} */
+    position: relative;
+    z-index: 999;
+    display: block;
+}
 
 /*회원 탭 콘텐츠 안에 아이디, 비밀번호 */
   .member1 input {
     width: 480px;
     height: 48px;
+    border: 0.5px solid #ddd;
+    padding-left:16px;
 }
 
 .id {
     border: 1px solid #856F56;
+    margin-bottom :8px;
 }
 
 .pw {
 
-    margin: 20px 0 20px 0;
     border: 1px solid #856F56;
+    margin-bottom :24px;
+
 }
 
 /* 회원 탭 콘텐츠 안에 로그인버튼 */
@@ -163,37 +156,75 @@ button {
     height: 56px;
     background: #856F56;
     font-size: 18px;
+    border:none;
+    color:#fff;
+
 }
 
-/* .etc {
-    background: red;
+.member1 button:hover{
+    background: #776655;
+    cursor: pointer;
+}
+
+/* #checkbox{
+    position:absolute;
 } */
-/* .member2 {
+
+#login_save{
+    background: pink;
+    height: 20px;
     width: 480px;
-    height: 234px;
+    text-align:right;
+}
+
+#checkbox input{
+    width: 20px;
+    vertical-align: middle;
+    background: red;
+    /* 왜 안먹지 */
+}
+
+/* #checkbox label{
+    width: 300px;
+    background: red;
+    vertical-align: middle;
 } */
+
+
 
 /* 비회원 탭 콘텐츠 안에 예약번호, 이름, 010*/
 .member2 input {
     width: 480px;
     height: 48px;
+    border: 0.5px solid #ddd;
+    padding-left:16px;
+
+}
+
+.member2 button:hover{
+    background: #776655;
+    cursor: pointer;
 }
 
 .res_num {
     border: 1px solid #856F56;
+    margin-bottom :8px;
 }
 .name {
-    margin: 20px 0 20px 0;
     border: 1px solid #856F56;
+    margin-bottom :8px;
 }
 .phone {
     border: 1px solid #856F56;
+    margin-bottom :16px;
 }
 
 /* 비회원 탭 콘텐츠 안에 예약내역조회버튼 */
 .member2 button {
     width: 480px;
     height: 56px;
+    border:none;
+    color:#fff;
 }
 
 .res_btn {
@@ -222,6 +253,7 @@ button {
     font-size: 16px;
 }
 
+/* 회원가입 버튼 */
 .recommand_join button{
 
     width: 480px;
@@ -229,31 +261,12 @@ button {
     background: #fff;
     color: #856F56; 
     border : 1px solid #856F56;
+    font-size: 18px;
 }
 
-/* bg-color */
-/* 회원 탭의 콘텐츠 영역 */
-.member1 {
-    background: #fff;
-    /* border:1px solid; */
+.recommand_join button:hover{
+    background: #776655;
+    color:#fff;
+    cursor: pointer;
 }
 
-/* 비회원 탭의 콘텐츠 영역 */
-.member2 {
-    background: #fff;
-    /* border:1px solid; */
-}
-
-
-/* form */
-input {
-    width: 100%;
-    padding-left: 8px;
-}
-
-button {
-    /* padding: 8px 16px; */
-    border: none;
-    background: #000;
-    color: #fff;
-}

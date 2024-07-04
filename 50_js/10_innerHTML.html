@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>요소의 콘텐츠를 변경하거나 가져오기</h1>
+    
+     <p class="p1">나는 첫 번째 단락입니다.</p>
+     <p class="p2">나는 두 번째 단락입니다.</p>
+     <p class="p3">아무것도 없어요</p>
+     <p class="p4">나두요</p>
+
+
+     <script>
+        /* 
+            //콘텐츠 가져올 때 쓰는 형식
+            객체.innerHTML
+            객체.textContent
+
+            //콘텐츠 변경할 때 쓰는 형식
+            객체.innerHTML = "값" 
+            객체.textContent = "값" 
+
+            innnerHTML은 HTML 태그 인식한다.
+            textContent는 HTML 태그 인식하지 않고 문자열로 처리한다.
+        */
+
+        //요소 찾기
+        const p1 = document.querySelector('.p1');
+        const p2 = document.querySelector('.p2');
+        const p3 = document.querySelector('.p3');
+        const p4 = document.querySelector('.p4');
+
+        //콘텐츠 가져오기
+        let getP1 = p1.innerHTML;
+        let getP2 = p2.textContent;
+        console.log("getP1 = ",getP1);
+        console.log("getP2 = ",getP2);
+
+        //p태그의 내용 바꾸기 (콘텐츠 변경)
+        //pTag.innerHTML = "여기에 쓴 내용으로 변경됩니다.";
+        p1.innerHTML = '<a href="#">네이버</a>' ;
+        p2.textContent = '<a href="#">네이버</a>' ;
+        
+        //p1,p2를 가져와서 p3, p4 내용으로 바꾸기
+        p3.innerHTML = getP1;
+        p4.textContent = getP2 ;
+
+     </script>
+</body>
+</html>

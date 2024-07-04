@@ -99,31 +99,41 @@
                 <input type="radio" name="btn" id="btn1" checked>
                 <label for="btn1">회원</label>
                 <div class="member1">
+
                     <form action="login.jsp">
                         <input type="text" class="id" name="user_id" placeholder="아이디">
                         <input type="password" class="pw" name="user_pw" placeholder="비밀번호">
                         <button type="submit">로그인</button>
+
+                        <!-- 로그인 상태유지, 아이디/비밀번호 찾기 -->
+                        <section id="login_save">
+
+                            <section id="checkbox">
+                                <label><input type="checkbox" id="loginchk" name="loginchk">로그인 상태 유지</label>
+                            </section>
+                            
+                            <p class="findpw"><a href="#">아이디/비밀번호 찾기</a></p>
+                            
+                        </section>
+
                     </form>
+
                 </div>
 
                 <!-- 비회원 탭 -->
-                <input type="radio" name="btn" id="btn2" >
+                <input type="radio" name="btn" id="btn2">
                 <label for="btn2">비회원(예약확인)</label>
                 <div class="member2">
                     <form action="login.jsp">
                         <input type="text" class="res_num" name="user_number" placeholder="예약번호">
                         <input type="text" class="name" name="user_name" placeholder="이름">
                         <input type="text" class="phone" name="user_phone" placeholder="010">
-                        <button type="submit" class = "res_btn">예약내역조회</button>
+                        <button type="submit" class="res_btn">예약내역조회</button>
                     </form>
+
                 </div>
 
-                <div class="loginSave">
-                    <div class="checkbox">
-                        <input type="checkbox" id="loginchk" name="loginchk" /><label for="check">로그인 상태 유지</label>
-                    </div>
-                    <p class="findPWD"><a href="#">아이디/비밀번호 찾기</a></p>
-                </div>
+
 
             </div>
 
