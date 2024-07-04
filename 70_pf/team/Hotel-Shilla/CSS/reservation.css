@@ -26,8 +26,30 @@ a, p, h1, h2, h3 {
 /* //reset */
 
 /* section1 */
-.res_sec1 p{
-    background: red;
+.res_des p{
+    outline: solid;
+    width: 1903px;
+    height: 130px;
+    padding: 30px 0 0 100px;
+
+}
+
+.calender p{
+    outline: solid;
+    width: 1903px;
+    height: 580px;
+
+}
+
+.choice p{
+    outline: solid;
+    width: 1903px;
+    height: 259px;
+
+}
+
+.search div{
+    outline: solid;
     width: 1903px;
     height: 130px;
 
