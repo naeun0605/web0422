@@ -25,20 +25,28 @@ a, p, h1, h2, h3 {
 
 /* //reset */
 
+/* section1 공통 */
+.res_des p, .calender p, .choice p, .search
+{
+    padding: 40px 103px 60px 200px;
+    color: #4A433B;
+
+}
+
 /* section1 */
 .res_des p{
     outline: solid;
     width: 1903px;
     height: 130px;
-    padding: 40px 103px 60px 200px;
-
+    /* padding: 40px 103px 60px 200px;
+    color: #4A433B; */
 }
 
 .calender p{
     outline: solid;
     width: 1903px;
     height: 580px;
-    padding: 40px 103px 60px 200px;
+    /* padding: 40px 103px 60px 200px; */
     
 
 }
@@ -47,12 +55,13 @@ a, p, h1, h2, h3 {
     outline: solid;
     width: 1903px;
     height: 259px;
-
+    /* padding: 40px 103px 60px 200px; */
 }
 
-.search div{
+.search{
     outline: solid;
     width: 1903px;
     height: 130px;
-
+    /* padding: 40px 103px 60px 200px; */
 }
+

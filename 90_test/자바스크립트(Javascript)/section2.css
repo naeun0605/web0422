@@ -1,0 +1,106 @@
+@charset "uft-8";
+
+@import url(reset.css);
+@import url(typo.css);
+
+.inner{
+    width: 1120px;
+    margin: 0 auto;
+}
+
+#s2{
+    padding: 72px 0;
+}
+
+/* '베스트셀러' */
+#s2>.inner>h2 {
+    text-align: center;
+}
+
+/* '이번주 베스트 셀러입니다. */
+#s2>.inner>h2+p{
+    text-align: center;
+    margin: 24px 0 48px;
+}
+
+/* 탭 전체 */
+#s2 #tabs {
+    position: relative;
+}
+
+#s2 #tabs ul{
+    display: flex;
+    align-items: flex-end;
+}
+
+/* 탭 버튼 */
+#s2 #tabs>ul{
+    position:absolute;
+    width: 474px;
+    right:0;
+}
+
+/* 탭 중에 간식, 장난감, 방석 탭만 */
+/* 이렇게 하면 사료랑 간식 간의 차이가 좁아요 */
+/* #s2 #tabs>ul>li:not(:first-child){
+    margin: 0 16px;
+} */
+
+#s2 #tabs>ul>li{
+    margin: 0 16px;
+}
+
+/* 탭 콘텐츠 */
+#s2 #tabs>div ul{
+    height: 432px;
+}
+
+/* 1위 사진 위쪽으로 붙이기 */
+#s2 #tabs>div ul li:nth-child(1){
+    align-self: flex-start;
+}
+
+/* 2위 사진 */
+#s2 #tabs>div ul li:nth-child(2){
+    margin: 0 30px 0 75px;
+}
+
+
+/* 1위 아카나, 2위 오리젠, 3위 하림 그 글씨부분 맞나요?*/
+#s2 #tabs>div ul li{
+    height: 216px;
+    /* background: red; */
+}
+
+/* 콘텐츠 안에 2,3위 사진영역 */
+#s2 #tabs>div a{
+    display:block;
+    width: 222px;
+    height: 168px;
+    /* background: blue; */
+}
+
+/* 1위 사진인거같은데 사진이 커졌다가 다시 줄어들어요  */
+#s2 #tabs>div a.rank1{
+    width: 570px;
+    height: 432px;
+}
+
+
+#s2 #tabs>div a.rank1+h3{
+    position:absolute;
+    width: 474px;
+    height: 48px;
+    right:0;
+    top: 48px;
+    text-wrap: nowrap;
+}
+
+/* 탭 기능 */
+#s2 #tabs>div{
+    display: none;
+}
+
+#s2 #tabs>div.on{
+    display: block;
+}

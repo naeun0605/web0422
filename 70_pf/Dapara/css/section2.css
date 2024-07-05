@@ -8,6 +8,7 @@
 .inner{
     width: 1120px;
     margin:0 auto;
+    background: red;
 }
 
 /* 섹션2 */
@@ -25,12 +26,11 @@
 }
 
 /* 탭(버튼, 콘텐츠) 공통*/
-
-/* li를 가로배치 하기 위해 부모한테 df적용 */
-/* df는 wrap이 no-wrap이 기본이라 사이즈가 크면 다음줄로 넘어감 */
 #s2 #tabs {
     position: relative;
 }
+/* li를 가로배치 하기 위해 부모한테 df적용 */
+/* df는 wrap이 no-wrap이 기본이라 사이즈가 크면 다음줄로 넘어감 */
 #s2 #tabs ul{
     display: flex;
     /* 교차축 정렬 중 align-items를 flex-end하면 아래에 붙이기 */
@@ -43,7 +43,6 @@
     /* 오른쪽으로 보내려고 */
     width: 474px;
     right:0;
-
 }
 
 #s2 #tabs>ul>li:not(:first-child){
@@ -55,33 +54,41 @@
 /* ul높이 */
 #s2 #tabs>div ul{
     height: 432px;
+    /* background: red; */
 }
+
 
 #s2 #tabs>div ul li:nth-child(1){
     align-self: flex-start;
     /* 1위 사진 위쪽으로 붙이기 */
 }
 
-/* 왜 div써주는지다시보기  */
+/* 2위 사진 */
 #s2 #tabs>div ul li:nth-child(2){
     margin: 0 30px 0 75px;
+    /* background: red; */
 }
 
 #s2 #tabs>div ul li{
     height: 216px;
 }
 
+/* 콘텐츠? */
 #s2 #tabs>div a{
     /* a태그는 인라인이라 w,h 적용되지 않음 따라서 df,블록, 인라인블록으로 해야 지정가능 */
     display: block;
     width: 222px;
     height: 168px;
+    /* background: red; */
 }
 
 #s2 #tabs>div a.rank1{
     display: block; /* 위에서 써서 안써도됨 */
     width: 570px;
     height: 432px;
+    /* background: blue; */
+    /* 왜 안먹지 */
+
 }
 
 #s2 #tabs>div a.rank1+h3{
@@ -93,3 +100,13 @@
     text-wrap:nowrap;/* 강제 줄바꿈 제거한 것 */
 }
 
+/* 탭의 기능 */
+/* 탭1,2,3,4의 콘텐츠 안보이게*/
+#s2 #tabs>div {
+    display: none;
+}
+
+/* on인 클래스의 콘텐츠만 보이게 */
+#s2 #tabs>div.on {
+    display: block;
+}
