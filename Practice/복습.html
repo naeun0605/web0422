@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="gallery">
+
+        <div class="btn">
+            <a href="#">이미지1</a>
+            <a href="#">이미지2</a>
+            <a href="#">이미지3</a>
+        </div>
+
+        <div class="cont">
+            <img src="./../assets/말티즈.jpeg" alt="이미지1">
+        </div>
+    </div>
+
+    <script>
+        const btn1 = document.querySelectorAll('a')[0];
+        const btn2 = document.querySelectorAll('a')[1];
+        const btn3 = document.querySelectorAll('a')[2];
+        const cont = document.querySelector('.cont');
+
+        btn1.onclick = function(){
+            cont.innerHTML = '<img src="./../assets/말티즈.jpeg" alt="이미지1">';
+        }
+
+        btn2.onclick = function(){
+            //div.cont의 콘텐츠 변경하기
+            cont.innerHTML = '<img src="./../assets/비숑.jpg" alt="이미지2">';
+        }
+
+        btn3.onclick = function(){
+            //div.cont의 콘텐츠 변경하기
+            cont.innerHTML = '<img src="./../assets/포메.jpg" alt="이미지3">';
+        }
+    </script>
+</body>
+</html>
