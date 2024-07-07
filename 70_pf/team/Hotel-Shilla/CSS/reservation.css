@@ -52,6 +52,7 @@ a, p, h1, h2, h3 {
     padding: 40px 200px 60px 200px;
     
   
+
 }
 
 /* 캘린더 이미지 */
@@ -71,19 +72,15 @@ a, p, h1, h2, h3 {
     
     width: 1903px;
     height: 200px;
-    margin: 0px 200px 0px 200px;
-    padding: 40px 200px 60px 0px;
-    border-bottom : 1px solid #ccc;
-    background: pink;
     
    
 }
-/* .choice_box{
+.choice_box{
     margin: 0px 200px 0px 200px;
     border-bottom : 1px solid #ccc;
     height: 100%;
     
-} */
+}
 
 
 .choice .cnt{
@@ -94,7 +91,7 @@ a, p, h1, h2, h3 {
 }
 .choice .result{
     font-size: 20px;
-    margin-left:145px;
+    margin-left:150px;
     /* background: pink; */
 }
 
