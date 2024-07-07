@@ -23,45 +23,154 @@ a, p, h1, h2, h3 {
     font: 400 16px "Noto Sans KR",sans-serif;
 }
 
+
+
+
+
 /* //reset */
 
-/* section1 공통 */
-.res_des p, .calender p, .choice p, .search
-{
-    padding: 40px 103px 60px 200px;
+
+/* section1 */
+.main_reservation {
+    width: 1903px;
+}
+
+.res_des h2{
+
+    height: 130px;
+    font-size: 32px;
+    padding: 40px 200px 60px 0px;
+    border-bottom : 1px solid #ccc;
+    margin: 40px 200px 60px 200px;
+    color: #4A433B;
+}
+
+/* section2 */
+.calender{
+    width: 1903px;
+    height: 580px;
+    padding: 40px 200px 60px 200px;
+    
+  
+
+}
+
+/* 캘린더 이미지 */
+.calender div{
+    /* outline:solid red; */
+    /* text-align: right; */
+    display: block;
+    border-bottom : 1px solid #ccc;
+    
+}
+.calender div img{
+      margin: 0 103px 0 103px;
+}
+
+/* section3 */
+.choice{
+    
+    width: 1903px;
+    height: 200px;
+    
+   
+}
+.choice_box{
+    margin: 0px 200px 0px 200px;
+    border-bottom : 1px solid #ccc;
+    height: 100%;
+    
+}
+
+
+.choice .cnt{
+    display: flex;
+    padding-left:350px;
+    padding-top:50px;
+    
+}
+.choice .result{
+    font-size: 20px;
+    margin-left:150px;
+    /* background: pink; */
+}
+
+.choice .choice_des{
+    /* background: red; */
+    display: inline-block;
+    margin: 10px;
+}
+
+.choice .cnt_left{
+    /* background: red; */
+    display: flex;
+    align-items: end;
+    
+    
+}
+
+.choice .cnt_left p{
+    font-size: 18px;
+}
+.choice .cnt_btn_left span {
+    margin: 0;
+    font-size: 18px;  
+}
+
+.calender h3,.choice h3{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.choice .cnt_btn_left .minus,  .choice .cnt_btn_left .plus{
+    margin: 0 15px;
+    
+}
+
+
+
+.choice .cnt_right{
+    margin-left: 280px;
+    /* text-align: center; */
+}
+
+.cnt_btn_room{
+    display: flex;
+    padding: 0 16px;
+    font-size: 18px;
+}
+
+.cnt_btn_room{
+    align-items : center;
+}
+.minus_adult, .plus_adult, .minus_kids, .plus_kids{
+    margin: 0 15px;
+}
+/* section4 */
+.search{
+    border-bottom : 1px solid #ccc;
+    width: 1903px;
+    height: 200px;
+    padding: 20px 200px 60px 200px;
     color: #4A433B;
 
 }
 
-/* section1 */
-.res_des p{
-    outline: solid;
-    width: 1903px;
-    height: 130px;
-    /* padding: 40px 103px 60px 200px;
-    color: #4A433B; */
+.search div{
+    text-align: center;
+}
+.search div p{
+    text-align : left;
 }
 
-.calender p{
-    outline: solid;
-    width: 1903px;
-    height: 580px;
-    /* padding: 40px 103px 60px 200px; */
-    
-
-}
-
-.choice p{
-    outline: solid;
-    width: 1903px;
-    height: 259px;
-    /* padding: 40px 103px 60px 200px; */
-}
-
-.search{
-    outline: solid;
-    width: 1903px;
-    height: 130px;
-    /* padding: 40px 103px 60px 200px; */
+.search button{
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px 0;
+    background: #856F56;
+    border:none;
+    color: #fff;
+    font-size: 18px;
 }
 
