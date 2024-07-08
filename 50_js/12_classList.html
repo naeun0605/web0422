@@ -37,9 +37,8 @@
 
         //방법2 - p에 on클래스를 추가한다.
         //p.classList.add('on');
-        p.classList.add('on');
 
-        // =================================================================
+        //========================================
 
         /* 버튼1을 클릭하면 p를 선택하여 글자의 색상을 red로 지정하고
         버튼2를 클릭하면 p를 선택하여 글자의 색상을 black으로 지정한다. */
@@ -53,12 +52,12 @@
 
         //버튼1을 클릭하면 => btn.onclick
         btn1.onclick = function(){
-            // p.style.color = "red";
+            //p에 on클래스를 추가한다.
             p.classList.add('on');
         }
 
         btn2.onclick = function(){
-            // p.style.color = "red";
+            //p에 on클래스를 제거한다.
             p.classList.remove('on');
         }
 

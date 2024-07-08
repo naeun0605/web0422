@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
         p {
             font-size: 50px;
         }
 
-        p.on{
-            color:red;
+        p.on {
+            color: red;
         }
-        
     </style>
 </head>
+
 <body>
     <h1>HTML 요소에 class를 추가하거나 제거하기</h1>
-    
+
     <div>
         <a href="#" class="red">버튼1</a>
         <a href="#" class="black">버튼2</a>
@@ -26,7 +26,7 @@
     <p>나는 단락이다.</p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- - Google CDN -->
-    
+
     <script>
 
 
@@ -39,16 +39,26 @@
         const btn2 = $('.black');
 
 
-        //2. 이벤트 처리
-        btn1.click(function(){
+        // //2. 이벤트 처리
+        btn1.click(function () {
             p.addClass('on');
         });
 
-        btn2.click(function(){
+        btn2.click(function () {
             p.removeClass('on');
         });
 
+        // //이벤트 처리 방법1 이용
+        // btn1.click(function () {
+        //     p.classList.add('on');
+        // });
+
+        // //이벤트 처리 방법3 이용
+        // btn2.on("click", function(){
+        //     p.classList.add('on');
+        // });
 
     </script>
-    </body>
+</body>
+
 </html>
