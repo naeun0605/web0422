@@ -76,43 +76,70 @@
         </div>
     </header>
 
-   <div class="main_reservation">
-
-
-    <!-- section1 -->
-    <div class="res_des">
-        <p>
-            예약을 원하시는 날짜, 객실, 인원을 선택해주세요
-        </p>
-    </div>
-
-    <!-- section2-->
-    <div class="calender">
-        <p>투숙기간 선택</p>
-
-    </div>
-
-    <!-- section3-->
-    <div class="choice">
-        <p>객실 및 인원 선택</p>
-
-    </div>
-
-    <!-- section4-->
-    <div class="search">
-        <div>
-            <p>최대 3개 객실까지 예약 가능합니다.</p>
-            <p>어린이 연령 기준은 초등학생(13세)입니다.</p>
+    <div class="main_reservation">
+        <!-- section1 -->
+        <div class="res_des">
+            <h2>
+                예약을 원하시는 날짜, 객실, 인원을 선택해주세요
+            </h2>
         </div>
 
-        <button type="submit">검색</button>
+        <!-- section2-->
+        <div class="calender">
+            <h3>투숙기간 선택</h3>
+            <div><img src="./../assets/images/calender.png" alt=""></div>
+        </div>
+
+        <!-- section3-->
+        <div class="choice">
+            <div class="choice_box">
+            <h3 class="choice_des">객실 및 인원 선택</h3>
+            <span class="result">객실 1개 성인 2명 어린이 0명</span>
 
 
+            <!-- 버튼으로 객실, 인원 선택 -->
+            <div class="cnt">
+
+                <div class="cnt_left">
+                    <p>객실 수</p>
+
+                    <div class="cnt_btn_left">
+                        <button class="minus">-</button>
+                        <span>1</span>
+                        <button class="plus">+</button>
+                    </div>
+
+                </div>
+
+                <div class="cnt_right">
+                    <div class="cnt_btn_room">
+                        <span>객실1</span>
+                        <div class="cnt_btn_adult">
+                            <button class="minus_adult">-</button>
+                            성인 <span>2</span>               
+                            <button class="plus_adult">+</button>
+                        </div>
+                        <div class="cnt_btn_kids">
+                            <button class="minus_kids">-</button>
+                            어린이 <span>0</span>
+                            <button class="plus_kids">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+        <!-- section4-->
+        <div class="search">
+            <div>
+                <p>*최대 3개 객실까지 예약 가능합니다.</p>
+                <p>*어린이 연령 기준은 초등학생(13세)입니다.</p>
 
+                <button type="submit">검색하기</button>
 
-   </div>
-    
+            </div>
+        </div>  
+    </div>
     <!-- footer -->
     <footer>
         <div class="centerbox">

@@ -50,84 +50,36 @@
         
 
         // 이벤트 처리 - 방법1 => 익명함수로 표현 
-        //eleBox1.onmouseenter = function(){
-        //   eleBox1.style.background = "pink";
-       // };
-        // eleBox1에 마우스 올리면 함수를 실행시킨다(배경을 분홍색으로 해라)
+        //eleBox1에 마우스 올리면 함수를 실행시킨다(배경을 분홍색으로 해라)
 
-
+        eleBox1.onmouseenter = function(){
+          eleBox1.style.background = "pink";
+       };
 
         //이벤트 처리 - 방법2 =>선언적 함수
-
         // 함수호출 => 선언적 함수로 표현
         //처음부터 호출못하게 ()생략
 
-        // eleBox1.onmouseleave = reset; 
-        // function reset(){
-        //    eleBox1.style.background = "transparent"; //투명
-        //    console.log(eleBox1.style.background);
-        // }
+        eleBox1.onmouseleave = reset; 
+        function reset(){
+           eleBox1.style.background = "transparent"; //투명
+           console.log(eleBox1.style.background);
+        }
       
 
-        // eleBox2.onmouseenter = reset;
-        // function reset(){
-        //     eleBox2.style.background = "#aaa";
-        //     console.log(eleBox2.style.background);
-        // }
-
-        // ==========================================================
-
-
         //이벤트 처리 - 방법3 => 익명함수로 표현
-        //eleBox2.addEventListener("mouseenter", function(){
-        //    eleBox2.style.background = "red";
-        //});
+        eleBox2.addEventListener("mouseenter", function(){
+           eleBox2.style.background = "red";
+        });
 
 
-        //이벤트 처리 - 방법4로 사용 = 선언적 함수로 표현
-        //eleBox2.addEventListener("mouseleave", reset2); 
-        //function reset2(){
-         //   eleBox2.style.background = "transparent";
-        //}
+        //이벤트 처리 - 방법4로 => 선언적 함수로 표현
+        eleBox2.addEventListener("mouseleave", reset2); 
+        function reset2(){
+           eleBox2.style.background = "transparent";
+        }
 
    
- 
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 
     </script>
 </body>

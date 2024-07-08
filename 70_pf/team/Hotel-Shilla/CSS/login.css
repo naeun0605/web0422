@@ -248,19 +248,21 @@ a, p, h1, h2, h3 {
 }
 
 /* 회원가입 버튼 */
-.recommand_join button{
 
-    width: 480px;
-    height: 56px;
-    background: #fff;
+
+.recommand_join a{
     color: #856F56; 
-    border : 1px solid #856F56;
     font-size: 18px;
+    display: inline-block;
+    width: 480px;
+    border : 1px solid #856F56;
+    text-align: center;
+    padding: 12px;
+    margin: 40px 0 64px;
 }
 
-.recommand_join button:hover{
+.recommand_join a:hover{
     background: #776655;
     color:#fff;
     cursor: pointer;
 }
-
