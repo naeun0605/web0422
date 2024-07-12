@@ -1,0 +1,91 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>연산자</h1>
+    <h2>산술연산자</h2>
+
+    <script>
+
+        const a = 5, b = 2, c = "오";
+
+        document.write("5 + 2 =" + (a + b) +"<br>");  
+        document.write(`5 + 2 =" + (a + b) +<br>`)
+    /*  백틱 (backticks) 구문
+        
+        1. 백틱 안에 내용은 모두 문자열로 취급한다. 
+        2. HTML 태그 인식한다.
+        3. 문자열 보간 : ${표현식 또는 변수}
+    */
+        
+        document.write("문자열<br>");
+        document.write("오 + 2 =" + ("오"+ b) + "<br>");
+        document.write(`오 + 2 = ${"오" + b } <br>`);
+        document.write(`${c} + ${b} = ${c + b} <br>`);
+        //${연산식 또는 변수}
+        document.write("5 - 2 =" + (a - b) + "<br>");
+        document.write(`5 - 2 = ${a - b} <br>`);
+
+        document.write("5 * 2 =" + a * b + "<br>");
+        document.write(`5 * 2 = ${a * b} <br>`);
+
+        document.write("5 / 2 =" + a / b + "<br>");
+        document.write(`5 / 2 = ${a / b} <br>`);
+
+        document.write("5 % 2 =" + a % b + "<br>");
+        document.write(`5 % 2 = ${a % b} <br>`);
+        //데이터가 바뀌는 경우에는 이렇게 적어주는 것이 더 효율적
+        document.write(`${a} % ${b} = ${a % b}`);
+
+
+
+    </script>
+</body>
+</html>
+
+
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>연산자</h1>
+    <h2>산술 연산자</h2>
+    <script>
+        const a = 7, b = 3, c = "오";
+
+        document.write("문자열<br>");
+        // +는 더하기
+        // 숫자 + 숫자 -> 숫자
+        document.write("5 + 2 = " + (a + b) + "<br>");
+        // +는 연결
+        // 문자 + 숫자 -> 문자
+        // 문자 + 문자 -> 문자
+        document.write(c + " + " + b + " = " + c + b + "<br>");
+        /*
+            백틱(backticks) 구문
+            1. `백틱` 안에 내용은 모두 문자열로 취급한다.
+            2. HTML 태그 인식한다.
+            3. 문자열 보간: ${표현식}
+        */
+        document.write(`${c} + ${b} = ${c + b}<br>`);
+
+        // NaN(Not a Number): 숫자가 아니다.
+        document.write(`${a} - ${b} = ${a - b} <br>`);
+        document.write(`${a} * ${b} = ${a * b} <br>`);
+        document.write(`${a} / ${b} = ${a / b} <br>`);
+        // %는 나머지
+        document.write(`${a} % ${b} = ${a % b}`);
+    </script>
+</body>
+</html>
