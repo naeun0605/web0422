@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>비교연산자</h1>
+
+    <script>
+        /* 
+            비교연산자
+            >       크다(초과)
+            <       작다(미만)
+            >=      크거나 같다(이상)
+            <=      작거나 같다(이하)
+            ===     같다(데이터 유형 구분함)    (==도 같다인데 데이터 유형을 구분하지 않음)
+            !==     같지 않다(데이터 유형 구분함)   (!=도 같지 않다인데 데이터 유형을 구분하지 않음)
+        */
+
+        let m = 5;
+
+        document.write(`${m>10}<br>`);
+        document.write(`${m<m}<br>`);
+        document.write(`${m>=10}<br>`);
+        document.write(`${m<=10}<br>`);
+        document.write(`${m===10}<br>`);
+        document.write(`${m!==10}<br>`);
+        document.write(`<hr>`);
+        
+        //변수 재할당
+        m = "10";
+        document.write(`${m===10}<br>`);
+        document.write(`${m==10}<br>`);
+        document.write(`${m!==10}<br>`);
+        document.write(`${m!=10}<br>`);
+
+        
+
+        
+
+    </script>
+</body>
+</html>   
