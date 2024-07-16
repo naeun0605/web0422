@@ -36,29 +36,32 @@
 
 
         //콘텐츠 가져오기
-        // let getP1 = p1.innerHTML;
-        // let getP2 = p2.textContent;
-        // console.log("getP1 = ",getP1);
-        // console.log("getP2 = ",getP2);
-
         let getP1 = p1.innerHTML;
         let getP2 = p2.textContent;
-        console.log(getP1, getP2);
+        console.log("getP1 = ",getP1);
+        console.log("getP2 = ",getP2);
+
+
 
         //p태그의 내용 바꾸기 (콘텐츠 변경)
         //pTag.innerHTML = "여기에 쓴 내용으로 변경됩니다.";
         // p1.innerHTML = '<a href="#">네이버</a>' ;
         // p2.textContent = '<a href="#">네이버</a>' ;
 
-        // p1.innerHTML = "나니랑";
-        // p2.textContent = "말이랑";
+        p1.innerHTML = "나니랑";
+        p2.textContent = "말이랑";
         
         //p1,p2를 가져와서 p3, p4 내용으로 바꾸기
-        // p3.innerHTML = getP1;
-        // p4.textContent = getP2 ;
-
         p3.innerHTML = getP1;
-        p4.textContent = getP2;
+        p4.textContent = getP2 ;
+
+         Q1. 바꾼 p1, p2의 내용으로 p3, p4를 바꿔주고 싶어서 이렇게 써봤는데 브라우저에 이렇게 나와요
+        [object HTMLParagraphElement]
+
+        //p3.innerHTML = p1;
+        //p3.innerHTML = p1.innerHTML;
+
+
 
      </script>
 </body>
