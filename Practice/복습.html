@@ -4,61 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <style>
-        #tabs>div{
-            font-size: 50px;
-            display:none;
-        }
-
-        #tabs>div.on{
-            display:block;
-        }
-
-        p.hidden{
-            display:none;
-        }
-
-    </style>
 </head>
 <body>
-    <p>나는 단락이다.</p>
-    <div id="tabs">
-        <ul>
-            <li><a href="#tab1">공지사항</a></li>
-            <li><a href="#tab2">갤러리</a></li>
-        </ul>
+     <script>
+        const d = new Date();
 
-        <div class="on" id="tab1">첫번째 콘텐츠</div>
-        <div id="tab2">두번째 콘텐츠</div>
+        let ss1 = d.getSeconds();
 
-        
-    </div>
-
-    <script>
-
-        const p = document.querySelector("p");
-        const btn1 = document.querySelector("#tab1");
-        const btn2 = document.querySelector("#tab2");
-        const cont1 = document.querySelector("#tabs>div")[0];
-        const cont2 = document.querySelector("#tabs>div")[1];
-
-        console.log(btn1, btn2);
-
-        btn1.onclick = function(){
-            p.classList.add("hidden");
+        if(ss1<10){
+            ss1 = "0" +ss1;
         }
 
+        document.write(`${ss1}`);
 
-        // btn1.onclick = function(){
-        //     cont1.classList.add("on");
-        //     cont2.classList.remove("on");
-        // };
+        let ss2 = d.getSeconds();
 
-        // btn2.onclick = function(){
-        //     cont2.classList.add("on");
-        //     cont1.classList.remove("on");
-        // };
-    </script>
+        if(ss2<10){
+            ss2 = "0" +ss2;
+        } else{
+            ss2 = ss2;
+        }
+
+        document.write(`${ss2}`);
+     </script>
 </body>
 </html>
