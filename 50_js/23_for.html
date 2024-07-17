@@ -48,13 +48,18 @@
         */
 
         //1을 화면에 10번 출력하기
-        //i++는 i를 1씩 증가시킨다.
+        //i++는 i를 1씩 증가시킨다. <=> i = i + 1 <=> i += 1
         //i--는 i를 1씩 감소시킨다.
+        
 
-        for(i=0; i<10; i++){
-            document.write("1");
+        for(let i=0; i<10; i++){
+            li[i].innerHTML = `<img src="./../assets/pic_${i+1}.jpg" alt="이미지${i+1}">`;
+
         }
 
+        for(let i=1; i<11; i++){
+            document.write(i);
+        }
 
         // li[0].innerHTML = '<img src="./../assets/pic_1.jpg" alt="이미지1">';
         // li[1].innerHTML = '<img src="./../assets/pic_2.jpg" alt="이미지2">';
