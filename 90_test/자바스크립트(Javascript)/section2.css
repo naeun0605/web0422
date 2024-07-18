@@ -41,10 +41,9 @@
 }
 
 /* 탭 중에 간식, 장난감, 방석 탭만 */
-/* 이렇게 하면 사료랑 간식 간의 차이가 좁아요 */
-/* #s2 #tabs>ul>li:not(:first-child){
+#s2 #tabs>ul>li:not(:first-child){
     margin: 0 16px;
-} */
+}
 
 #s2 #tabs>ul>li{
     margin: 0 16px;
@@ -65,14 +64,11 @@
     margin: 0 30px 0 75px;
 }
 
-
-/* 1위 아카나, 2위 오리젠, 3위 하림 그 글씨부분 맞나요?*/
+/* li 3개 다 */
 #s2 #tabs>div ul li{
     height: 216px;
-    /* background: red; */
 }
-
-/* 콘텐츠 안에 2,3위 사진영역 */
+/* 그림이랑 그림제목 */
 #s2 #tabs>div a{
     display:block;
     width: 222px;
@@ -80,13 +76,15 @@
     /* background: blue; */
 }
 
-/* 1위 사진인거같은데 사진이 커졌다가 다시 줄어들어요  */
+/* 1위 사진인거같은데 영향을 안받아요  */
+
 #s2 #tabs>div a.rank1{
     width: 570px;
     height: 432px;
+    background: yellow;
 }
 
-
+/* 1위 사진 그림제목부분 */
 #s2 #tabs>div a.rank1+h3{
     position:absolute;
     width: 474px;
@@ -94,9 +92,11 @@
     right:0;
     top: 48px;
     text-wrap: nowrap;
+    /* background: red; */
+    /* 인식이 안됨 */
 }
 
-/* 탭 기능 */
+/* 탭 기능 핵심*/
 #s2 #tabs>div{
     display: none;
 }

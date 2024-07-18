@@ -1,0 +1,11 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(typo.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css);
+
+/* 공통 */
+section {
+    height: 100vh;
+}
+
+/* 섹션1 */
