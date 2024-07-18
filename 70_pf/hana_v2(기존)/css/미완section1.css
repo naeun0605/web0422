@@ -19,3 +19,15 @@ section {
 .bx-wrapper .bx-controls-auto, .bx-wrapper .bx-pager {
     bottom:30px;
 }
+
+/* 페이저 색깔 */
+.bx-wrapper .bx-pager.bx-default-pager a{
+    background: #fff;
+     
+}
+
+/* 동그라미 중에 선택한 동그라미에 색 주기 */
+.bx-wrapper .bx-pager.bx-default-pager a.active{
+    transform: scale(2);/* (2,2)이렇게 쓴거랑 똑같음 */
+    background: rgb(133, 31, 47);
+}
