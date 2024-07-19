@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            height: 2000px;
+        }
+        p{
+            position:fixed;
+        }
+
+    </style>
+
+    <script>
+
+        //load이벤트 : HTML 요소, css, 외부 이미지/동영상 포함하여 모든 내용을 다 읽으면 실행
+        //DOMContentLoaded이벤트 : HTML 내용(HTML요소만)이 모두 읽으면 function안에 실행코드 실행
+
+        window.addEventListener("DOMContentLoaded", function(){
+            //요소찾기
+            const p = document.querySelector("p");
+            //스크롤 이벤트
+            window.addEventListener("scroll",function(){
+                p.innerHTML = Math.floor(pageYOffset);
+
+                if(p.innerHTML >= 300){
+                    document.body.style.background="skyblue";
+
+                }else{
+                    document.body.style.background="pink";
+
+                }
+            });
+  
+        });
+
+    
+    </script>
+
+</head>
+<body>
+    <h1>스크롤 이벤트</h1>
+    <p>스크롤하면 배경색이 바뀐다.</p>
+
+
+</body>
+</html>
