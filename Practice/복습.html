@@ -4,28 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body, h1, h2, p{
+            margin:0;
+        }
+        header{
+            position:fixed;
+            background: hotpink;
+            z-index: 9999;
+        }
+        header p{
+            font-size: 5rem;
+        }
+        .section{
+            height: 100vh;
+        }
+        #s1{
+            background: lightpink;
+        }
+        #s2{
+            background: lightblue;
+        }
+        #s3{
+            background: lightgreen;
+            position: relative;
+        }
+        #s3 .mbx{
+            position: absolute;
+            left: 50%;
+            top: 90%;
+            transform:translate(-50%, -50%);
+            font-size: 50px;
+            transition:2s;
+            opacity: 0;
+            padding:100px;
+
+        }
+
+        #s3 .mbx.active{
+            top:50%;
+            opacity:1;
+
+        }
+        #s4{
+            background: lightgoldenrodyellow;
+        }
+    </style>
+         <script>
+            window.addEventListener("DOMContentLoaded", function(){
+                const p = document.querySelector("p");
+                const mbx = document.querySelector(".mbx");
+    
+                window.addEventListener("scroll",function(){
+                    p.innerHTML = Math.floor(pageYOffset);
+    
+                    if(p.innerHTML >= 1750){
+                        mbx.classList.add("active");
+                    }else{
+                        mbx.classList.remove("active");
+                    }
+                });
+            });
+    
+         </script>
 </head>
 <body>
-     <script>
-        const d = new Date();
+    <header>
+        <h1>스크롤에 따른 요소의 움직임!</h1>
+        <p>여기에 스크롤양 기록</p>
+    </header>
 
-        let ss1 = d.getSeconds();
+    <div id="s1" class="section">
+        <h2>섹션1</h2>
+    </div>
+    <div id="s2" class="section">
+        <h2>섹션2</h2>
+    </div>
+    <div id="s3" class="section">
+        <h2>섹션3</h2>
+        <div class="mbx active">스크롤하면 내가 움직여요</div>
+    </div>
+    <div id="s4" class="section">
+        <h2>섹션4</h2>
+    </div>
 
-        if(ss1<10){
-            ss1 = "0" +ss1;
-        }
-
-        document.write(`${ss1}`);
-
-        let ss2 = d.getSeconds();
-
-        if(ss2<10){
-            ss2 = "0" +ss2;
-        } else{
-            ss2 = ss2;
-        }
-
-        document.write(`${ss2}`);
-     </script>
 </body>
 </html>
