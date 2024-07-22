@@ -385,7 +385,7 @@ header .container {
 } */
 
 /* LIFE아래 마크 */
-/* #s4 h3::after{
+#s4 h3::after{
     content:"";
     z-index: -1;
     width: 200px;
@@ -394,7 +394,7 @@ header .container {
     position:absolute;
     left:-2px;
     top:100px;
-} */
+}
 
 
 /* -------------------------------------------------------------------- */
@@ -421,4 +421,10 @@ header .container {
 /* 버튼 간 간격 */
 #s4 .link a:first-child{
     margin-right: 16px;
+}
+
+footer{
+    text-align: center;
+    height: 200px;
+    line-height: 200px;
 }
