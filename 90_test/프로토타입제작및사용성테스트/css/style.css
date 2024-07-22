@@ -1,0 +1,424 @@
+@charset "utf-8";
+
+@import url(reset.css);
+@import url(typo.css);
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css");
+@import url(https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css);
+
+
+
+/* fullpage */
+
+/* 풀페이지 왼쪽 하단 네비메뉴 */
+#hana_nav{
+    z-index: 9999;
+    position:fixed;
+    left: 0;
+    bottom:0;
+}
+
+/* 복붙------------------------------------------------------------- */
+
+/* 푸터에 있는 p의 높이 */
+.fp-auto-height div {
+    height: 200px;
+    color: white;
+    background: #000;
+}
+
+/* 푸터 영역 - 오른쪽 중앙에 있는 인디케이션 숨김 */
+#fp-nav.right li:last-child {
+    display: none;
+}
+
+/* common */
+.ibx {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    z-index: 99999;
+}
+
+header .container {
+    display: flex;  
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    border-bottom: 5px solid #007CFF;
+    position:fixed;
+}
+/* 로고 */
+.logo {
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+}
+
+/* 내비게이션 */
+.gnb {
+    align-self: flex-end;
+    background: #007CFF;
+    color:#fff;
+
+
+}
+
+/* 1depth */
+.main {
+    display: flex;
+    height: 30px;
+}
+
+.main>li {
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    line-height:30px;
+}
+
+.main>li a{
+    color:#fff;
+
+}
+
+.main>li:hover {
+    border-bottom: 5px solid #007CFF;
+}
+
+/* .main li:hover a {
+    color: #007CFF;
+} */
+
+.main li:hover ul a {
+    color: #007CFF;
+}
+
+
+/* 서브바 */
+.main::before {
+    content: "";
+    position: absolute;
+    top: 95px;
+    left: 0;
+    width: 100%;
+    /* Q질문, height는 왜 적용안되는지  */
+    height: 0px;
+    opacity: 0;
+    transition: .3s;
+    background: #007bff67;
+}
+
+/* .main에 마우스 올리면 서브바 보이게 하는거 */
+.main:hover::before {
+    z-index: 100;
+    height: 150px;
+    opacity: 1;
+    /* width: 1200px;
+    margin: 0 auto; */
+
+}
+
+/* 2depth */
+.sub {
+    z-index: 99;
+    position: relative; 
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px 0 20px;
+    line-height: 2;
+}
+
+/* .main(1depth)애 마우스 올리면 2depth가 아래처럼 변경됨*/
+.main:hover .sub {
+    z-index: 101;
+    height: 200px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub li a {
+    padding: 4px 16px;
+}
+
+.sub li:hover a {
+    color:#007CFF;
+    border-bottom: 5px solid #007CFF;
+}
+ 
+
+/* 섹션1 */
+
+/* 슬라이드 */
+.bx-wrapper {
+    box-shadow: none;
+    border: none;
+    margin-bottom: 0;
+}   
+/* ////////////////////////////////////////////// */
+/* 
+    현재 사용한 이미지 크기: 2000 * 1100
+    뷰포트 크기에 맞게 이미지 채우기
+*/
+.bx-viewport {
+    height: 100% !important;
+}
+
+.bx-wrapper li {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ////////////////////////////////////////////// */
+
+.bx-wrapper .bx-controls-auto, .bx-wrapper .bx-pager {
+    bottom: 30px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #fff;
+    margin: 0 18px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    transform: scale(2,2);
+    background: #06D0DA;
+}
+.bx-wrapper .bx-controls-direction a {
+    width: 40px;
+    height: 80px;
+}
+.bx-wrapper .bx-prev {
+    left: 160px;
+    background: url(./../images/prev.png) no-repeat 0px 0px;
+}
+.bx-wrapper .bx-next {
+    right: 160px;
+    background: url(./../images/next.png) no-repeat 0px 0px;
+}
+/* next 버튼 호버시 사라지는 현상 초기화 */
+.bx-wrapper .bx-next:focus, .bx-wrapper .bx-next:hover {
+    background-position: 0 0;
+}
+
+/* 슬라이드 중앙 텍스트 */
+#s1 .slideWrap p {
+    z-index: 9999;
+    position: absolute;
+    left:50%; top:50%;
+    transform: translate(-50%, -50%);
+}
+
+/* section 2 */
+#s2 {
+    padding: 72px 0;
+}
+
+#s2>.ibx>h2 {
+    text-align: center;
+}
+
+#s2>.ibx>h2+p {
+    text-align: center;
+    margin: 24px 0 48px;
+}
+
+/* 탭(버튼, 콘텐츠) 공통*/
+#s2 #tabs {
+    position: relative;
+}
+/* li를 가로배치 하기 위해 부모한테 df적용 */
+/* df : wrap이 no-wrap이 기본이라 사이즈가 크면 다음줄로 넘어감 */
+#s2 #tabs ul{
+    display: flex;
+    /* 교차축 정렬 중 align-items를 flex-end하면 아래에 붙이기 */
+    align-items: flex-end;
+}
+
+/* 탭의 버튼 (10대/ 2~30대/ 40대/ 50대 )*/
+#s2 #tabs>ul{
+    position:absolute;
+    /* 오른쪽으로 보내려고 */
+    width: 474px;
+    right:0;
+    bottom:400px;
+}
+
+#s2 #tabs>ul>li{
+    margin-right:24px;
+}
+
+/* #s2 #tabs>ul>li:not(:first-child){
+    margin: 0 16px;
+} */
+
+
+/* 탭의 콘텐츠*/
+
+/* ul높이 = 1위 사진 세로랑 같게 */
+#s2 #tabs>div ul{
+    height: 432px;
+}
+
+/* 1위 사진 위쪽으로 붙이기 */
+#s2 #tabs>div ul li:nth-child(1){
+    align-self: flex-start;
+    
+}
+
+/* 2위 사진 */
+#s2 #tabs>div ul li:nth-child(2){
+    margin: 0 30px -30px 75px;
+}
+
+/* 3위 사진 */
+#s2 #tabs>div ul li:nth-child(3){
+    margin-bottom: -30px;
+}
+
+/* Q질문 이렇게 해서 한번에 2,3위 사진 밑으로 내리려했는데 왜 적용안되나요*/
+/* #s2 #tabs>div a:not(:first-child){
+    margin: 0 16px;
+} */
+
+/* 1위,2위,3위 */
+#s2 #tabs>div ul li{
+    height: 216px;
+}
+
+/* 1,2,3위 그림이랑 제목부분 */
+#s2 #tabs>div a{
+    /* a태그는 인라인이라 w,h 적용되지 않음 따라서 df,블록, 인라인블록으로 해야 지정가능 */
+    display: block;
+    width: 222px;
+    height: 168px;
+    /* background: red; */
+}
+
+
+/* 1위 사진 */
+#s2 #tabs>div a.rank1{
+    /* display: block; 위에서 써서 안써도됨 */
+    width: 570px;
+    height: 432px;
+
+}
+
+/* 1위 사진제목 */
+#s2 #tabs>div a.rank1+h3{
+    position:absolute;
+    /* Q질문 : w,h 조정시 왜 글씨랑 영역이랑 따로 노는지랑 w,h 지정을 왜 하는지 */
+    /* width: 474px; */
+    /* height: 48px; */
+    right: 255px; /* 오른쪽기준 */
+    top:48px;
+    /* 강제 줄바꿈 제거 */
+    text-wrap:nowrap;
+    /* background: red; */
+}
+
+/* 탭의 기능 */
+/* 탭1,2,3,4의 콘텐츠 안보이게*/
+#s2 #tabs>div {
+    display: none;
+}
+
+/* on인 클래스의 콘텐츠만 보이게 */
+#s2 #tabs>div.on {
+    display: block;
+}
+
+/* section4 */
+
+#s4 {
+    height: 100vh;
+    background: url(./../images/s4_bg_cs.png) no-repeat -400px 0/cover; /* 좌우 상하 */
+    
+}
+
+#s4 .ibx {
+    display: flex;
+    align-items: center;
+    width: 1120px;
+    /* margin: 0 auto;
+    height: 100%; */
+    /* 부모인 section의 높이가 100vh로 가득차있으니까 얘도 부모기준이라 꽉참 */
+}
+
+/* 섹션4 */
+#s4 .cont {
+    width: 560px;
+}
+
+/* 수직 가운데로 보내는 3가지 방법
+    1. position : absolute => 다른 애한테 영향X
+    2. display : flex => 부모한테 적용해야함
+    3. margin으로 강제로 근데 이건 다른 애들한테 영향줌
+*/
+
+
+
+/* 부모기준 */
+#s4 h3{
+    z-index: 1;
+    position: relative;
+    margin: 24px 0 48px 0;
+
+}
+
+/* 확인------------------------------------------------------------ */
+/* LIFE아래 마크 */
+/* #s4 .cont::after {
+    content:"";
+    z-index: -1;
+    width: 200px;
+    height: 40px;
+    background: #007CFF;
+    position:absolute;
+    left:-2px;
+    top:100px;
+} */
+
+/* LIFE아래 마크 */
+/* #s4 h3::after{
+    content:"";
+    z-index: -1;
+    width: 200px;
+    height: 40px;
+    background: #007CFF;
+    position:absolute;
+    left:-2px;
+    top:100px;
+} */
+
+
+/* -------------------------------------------------------------------- */
+
+/* 두번째 단락 여백 */
+#s4 p:last-of-type{
+    margin:24px 0;
+}
+
+/* 브랜드소개, 창업문의 */
+#s4 .link a{
+    background: #007CFF;
+    padding: 16px 24px;
+    transition: .1s;
+    display: inline-block;
+}
+
+/* 마우스 호버시 위치 조정 및 색 변경 */
+#s4 .link a:hover{
+    transform:translateY(-4px);
+    background: #007bff8c;
+}
+
+/* 버튼 간 간격 */
+#s4 .link a:first-child{
+    margin-right: 16px;
+}

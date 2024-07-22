@@ -19,7 +19,7 @@
 /* 가로, 세로의 %는 부모 기준 */
 section {
     height: 100vh;
-    background: url(./../assets/s4_bg.png) no-repeat -285px 0/cover; /* 좌우 상하 */
+    background: url(./../assets/s4_bg_cs.png) no-repeat -285px 0/cover; /* 좌우 상하 */
     
 }
 
