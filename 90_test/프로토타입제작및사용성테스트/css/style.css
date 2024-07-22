@@ -333,6 +333,10 @@ header .container {
     display: block;
 }
 
+#s3 h2{
+    text-align: center;
+}
+
 /* section4 */
 
 #s4 {
