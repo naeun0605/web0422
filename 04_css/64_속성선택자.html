@@ -18,6 +18,7 @@
         div[class^="test"]{background: lime;}
         /* div중에서 class 속성 값이 test로 끝나는 요소 */
         div[class$="test"]{border: 2px solid green;}
+        div[class*="test"]{color:orange;}
 
 
     </style>
@@ -47,6 +48,8 @@
     <h2>[속성^="값"]</h2>
     <!-- dollar sign, 달러 사인, $는 값으로 끝나는 -->
     <h2>[속성$="값"]</h2>
+    <!-- asterisk, 아스테리스크 -->
+    <h2>[속성*="값"]</h2>
     <div class="first_test">The first div element.</div>
     <div class="second">The second div element.</div>
     <div class="test">The third div element.</div>
@@ -55,8 +58,7 @@
     <p class="test_ex">This is a paragraph.</p>
 
 
-    <!-- asterisk, 아스테리스크 -->
-    <h2>[속성*="값"]</h2>
+
 </body>
 
 </html>
