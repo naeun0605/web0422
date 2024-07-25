@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        html{
+            font-size: 10px;
+        }
+        img {
+            /*
+            가변 이미지
+            이미지 크기보다 큰 화면에서는 이미지가 원래 크기대로 표시되고, 
+            이미지 크기보다 작은 화면에서는 이미지가 장치 크기에 맞게 작아짐 
+            */
+          max-width: 100%;
+          /* body에서 크기를 강제로 지정해놨기때문에 height를 auto로 지정해주지 않으면 이미지 찌그러짐*/
+          /* height: auto; */
+        }
+ 
+        /* 뷰포트 단위: vw, vh, vmin, vmax */
+        /* vw: 창 크기의 배수 */
+        p{
+            font-size: 1vw;;
+        }
+        </style>
+</head>
+<body>
+    <!--  width="460" height="345" -->
+    <img src="https://www.w3schools.com/css/img_chania.jpg" alt="이미지 설명글">
+    <p>너비가 460px보다 작을 때 이미지 크기가 어떻게 변하는지 확인하려면 브라우저 창 크기를 조절하세요.</p>
+</body>
+</html>

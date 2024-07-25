@@ -27,6 +27,10 @@
             list-style: none;
         }
 
+        img{
+            max-width: 100%;
+            height: auto;
+        }
 
         /* 
             CSS 변수
@@ -109,6 +113,9 @@
         .main {
             color: var(--gray);
         }
+        .main img:first-of-type{
+            display: none;
+        }
 
         /* 오른쪽 메뉴(사이드 콘텐츠) */
         .aside {
@@ -136,7 +143,7 @@
 
 
 
-        /* 최소 576이상의 장치 : tablets, desktop/
+        /* 최소 576이상의 장치 : tablets, desktop*/
         @media (min-width: 576px) {
             .section{
                 display: flex;
@@ -161,7 +168,15 @@
             width: 100%;
         }
 
+        .main img:first-of-type{
+            display: none;
+        }
 
+        .main img:last-of-type{
+            display: none;
+        }
+
+    }
         /* 최소 768이상의 장치 : desktop*/
         @media (min-width: 768x) {
             .section {

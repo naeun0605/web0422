@@ -7,19 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
-        /* https://www.w3schools.com/css/css_rwd_intro.asp */
-
         /* 초기화 */
+        /* width, height 크기에 border와 padding 포함된다. */
         * {
-            /* w,h 크기에 border랑 padding이 포함되게 하는 것 */
             box-sizing: border-box;
         }
 
         body,
         ul {
             margin: 0;
-
         }
 
         ul {
@@ -29,23 +25,35 @@
 
 
         /* 
-            CSS 변수
-            1. 선언
-                :root {--변수명: 값;}
-            2. 사용
-                선택자 {속성: var(--변수명);}
+            CSS 변수(variable)
+                1. 선언 
+                    :root {--변수명: 값;}
+                2. 사용
+                    선택자 {속성: var(--변수명);}
+
+
+            url(이미지)
+            scale()
+            rotate()
+            translate()
+            skew()
+            calc(10 - 2)
+            var()
+
         */
 
         /* 색상 */
-        /* :root == html */
-        :root {
-            /* --변수명 */
-            /* 변수(variable) */
-            --violet: #9933cc;
-            --bluesky: #33b5e5;
-            --skyblue: #0099cc;
+        html {
+            --violet: rgb(81, 7, 118);
+            --bluesky: #a4f208;
+            --skyblue: rgb(138, 172, 13);
             --white: #fff;
             --gray: #333;
+            /* --violet: #93c;
+            --bluesky: #33b5e5;
+            --skyblue: #09c;
+            --white: #fff;
+            --gray: #333; */
         }
 
         /* 타이포 */
@@ -53,8 +61,6 @@
             font-family: "Lucida Sans", sans-serif;
             color: var(--white);
         }
-
-
 
         /* 헤더 */
         .header {
@@ -65,29 +71,22 @@
         /* 섹션 */
         .row {
             display: flex;
-            /* 강제 줄바꿈 */
             flex-wrap: wrap;
         }
 
-
         /* 
-        CSS 스타일이 적용되는 우선순위
-            0순위 !important
-            1순위 인라인 스타일
-            ----------------------------
-            2순위 #아이디
-            3순위 .클래스, :클래스, [속성]
-            4순위 요소, ::가상 요소 선택자(after, before)             
+            CSS 스타일 적용 우선순위
+                0. !important (값)
+                1. 인라인 스타일
+                ---------------------------------
+                2. #아이디
+                3. .클래스, :클래스, [속성]
+                4. 요소, ::가상요소
         */
 
-
-        /* .row>div 이거랑 같은건데 이렇게 쓰면 우선순위가 높아져서 밑에 width 퍼센트로 바꿔준게 적용이 안되니까 속성 선택자로 작성!*/
-        .menu,
-        .main,
-        .aside {
+        .menu, .main, .aside {
             padding: 15px;
         }
-
 
         /* 왼쪽 메뉴 */
         .menu li {
@@ -96,8 +95,7 @@
             background: var(--bluesky);
             transition: .3s;
 
-            /* box-shadow: x위치 y위치 흐림 [퍼짐](생략가능) 색 */
-            /* 흐림 숫자 클수록 뿌~옇게 처리 */
+            /* box-shadow: x위치 y위치 흐림 [퍼짐] 색, x위치 y위치 흐림 [퍼짐] 색, ... */
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         }
 
@@ -110,8 +108,8 @@
             color: var(--gray);
         }
 
-        /* 오른쪽 메뉴(사이드 콘텐츠) */
-        .aside {
+        /* 사이드 콘텐츠 */
+        .aside div {
             background: var(--bluesky);
             padding: 15px;
             text-align: center;
@@ -119,7 +117,7 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         }
 
-        /* 푸터 영역 */
+        /* 푸터 */
         .footer {
             background: var(--skyblue);
             text-align: center;
@@ -127,73 +125,50 @@
             padding: 15px;
         }
 
+        /* https://www.w3schools.com/css/css_rwd_intro.asp */
+        /* 최소 576px 이상의 장치: tablet, desktop */
+
         /* 
             미디어쿼리
-            중단점(breakpoint) => 576,768,992,1200,1440
-            @media (조건){
-            CSS 코드}
+            중단점(breakpoint): 576, 992
+            @media (조건) {
+                CSS 코드
+            }
         */
 
-
-
-        /* 최소 576이상의 장치 : tablets, desktop/
         @media (min-width: 576px) {
-            .section{
-                display: flex;
-                flex-wrap: wrap;
-            }
+            .section {display: flex; flex-wrap: wrap;}
             /* 
-                flex-grow : 기본값(1) 
-                flex-shrink : 기본값(0) - 수축되지 않음
-                flex-basis: 기본값(auto) - (단위필요 : %, px, ...)
-                flex:grow shrink basis;
+                flex-grow: 1
+                flex-shrink: 0
+                flex-basis: auto (단위: %, px, ...)
+                flex: grow shrink basis;
             */
-
-        .menu {
-            flex: 33%;
+            .menu {flex:33%;}
+            .main {flex:67%;}
+            .aside {flex:100%;}
         }
-
-        .main {
-            flex: 67%;
-        }
-
-        .aside {
-            width: 100%;
-        }
-
-
-        /* 최소 768이상의 장치 : desktop*/
-        @media (min-width: 768x) {
-            .section {
-                display: flex;
-            }
-
-            .menu {
-                flex: 25%;
-            }
-
-            .main {
-                flex: 50%;
-            }
-
-            .aside {
-                width: 25%;
-            }
+        
+        /* 최소 768이상의 장치: desktop */
+        @media (min-width: 768px) {
+            .menu {flex:25%;}
+            .main {flex:50%;}
+            .aside {flex:25%;}
         }
     </style>
 </head>
 
 <body>
-
-    <!-- 헤더 영역 -->
+    <!-- 헤드 영역 -->
     <header class="header">
         <h1>Chania</h1>
     </header>
 
-    <!-- 왼쪽 메뉴 -->
-    <!-- col-*는 데스크탑, col-s-*는 테블릿, *는 1~12 -->
-    <!-- col-를 지정하지 않으면 폰 -->
+    <!-- row: 행, column:열 -->
     <section class="section">
+        <!-- 왼쪽 메뉴 -->
+        <!-- col-*는 데스크탑, col-s-*는 테블릿, *는 1~12 -->
+        <!-- col-를 지정하지 않으면 폰 -->
         <nav class="menu">
             <ul>
                 <li>The Flight</li>
@@ -203,13 +178,14 @@
             </ul>
         </nav>
 
-        <!-- main태그는 한 번만 쓸 수 있음 -->
         <!-- 메인 콘텐츠 -->
         <main class="main">
             <h1>The City</h1>
             <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts,
                 the old town and the modern city.</p>
-            <img src="https://www.w3schools.com/css/img_chania.jpg" alt="하니아">
+                <img src="https://www.w3schools.com/css/img_chania.jpg" alt="하니아">
+                <img src="https://www.w3schools.com/css/img_smallflower.jpg" alt="하니아">
+
         </main>
 
         <!-- 사이드 콘텐츠 -->
@@ -229,10 +205,7 @@
     <!-- 푸터 영역 -->
     <footer class="footer">
         <p>Copyright 2024 Chania. All rights reserved.</p>
-    </footer>
-
-
-
+    </foot>
 </body>
 
 </html>
