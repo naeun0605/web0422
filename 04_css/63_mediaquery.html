@@ -9,6 +9,7 @@
     <style>
 
         /* https://www.w3schools.com/css/css_rwd_intro.asp */
+
         /* 초기화 */
         * {
             /* w,h 크기에 border랑 padding이 포함되게 하는 것 */
@@ -18,13 +19,14 @@
         body,
         ul {
             margin: 0;
-            
+
         }
 
         ul {
             padding: 0;
             list-style: none;
         }
+
 
         /* 
             CSS 변수
@@ -36,13 +38,13 @@
 
         /* 색상 */
         /* :root == html */
-        :root {
+        html {
             /* --변수명 */
             /* 변수(variable) */
             --violet: #9933cc;
             --bluesky: #33b5e5;
             --skyblue: #0099cc;
-            --white:#fff;
+            --white: #fff;
             --gray: #333;
         }
 
@@ -80,9 +82,8 @@
 
 
         /* .row>div 이거랑 같은건데 이렇게 쓰면 우선순위가 높아져서 밑에 width 퍼센트로 바꿔준게 적용이 안되니까 속성 선택자로 작성!*/
-        [class*="col-"] {
+        .menu,.main,.aside {
             padding: 15px;
-            width: 100%;
         }
 
 
@@ -108,7 +109,7 @@
         }
 
         /* 오른쪽 메뉴(사이드 콘텐츠) */
-        .aside {
+        .aside div{
             background: var(--bluesky);
             padding: 15px;
             text-align: center;
@@ -124,111 +125,57 @@
             padding: 15px;
         }
 
+        /* 
+            미디어쿼리
+            중단점(breakpoint) => 576,768,992,1200,1440
+            @media (조건){
+            CSS 코드}
+        */
 
-        /* 최소 600이상의 장치 : tablets*/
-        @media only screen and (min-width: 600px) {
 
-            /* For tablets: */
-            .col-s-1 {
-                width: 8.33%;
+
+        /* 최소 576이상의 장치 : tablets, desktop*/
+        @media (min-width: 576px) {
+            .section{
+                display: flex;
+                flex-wrap: wrap;
             }
+            /* 
+                flex-grow : 기본값(1) 
+                flex-shrink : 기본값(0) - 수축되지 않음
+                flex-basis: 기본값(auto) - (단위필요 : %, px, ...)
+                flex:grow shrink basis;
+            */
 
-            .col-s-2 {
-                width: 16.66%;
-            }
-
-            .col-s-3 {
-                width: 25%;
-            }
-
-            .col-s-4 {
-                width: 33.33%;
-            }
-
-            .col-s-5 {
-                width: 41.66%;
-            }
-
-            .col-s-6 {
-                width: 50%;
-            }
-
-            .col-s-7 {
-                width: 58.33%;
-            }
-
-            .col-s-8 {
-                width: 66.66%;
-            }
-
-            .col-s-9 {
-                width: 75%;
-            }
-
-            .col-s-10 {
-                width: 83.33%;
-            }
-
-            .col-s-11 {
-                width: 91.66%;
-            }
-
-            .col-s-12 {
-                width: 100%;
-            }
+        .menu {
+            flex: 33%;
         }
 
-        /* 최소 768 이상의 장치: desktop */
-        @media only screen and (min-width: 768px) {
+        .main {
+            flex: 67%;
+        }
 
-            /* 한 칸이 8.33,  두 칸이면 8.33 * 2 = 16.66 */
-            /* For desktop: */
-            .col-1 {
-                width: 8.33%;
+        .aside {
+            flex: 100%;
+        }
+    }
+
+        /* 최소 768이상의 장치 : desktop*/
+        @media (min-width: 768x) {
+            /* .section {
+                display: flex;
+            } */
+
+            .menu {
+                flex: 25%;
             }
 
-            .col-2 {
-                width: 16.66%;
+            .main {
+                flex: 50%;
             }
 
-            .col-3 {
-                width: 25%;
-            }
-
-            .col-4 {
-                width: 33.33%;
-            }
-
-            .col-5 {
-                width: 41.66%;
-            }
-
-            .col-6 {
-                width: 50%;
-            }
-
-            .col-7 {
-                width: 58.33%;
-            }
-
-            .col-8 {
-                width: 66.66%;
-            }
-
-            .col-9 {
-                width: 75%;
-            }
-
-            .col-10 {
-                width: 83.33%;
-            }
-
-            .col-11 {
-                width: 91.66%;
-            }
-
-            .col-12 {
-                width: 100%;
+            .aside {
+                flex: 25%;
             }
         }
     </style>
@@ -237,33 +184,36 @@
 <body>
 
     <!-- 헤더 영역 -->
-    <div class="header">
+    <header class="header">
         <h1>Chania</h1>
-    </div>
+    </header>
 
     <!-- 왼쪽 메뉴 -->
     <!-- col-*는 데스크탑, col-s-*는 테블릿, *는 1~12 -->
     <!-- col-를 지정하지 않으면 폰 -->
-    <div class="row">
-        <div class="col-3 col-s-3 menu">
+    <section class="section">
+        <nav class="menu">
             <ul>
                 <li>The Flight</li>
                 <li>The City</li>
                 <li>The Island</li>
                 <li>The Food</li>
             </ul>
-        </div>
+        </nav>
 
+        <!-- main태그는 한 번만 쓸 수 있음 -->
         <!-- 메인 콘텐츠 -->
-        <div class="col-6 col-s-9 main">
+        <main class="main">
             <h1>The City</h1>
             <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts,
                 the old town and the modern city.</p>
-        </div>
+            <img src="https://www.w3schools.com/css/img_chania.jpg" alt="하니아">
+            <img src="https://www.w3schools.com/css/img_smallflower.jpg" alt="하니아">
+        </main>
 
         <!-- 사이드 콘텐츠 -->
-        <div class="col-3 col-s-12">
-            <div class="aside">
+        <aside class="aside">
+            <div>
                 <h2>What?</h2>
                 <p>Chania is a city on the island of Crete.</p>
                 <h2>Where?</h2>
@@ -271,13 +221,14 @@
                 <h2>How?</h2>
                 <p>You can reach Chania airport from all over Europe.</p>
             </div>
-        </div>
-    </div>
+        </aside>
+
+    </section>
 
     <!-- 푸터 영역 -->
-    <div class="footer">
+    <footer class="footer">
         <p>Copyright 2024 Chania. All rights reserved.</p>
-    </div>
+    </footer>
 
 
 
