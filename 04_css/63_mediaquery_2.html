@@ -16,7 +16,7 @@
         body,
         ul {
             margin: 0;
-            
+
         }
 
         ul {
@@ -40,7 +40,7 @@
             --violet: #9933cc;
             --bluesky: #33b5e5;
             --skyblue: #0099cc;
-            --white:#fff;
+            --white: #fff;
             --gray: #333;
         }
 
@@ -78,7 +78,9 @@
 
 
         /* .row>div 이거랑 같은건데 이렇게 쓰면 우선순위가 높아져서 밑에 width 퍼센트로 바꿔준게 적용이 안되니까 속성 선택자로 작성!*/
-        .menu, .main, .aside {
+        .menu,
+        .main,
+        .aside {
             padding: 15px;
         }
 
@@ -121,6 +123,14 @@
             padding: 15px;
         }
 
+        /* 
+            미디어쿼리
+            중단점(breakpoint) => 576,768,992,1200,1440
+            @media (조건){
+            CSS 코드}
+        */
+
+
 
         /* 최소 576이상의 장치 : tablets, desktop/
         @media (min-width: 576px) {
@@ -135,38 +145,37 @@
                 flex:grow shrink basis;
             */
 
-            .menu{
-                flex:33%;
-            }
+        .menu {
+            flex: 33%;
+        }
 
-            .main{
-                flex:67%;
-            }
+        .main {
+            flex: 67%;
+        }
 
-            .aside{
-                width: 100%;
-            }
-        
+        .aside {
+            width: 100%;
+        }
+
 
         /* 최소 768이상의 장치 : desktop*/
         @media (min-width: 768x) {
-            .section{
+            .section {
                 display: flex;
             }
-            .menu{
-                flex:25%;
+
+            .menu {
+                flex: 25%;
             }
 
-            .main{
-                flex:50%;
+            .main {
+                flex: 50%;
             }
 
-            .aside{
+            .aside {
                 width: 25%;
             }
         }
-        
-
     </style>
 </head>
 
@@ -199,16 +208,16 @@
         </main>
 
         <!-- 사이드 콘텐츠 -->
-            <aside class="aside">
-                <div>
-                    <h2>What?</h2>
-                    <p>Chania is a city on the island of Crete.</p>
-                    <h2>Where?</h2>
-                    <p>Crete is a Greek island in the Mediterranean Sea.</p>
-                    <h2>How?</h2>
-                    <p>You can reach Chania airport from all over Europe.</p>
-                </div>
-            </aside>
+        <aside class="aside">
+            <div>
+                <h2>What?</h2>
+                <p>Chania is a city on the island of Crete.</p>
+                <h2>Where?</h2>
+                <p>Crete is a Greek island in the Mediterranean Sea.</p>
+                <h2>How?</h2>
+                <p>You can reach Chania airport from all over Europe.</p>
+            </div>
+        </aside>
 
     </section>
 
