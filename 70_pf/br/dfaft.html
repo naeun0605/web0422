@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>올림픽</title>
+    <style>
+        body{
+            margin:0;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+
+        .tablet, .desktop{
+            display: none;
+        }
+
+        @media (min-width:576px) {
+            /* 폰은 숨기고 태블릿은 보이게 */
+            .phone {display: none;}
+            .tablet {display: block;}
+        }
+
+        @media (min-width:992px) {
+            /* 폰은 위에서 숨겼고 태블릿도 숨기고 데스크탑만 보이게 */
+            .tablet {display: none;}
+            .desktop {display: block;}
+        }
+    </style>
+
+</head>
+<y>
+    <img class="phone" src="./../assets/phone.png" alt="폰">
+    <img class="tablet" src="./../assets/tablet.png" alt="태블릿">
+    <img class="desktop" src="./../assets/desktop.png" alt="데스크탑">
+tablety>
+</html>
