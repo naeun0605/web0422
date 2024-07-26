@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            /* 
+            함수
+                1. 선언적 함수
+                2. 익명함수 -> 화살표 함수
+        */
+            window.addEventListener("DOMContentLoaded", () => {
+                const ho = document.querySelectorAll("span").item(0);
+                const mi = document.querySelectorAll("span").item(2);
+                const se = document.querySelectorAll("span").item(4);
+
+                //setInterval(함수,밀리초);
+                setInterval(clock, 1000);
+
+                function clock() {
+                    const d = new Date();
+
+                    let hou = d.getHours();
+
+                    (hou < 10) ? hou = "0" + hou : hou = hou;
+                    ho.innerText = hou;
+
+
+                    let min = d.getMinutes();
+
+                    (min < 10) ? min = "0" + min : min = min;
+                    mi.innerText = min;
+
+
+                    // 초(0~59)를 sec에 할당
+                    let sec = d.getSeconds();
+
+                    if (sec < 10) {
+                        sec = "0" + sec;
+                    } else {
+                        sec = sec;
+                    }
+                    //  (sec < 10) ? sec = "0" + sec : sec = sec;
+                    se.innerText = sec;
+
+                    function zero(num){
+                        return (num < 10) ? num = "0" + num : num = num;
+                    }
+
+              
+                } 
+                // clock_fn
+
+            }); 
+            // DOMContentLoaded
+        </script>
+    </head>
+    <body>
+        <div>
+            <span>시</span>
+            <span>:</span>
+            <span>분</span>
+            <span>:</span>
+            <span>초</span>
+        </div>
+    </body>
+</html>
