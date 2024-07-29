@@ -19,12 +19,19 @@
 
         // 1. 함수 선언
         function fn(para){
-            return    document.write(para + "호출했니?");
+            return para + "호출했니?";
         }
 
         // 2. 함수 호출
-        fn("나");
-    </script>
+        const na = fn("나");
+        const yo = fn("너");
+        const hong = fn("홍길동");
+
+
+        // 3.출력
+        document.write(na, yo, hong);
+        
+</script>
 </head>
 <body>
     <h1>함수 - return</h1>

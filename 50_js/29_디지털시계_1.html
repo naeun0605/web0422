@@ -18,6 +18,13 @@
             const se = document.querySelectorAll("span").item(4);
 
             //setInterval(함수,밀리초);
+            //setInterval(function(){return clock()}, 1000);
+            //setInterval(()=>{return clock(1)}, 1000);
+            //실행문이 하나면 return 과 {}생략
+            //매개값이 없으면 함수 이름만으로 호출한다, 즉 ()는 안씀
+
+            //1초마다 clock 호출
+
             setInterval(clock, 1000);
 
             function clock(){
