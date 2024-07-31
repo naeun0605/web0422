@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+/* 공통 */
+*{
+    box-sizing:border-box;
+}
+
+body, ul{
+    margin: 0;
+}
+
+html{
+    font-size: 10px;
+}
+body{
+    color:#333;
+    background: #fff;
+    font-family: Arial, 굴림, sans-serif;
+    font-size: 1.5rem;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+a {
+    color:#333;
+    text-decoration: none;
+}
+
+/* 사용 후 반드시 지우기 */
+body *{
+    outline:1px solid red;
+}
+
+/* A영역 */
+header{
+    height: 100px;
+    width: 1340px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.logo{
+    width: 190px;
+    height: 44px;
+}
+
+nav{
+    align-self:flex-end;
+}
+
+.main{
+    font-size: 1.8rem;
+    font-weight:bold;
+    display: flex;
+}
+
+Q. li가 a를 감쌌는데 어떻게 a가 더 큰가요?! 
+a가 li자식이니까 자식꺼 늘리면 부모도 늘어남 (블록레벨요소)
+
+
+/* .main>li{
+    background: blue;
+}
+
+.main>li>a{
+    background: green;
+} */
+
+
+.main>li>a{
+    padding:16px 24px;
+    display:block;
+            /* a가 인라인 요소라서 부모를 벗어남 그래서 인라인요소인 a태그를 block으로 바꿔주기  => 그래야 부모 요소를 벗어나지 않음*/
+        Q 근데 nav는 블록이고 a는 인라인인데 nav가 넘쳤다고 보면 안되나요??
+}
+
+.main>li>a:hover{
+    background: #e31a40;
+}
+
+.sub{
+    font-size: 1.4rem;
+    font-weight: normal;
+    display: none;
+}
+
+
+/* B영역 */
+#slide{
+    height: 350px;
+    overflow:hidden;
+}
+
+/* C,D영역 공통 */
+.container{
+    position:relative;
+    top: -100px;
+    width: 1340px;
+    margin: 0 auto;
+}
+
+#link{
+    height: 100px;
+    background: #e31a40;
+}
+#banner{
+    height: 150px;
+
+}
+#board{
+    height: 300px;
+
+}
+/* D영역 */
+footer{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.flogo{
+    width: 200px;
+}
+
+.addr{
+    width: 900px;
+}
+
+.fs{
+    width: 240px;
+}
