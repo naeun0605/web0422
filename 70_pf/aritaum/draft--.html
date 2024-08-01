@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aritaum</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        div{
+            /* 
+                background-color: 배경색
+                background-image: url(이미지);
+                background-repeat: 반복;
+                background-position: x위치 y위치;
+                background-size: 가로 세로; => 하나만 쓰면 세로를 생략
+                background-attachment: fixed; => 패럴렉스 스크롤링 효과
+
+                background: 색상|이미지 [반복] [위치]/[크기] [고정]; => 색상 또는 이미지는 반드시 써야함
+
+            */
+            background: url(phone.png) no-repeat 0 0/100%;
+            /* 기본 */
+            width: 100%;
+            /* 컨텐츠가 없을때는 height를 auto로 해도 의미 없음 이럴땐 강제 지정 해줘야함 */
+            /* JS에서는 자동으로 높이 잡을 수 있음 => 아직 안배움 */
+            height: 3332px;
+        }
+
+        @media(min-width:768px){
+            div{
+            background: url(tablet.png) no-repeat;
+            /* 기본 */
+            width: 100%;
+            /* 컨텐츠가 없을때는 height를 auto로 해도 의미 없음 이럴땐 강제 지정 해줘야함 */
+            /* JS에서는 자동으로 높이 잡을 수 있음 => 아직 안배움 */
+            height: 4096px;
+        }
+
+        @media(min-width:992px){
+            div{
+            background: url(desktop.png) no-repeat;
+            /* 기본 */
+            width: 100%;
+            /* 컨텐츠가 없을때는 height를 auto로 해도 의미 없음 이럴땐 강제 지정 해줘야함 */
+            /* JS에서는 자동으로 높이 잡을 수 있음 => 아직 안배움 */
+            height: 3822px;
+        }
+
+        }
+
+    </style>
+
+    <script>
+        /* 
+            JS에서 img의 속성(Atrribute)을 변경하는 메서드?
+
+        */
+    </script>
+
+</head>
+<body>
+       <div></div>
+ 
+</body>
+</html>
