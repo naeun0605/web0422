@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            transform(변형): 2D(x,y), 3D(x, y, z)
+                2D(x,y)
+                    rotate(각도)
+                    scale(w, h)
+                    scaleX(w)
+                    scaleY(h)
+                    translate(x,y)
+                    translateX(x)
+                    translateY(y)
+                    skew(각도, 각도)
+                    skewX(각도)
+                    skewY(각도)
+
+                3(x, y, z)
+                    rotateX(회전)
+                    rotateY(회전)
+                    scaleZ(크기 조절)
+                    translateZ(위치)
+
+                
+
+                2D
+                transform: rotate(숫자deg);
+
+                3D
+                transform: rotateX(숫자deg);
+                transform: rotateY(숫자deg);
+
+        */
+
+        div{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            transition: 1s;
+
+        }
+
+        div:hover{
+            transform: rotate(360deg);
+            /* 
+                transition-property: 속성;
+                transition-duration; 전환시간;
+                transition-delay: 지연시간;
+                transition-timing-function: 가속도;
+
+                transition: 속성 전환시간 가속도 지연시간;
+
+            */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>변형</h1>
+    <div>회전</div>
+</body>
+</html>
