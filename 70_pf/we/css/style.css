@@ -69,10 +69,22 @@ nav{
     display: flex;
 }
 
+Q. li가 a를 감쌌는데 어떻게 a가 더 큰가요?! 
+a가 li자식이니까 자식꺼 늘리면 부모도 늘어남 (블록레벨요소)
+
+
+/* .main>li{
+    background: blue;
+}
+
+.main>li>a{
+    background: green;
+} */
+
 .main>li>a{
     display:block;
         /* a가 인라인 요소라서 부모를 벗어남 그래서 인라인요소인 a태그를 block으로 바꿔주기  => 그래야 부모 요소를 벗어나지 않음*/
-        /* Q 근데 nav는 블록이고 a는 인라인인데 nav가 넘쳤다고 보면 안되나요?? */
+        Q 근데 nav는 블록이고 a는 인라인인데 nav가 넘쳤다고 보면 안되나요??
     padding: 16px 24px;
 }
 
