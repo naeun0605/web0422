@@ -1,0 +1,183 @@
+@charset "utf-8";
+@import url('reset.css');
+@import url('typo.css');
+
+/* 내비게이션의 버튼 클릭 시 부드러운 움직임 표현 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 헤더 영역 */
+header {
+    /* position이 fixed나 absolute이면 width가 콘텐츠 크기 */
+    position: fixed;
+    z-index: 9999;
+    /* position이 fixed나 absolute면 width가 콘텐츠 크기라서 100%로 지정 */
+    width:100%;
+    display: flex;
+    /* 주축정렬 */
+    justify-content: space-between;
+    /* 교차축정렬 */
+    align-items: center;
+    height:54px;
+    padding: 0 30px;
+    /* 
+    box-shadow: x위치 y위치 흐림 퍼짐 색, x위치 y위치 흐림 퍼짐 색, ... 
+    text-shadow: x위치 y위치 흐림 색, x위치 y위치 흐림 색, ... 
+    */
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* navigation */
+nav ul {
+    display: flex;
+}
+
+/* 딴요소 없으면 child 있으면 of type */
+nav ul li:not(:first-child){
+    margin-left: 40px;
+}
+
+/* 섹션공통 */
+section {
+    width: 1480px;
+    /* 블록 레벨 요소 가로 가운데배치 */
+    margin: 0 auto;
+    padding-top: 96px;
+}
+
+
+/* 섹션1 */
+#sec1 {
+    position: relative;
+    /* 헤더의 높이만큼 이미지 내리기 위해 */
+    padding-top: 54px;
+}
+#sec1 h2 {
+    /* 화면에 h2 정중앙 배치 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+#sec1 b {
+    padding: 8px 16px;
+    margin-right: 16px;
+}
+
+
+#sec1 div {
+    height: 745px;
+}
+
+
+/* 섹션2,3 공통 */
+section li {
+    width: 355px;
+}
+
+section li:not(:nth-of-type(4n)) {
+    margin-right: 20px;
+}
+
+
+/* 섹션2 */
+#sec2 h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 24px;
+    margin-bottom: 48px;
+}
+
+#sec2 ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#sec2 li {
+    height: 240px;
+    margin-bottom: 20px;
+}
+
+#sec2 h3 {
+    position: absolute;
+    padding: 8px 24px;
+}
+
+#sec2 div {
+    height: 100%;
+}
+
+/* 섹션3 */
+#sec3 h2 {
+    border-bottom: 1px solid #111;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+#sec3>p {
+    margin-bottom: 48px;
+}
+
+#sec3 ul {
+    display: flex;
+}
+
+#sec3 div {
+    height: 240px;
+}
+
+#sec3 h3 {
+    margin: 24px 0;
+}
+
+#sec3 li p {
+    margin: 24px 0;
+}
+
+#sec3 a {
+    display: block;
+    text-align: center;
+    padding: 12px 0;
+}
+
+/* 섹션4 */
+#sec4 {
+    padding-bottom: 8px;
+}
+#sec4 h2 {
+    border-bottom: 1px solid #111;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+#sec4 p {
+    margin-bottom: 24px;
+}
+#sec4 input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 16px 0;
+    padding-left: 8px;
+    border: 1px solid #ccc;
+}
+#sec4 button {
+    margin: 16px 0 48px;
+    padding: 12px 20px;
+}
+
+#sec4 .map {
+    /* width: 1480px; */
+    height: 845px;
+}
+
+/* 푸터 */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    height: 85px;
+    /* padding: 30px 0; */
+}

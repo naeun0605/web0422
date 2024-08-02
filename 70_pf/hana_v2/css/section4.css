@@ -12,7 +12,7 @@
 */
 section {
     height: 100vh;
-    background: url(../assets/s4_bg.png) no-repeat -297px 0/cover;
+    background: url(../assets/s4_bg.png) no-repeat -285px 0/cover;
 }
 
 .ibx {
@@ -27,55 +27,37 @@ section {
 #s4 .cont {
     width: 560px;
 }
-
-/* .cont 안에 있는 것들 여백설정 */
-#s4 h3{
-    margin: 24px 0 48px 0;
+#s4 h3 {
     position: relative;
-
+    margin: 24px 0 48px 0;
 }
-
-/* 콘텐츠는 html로 삽입하는건데 css로 가상으로 삽입할 수 있는 선택자 ; 가상 선택자 */
-#s4 h3::after{
-    content:"";
-    background: #00D4EA;
-    position:absolute; /*다른 애들한테 영향 안주고 */
-    left:-4px;
-    top:100px;
-    /* content에 내용을 지우면 없어진 거 처럼 보이니까 w,h지정 */
-    width: 360px;
-    height: 40px;
+#s4 h3::after {
+    content: "";
     z-index: -1;
+    position: absolute; left:-4px; top:100px;
+    width: 360px; height: 40px;
+    background: #5E2BB8;
 }
-
-#s4 p:last-of-type{
+#s4 p:last-of-type {
     margin: 24px 0;
 }
-
-/* 브랜드소개, 여행문의 버튼 */
 #s4 .link a {
-    display:inline-block; /* a태그는 인라인이라 블록으로 바꿔줄껀데 블록은 줄바꿈되니까 인라인블록으로*/
-    padding : 16px 24px;
-    background: #00D4EA;
+    display: inline-block;
+    padding: 16px 24px;
+    background: #5E2BB8;
     transition: .1s;
-    /* transition주려면 호버전에 적어야 호버 전 후 적용됨 */
 }
-
 /* 
-    2D 변형 (transform)
-    1. scale (1,1), scaleX(1), scaleY(1)
-    2. rotate (0deg)
-    3. translate (0px, 0px), translateX(0px), translateY(0px)
-    4. skew (0deg 0deg), skewX(0deg), skewY(0deg)
+    2D 변형(transform)
+        1. scale(1, 1), scaleX(1), scaleY(1)
+        2. rotate(0deg)
+        3. translate(0px, 0px), translateX(0px), translateY(0px)
+        4. skew(0deg, 0deg), skewX(0deg), skewY(0deg)
 */
-/* 버튼에 마우스 호버 시 효과주기 */
-#s4 .link a:hover{
-    transform:translateY(-4px);
-    background: #153d92;
-
+#s4 .link a:hover {
+    transform: translateY(-4px);
+    background: #4c0cb9;
 }
-/* 브랜드소개, 여행문의 버튼 사이 간격 */
-#s4 .link a:first-child{
-    margin-right:20px;
+#s4 .link a:first-child {
+    margin-right: 20px;
 }
-
