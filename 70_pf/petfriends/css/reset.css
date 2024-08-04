@@ -1,29 +1,37 @@
 @charset "utf-8";
 
-/* reset */
 *{
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
-body, h1, h2, h3, ul, p{
-    margin:0;
+
+body, h1, h2, h3, p, ul{
+    margin: 0;
 }
+
 ul{
-    padding:0; 
     list-style:none;
+    padding:0;
 }
+
 img{
+    /* 얘를 주석처리 하면 좀 비슷해짐 */
     width: 100%;
     height:auto;
 }
+
 a{
     text-decoration:none;
 }
+
 body{
     background: #fff;
 }
+
 button{
     border:none;
 }
+
+/* 왜 세로크기 반영이 안되나요 */
 iframe{
     border:none;
     width: 100%;

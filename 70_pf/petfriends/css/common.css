@@ -1,64 +1,47 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-@font-face {
-    font-family: 'NanumSquareNeo';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2');
-}
-
-/* 글꼴과 색상은 임의 지정한다. */
-
-:root {
+:root{
     font-size: 10px;
-    /* 
-    CSS 변수 선언
-    --변수명: 값; 
-    
-    CSS 변수 사용
-    속성: var(--변수명);
-    
-    */
+
     --white: #fff;
     --black: #000;
     --gray1: #111;
     --gray3: #333;
     --graya: #aaa;
     --grayc:#ccc;
-    
 }
 
-body {
-    font-family: "Noto Sans KR", sans-serif;
+body{
+    font-family:"Noto Sans KR", sans-serif;
     font-size: 1.5rem;
-    color: var(--gray3);
+    color:var(--gray3);
 }
 
-h1 {
+h1{
     font-weight: normal;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3{
     font-family: "NanumSquareNeo", sans-serif;
 }
 
-h1,
-h3 {
+h1, h3{
+    /* 애를 했는데 왜 더 작아지나요 */
     font-size: 1.5rem;
 }
 
-h2 {
+h2{
+    /* 얘도 왜 반영이 안되나요 */
     font-size: 2.4rem;
 }
 
-/* a태그는 글자색을 상속받지 않는다. */
-a {
-    color: var(--gray1);
+/* a태그는 글자색 상속받지 않으므로 따로 지정 */
+a{
+    color:var(--gray1);
 }
 
-/* input, button, ::placeholder는 글자색, 글자크기, 글꼴 등을 상속받지 않는다. */
-input {
+/* input, button, ::placeholder는 글자색, 글자크기, 글꼴 등을 상속받지 않음 */
+input{
     font-size: 1.5rem;
     font-family: "Noto Sans KR", sans-serif;
 }
@@ -75,72 +58,64 @@ button {
     font-family: "Noto Sans KR", sans-serif;
 }
 
-/* 헤더 */
-/* 섹션1 */
-#sec1 h2 {
-    letter-spacing: 4px;
+/* header */
+/* section1 */
+#sec1 h2{
+    letter-spacing:4px;
     font-weight: 400;
 }
-
-#sec1 b {
-    color: var(--white);
+#sec1 b{
+    color:var(--white);
 }
-
-/* 섹션2 */
-#sec2 h3 {
-    color: var(--white);
+/* section2 */
+#sec2 h3{
+    color:var(--white);
 }
-
-/* 섹션3 */
-#sec3 h3 {
+/* section3 */
+#sec3 h3{
     font-size: 2.4rem;
 }
-
-/* 섹션4 */
-/* 푸터 */
-footer {
-    color: var(--white);
+/* section4 */
+/* footer */
+footer{
+    color:var(--white);
 }
 
 /* 배경색 */
-/* 헤더 */
-header {
+
+/* header */
+header{
     background: var(--white);
 }
-
-/* 섹션1 */
-#sec1 b {
+/* section1 */
+#sec1 b{
     background: var(--black);
 }
 
-#sec1 div {
+#sec1 div{
+    background: var(--grayc);
+}
+/* section2 */
+#sec2 div{
     background: var(--grayc);
 }
 
-/* 섹션2 */
-#sec2 div {
+/* section3 */
+#sec3 div{
     background: var(--grayc);
 }
 
-/* 섹션3 */
-#sec3 div {
+#sec3 a{
     background: var(--grayc);
 }
-
-#sec3 a {
-    background: var(--grayc);
-}
-
-/* 섹션4 */
-#sec4 button {
+/* section4 */
+#sec4 button{
     background: var(--black);
 }
-
-#sec4 .map {
+#sec4 .map{
     background: var(--grayc);
 }
-
-/* 푸터 */
-footer {
+/* footer */
+footer{
     background: var(--black);
 }
