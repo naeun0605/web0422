@@ -103,7 +103,6 @@ section li:not(:nth-of-type(4n)) {
 #sec2 h2 {
     border-bottom: 1px solid #ccc;
     padding-bottom: 24px;
-    /* margin-top: 72px; */
     margin-bottom: 48px;
 }
 
@@ -139,7 +138,7 @@ section li:not(:nth-of-type(4n)) {
     margin-bottom: 24px;
 }
 
-#sec3 p {
+#sec3>p {
     margin-bottom: 48px;
 }
 
@@ -150,7 +149,6 @@ section li:not(:nth-of-type(4n)) {
 
 #sec3 div {
     height: 240px;
-    background: lightpink;
 }
 
 #sec3 h3 {

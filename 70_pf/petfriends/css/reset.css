@@ -17,6 +17,7 @@ img{
     /* 얘를 주석처리 하면 좀 비슷해짐 */
     width: 100%;
     height:auto;
+    vertical-align:top;
 }
 
 a{
@@ -29,6 +30,8 @@ body{
 
 button{
     border:none;
+    /* 손모양 */
+    cursor:pointer;
 }
 
 /* 왜 세로크기 반영이 안되나요 */

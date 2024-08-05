@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        window.addEventListener("DOMContentLoaded", ()=>{
+
+        
+
+        
+        // 속성은 ""안에 묶어 사용 가능
+        const person = {
+            // 이렇게 쓰는 거도 가능 한데 이렇게 쓰면 객체 접근 방법도 person1["firstName"]; 이렇게만 써야함
+            firstName: "존",
+            lastName: "도",
+            // 숫자 데이터의 경우 ""을 묶지 않는 것이 원칙인데, 숫자형 문자데이터의 경우는 묶을 수 있다. Ex) model: "500";
+            age: 50,
+            // 변수이름에서 특수문자 쓸거면 ""로 묶기
+            "남자니?": true,
+            성과이름: function(){
+                return this.firstName + " " + this.lastName;
+
+            },
+
+            // 변수이름에서 띄어쓰기 할 거면 ""로 묶기
+            myCar:{
+                type: "피아트",
+                // 숫자 데이터의 경우""을 묶지 않는것이 원칙
+                // 숫자형 문자 데이터의 경우는 묶을 수 있다.
+                model: "500",
+                color: "흰색"
+            }
+            
+            
+            
+        };
+
+
+        // 요소 찾기
+        const div = document.querySelector("div");
+
+    
+
+        div.innerHTML = `<b>이름이 어떻게 되세요?</b> ${person.firstName} <b><br>성은 어떻게 되세요?</b> ${person.lastName} <b><br>나이는? </b>${person.age} 세<br> <b>너 남자니?</b> ${(person["남자니?"] ? "예" : "아니오")} <b><br>이름을 다시 한 번 성과 함께 말해주세요</b> ${person.성과이름()} 입니다.<b><br> 차를 가지고 있군요 어떤 차 인가요? </b>${person.myCar.type} 이구요. 모델명은 ${person.myCar.model} 이구요. 색깔은 ${person.myCar.color}입니다.`
+
+        const b = document.querySelectorAll('b');
+
+        console.log(b.length);
+
+        /* 
+           
+            length: 길이, 개수( HTML Collection(querySelectorAll로 찾은 요소 여기서는 b) 객체의 개수)
+
+        */
+
+        // 요소의 개수 만큼만 반복 (여기서 요소는 b태그)
+
+        /* 
+            객체.forEach(function(현재값, 색인번호, 배열){}) (ver.ES5)
+            
+            
+        // 객체.forEach(function(ele, idx){}) (ver.ES5)
+        // cv는 b[0]~b[5]를 의미한다.
+        b.forEach((cv,idx)=>{
+            cv[idx].style.color="blue";  
+            cv[idx].style.lineHeight=2;
+            cv[idx].style.fontWeight="normal";
+            cv[idx].style.fontSize=".7rem";
+            });
+            
+
+
+
+            for ~ of (ver.eS6)
+
+            for(let 변수명 of HTML컬렉션 또는 배열){
+                변수명.코드;
+            }
+
+            for ~ of => HTML 컬렉션(Nodelist) 또는 배열
+            for ~ in => 객체
+            
+        */
+
+
+        //객체.forEach(function(현재값){}) (ver.ES5)
+        // 얘는 순번을 매길 순 없음
+        // 그러나 시스템 처리속도는 제일 빠르므로 일반적으로는 얘를 쓰고 순번매길땐 forEach쓰기
+        b.forEach(x=>{
+            x.style.color="blue";
+            x.style.lineHeight=2;
+            x.style.fontWeight="normal";
+            x.style.fontSize=".7rem";
+            });
+
+
+        // for ~ of (ver.eS6)
+        // b요소 갯수만큼 for문 반복
+        // for(let x of b){
+        //     x.style.color="blue";
+        //     x.style.lineHeight=2;
+        //     x.style.fontWeight="normal";
+        //     x.style.fontSize=".7rem";
+        // }
+
+
+        
+        // for(let i=0; i< b.length; i++){
+        //     b[i].style.color="blue";
+        //     b[i].style.lineHeight=2;
+        //     b[i].style.fontWeight="normal";
+        //     b[i].style.fontSize=".7rem";
+
+        // }
+ 
+
+
+        // 속성 값 변경 및 추가
+        person.firstName = "John";
+        person.lastName = "Doe";
+        person.age = 50;
+        person.eyeColor = "blue";
+
+        console.log(person);
+
+
+
+    });
+    //DOMContentLoaded
+    
+    </script>
+</head>
+
+<body>
+    <h1>객체</h1>
+    <div>여기에 출력됩니다.</div>
+</body>
+
+</html>

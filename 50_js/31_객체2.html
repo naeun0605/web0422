@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        window.addEventListener("DOMContentLoaded", ()=>{
+
+        
+
+        
+        // 속성은 ""안에 묶어 사용 가능
+        const person = {
+            // 이렇게 쓰는 거도 가능 한데 이렇게 쓰면 객체 접근 방법도 person1["firstName"]; 이렇게만 써야함
+            firstName: "존",
+            lastName: "도",
+            // 숫자 데이터의 경우 ""을 묶지 않는 것이 원칙인데, 숫자형 문자데이터의 경우는 묶을 수 있다. Ex) model: "500";
+            age: 50,
+            // 변수이름에서 특수문자 쓸거면 ""로 묶기
+            "남자니?": true,
+            성과이름: function(){
+                return this.firstName + " " + this.lastName;
+                // this는 객체 자신을 가리킨다.
+                // return person.firstName + " " + person.lastName;
+            },
+
+            // 변수이름에서 띄어쓰기 할 거면 ""로 묶기
+            myCar:{
+                type: "Fiat",
+                // 숫자 데이터의 경우""을 묶지 않는것이 원칙
+                // 숫자형 문자 데이터의 경우는 묶을 수 있다.
+                model: "500",
+                color: "white"
+            }
+            
+            
+            
+        };
+
+        // 출력하려면 요소 찾아야함! 요소 찾기않고 출력하는 가장 쉬운 방법은 document.~ 그리고 출력을 하려면 객체에 접근해야함
+
+        // 요소 찾기
+        const div = document.querySelector("div");
+
+        // 출력
+
+        /* 
+            출력
+
+            div의 내용으로 출력하기
+            // div.innerText = "값"
+            // div.innerHTML = "값"
+            // div.textContent ="값"
+        */
+        /* 
+        
+            객체 접근 방법
+                객체.속성
+                객체["속성"]
+
+                객체.객체.속성
+                ex) div.style.color = "red";   
+
+
+        */ 
+
+        /* 
+            a를 1씩 증가
+            a = a + 1;
+            a += 1;
+            a++;
+
+
+            a를 5씩 증가
+            a = a + 5;
+            a += 5;
+        */
+
+        // 화면상 출력
+        // div.innerHTML = "이름은 " + person.firstName;
+        // div.innerHTML += person.lastName;
+        // div.innerHTML += " 나이는 " + person.age;
+
+
+        div.innerHTML = "이름은 " 
+        + person.firstName 
+        + " 성은 "
+        + person.lastName
+        + " 나이는 " 
+        + person.age
+        // + person.남자니? => 에러
+        + "세<br>"
+        + "너 남자니? "
+        /* 
+
+            if(조건) {
+                참
+            } else{
+                거짓 
+            }
+
+
+            조건(삼항)연산자
+
+            조건 ? 참 : 거짓
+        */
+        + (person["남자니?"] ? "예" : "아니오")
+        + "<br>이름을 다시 한 번 성과 함께 말해주세요<br>"
+        + person.성과이름()
+        + "입니다.<br>"
+        + "차를 가지고 있군요 어떤 차 인가요?<br>"
+        + person.myCar.type
+        +" 이구요.<br> 모델명은 "
+        + person.myCar.model
+        +" 이구요.<br> 색깔은 "
+        + person.myCar.color
+        +" 입니다."
+ 
+
+        // 콘솔로 출력
+        console.log("객체.속성 방법:");
+        console.log(person.firstName);
+        console.log(person.lastName);
+        console.log(person.age);
+        // console.log(person.남자니?); => 에러
+        // console.log(객체.메서드());
+        console.log(person.성과이름());
+
+        console.log('객체["속lastName"] 방법 :');
+        console.log(person["firstName"]);
+        console.log(person["lastName"]);
+        console.log(person["age"]);
+        // 특수문자 쓸거면 이 방법만 쓸 수 있음!
+        console.log(person["남자니?"]);
+
+
+        console.log('객체.객체.속성 방법:');
+        console.log(person.myCar.type);
+        console.log(person.myCar.model);
+        console.log(person.myCar.color);
+
+
+
+        /*
+        person2.fullName();
+        document.getElementById("아이디명");
+
+        const document = {
+            getElementById = function(){};
+        }
+        */
+
+
+
+        // 객체 리터럴로 객체 생성
+        const person3 = {};
+
+        // 값 할당 (속성 추가)
+        person.firstName = "John";
+        person.lastName = "Doe";
+        person.age = 50;
+        person.eyeColor = "blue";
+
+
+        // new 키워드로 객체 생성
+        const person4 = new Object();
+
+        // 값 할당 (속성 추가)
+        person4.firstName = "John";
+        person4.lastName = "Doe";
+        person4.age = 50;
+        person4.eyeColor = "blue";
+
+    });
+    //DOMContentLoaded
+    </script>
+</head>
+
+<body>
+    <h1>객체</h1>
+    <div>여기에 출력됩니다.</div>
+</body>
+
+</html>
