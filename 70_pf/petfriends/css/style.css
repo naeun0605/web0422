@@ -36,6 +36,7 @@ section li {
 #sec1 {
     position: relative;
     padding: 54px 0 0;
+    background: lightpink;
 }
 
 #sec1 h2 {
@@ -180,7 +181,9 @@ nav {
         border:1px solid red;
         /* 1480/1920*100 */
         /* 1480/1903*100 = 77.771939... */
+        /* Q. 근데 데스크탑 영역에서는 100%로 꽉 차야되는거 아닌가요?? */
         width: 78%;
+        /* width: 1480px; */
         margin: 0 auto;
     }
 
@@ -193,6 +196,7 @@ nav {
         /* 이렇게만 쓰면 좌우 20픽셀 여백때문에 20빼줌 */
         /* width: 25%; */
         /* 4번째, 8번째 오른쪽 여백은 안뺄거라서 60/4=15 */
+        /* 4개니까 25%고 왜 60/4했져?? */
         width:calc(25% -15px);
     }
 
