@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+        <!-- bx슬라이더 라이브러리 - css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
+    <!-- 제이쿼리 라이브러리 파일이 위쪽으로 지정 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bx슬라이더 라이브러리 - js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <script>
+        // bxSlider는 제이쿼리 플러그인 프로그램이니까 제이쿼리 로드이벤트로 써줘야함
+        // window.addEventListener("DOMContentLoaded", ()=>{}); => 이건 자바스크립트
+        // 로드 이벤트
+        //$(document).ready(()=>{});
+        // 더 줄이면 이렇게도 가능
+        $(() => {
+            $('.bxslider').bxSlider({
+                auto: true,
+                autoControls: true,
+                stopAutoOnClick: true,
+                pager: true,
+                slideWidth: 600
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- https://bxslider.com/ -->
+    <!-- https://bxslider.com/examples/auto-show-start-stop-controls -->
+    <div class="bxslider">
+        <div><img src="../assets/pic_1.jpg" alt="슬라이드 이미지1"></div>
+        <div><img src="../assets/pic_2.jpg" alt="슬라이드 이미지2"></div>
+        <div><img src="../assets/pic_3.jpg" alt="슬라이드 이미지3"></div>
+    </div>
+</body>
+
+</html>

@@ -45,6 +45,7 @@ section li {
     left: 50%;
     /* 자식 요소의 중심을 부모의 중앙에 위치 */
     transform: translate(-50%, -50%);
+    border:none;
 }
 
 #sec1 b {
@@ -147,15 +148,14 @@ nav {
     }
 
     /* 섹션2,3 공통 */
-
-
     section ul {
         display: flex;
         flex-wrap: wrap;
     }
 
     section li {
-        width: 355px;
+        /* 이거 빼는 숫자 바꿔줘야함 */
+        width:calc(50% -30px);
     }
 
     section li:not(:nth-of-type(2n)) {
@@ -177,7 +177,10 @@ nav {
     /* 섹션공통 */
     section {
 
-        width: 1480px;
+        border:1px solid red;
+        /* 1480/1920*100 */
+        /* 1480/1903*100 = 77.771939... */
+        width: 78%;
         margin: 0 auto;
     }
 
@@ -186,19 +189,26 @@ nav {
         margin-right: 20px;
     }
 
+    section li {
+        /* 이렇게만 쓰면 좌우 20픽셀 여백때문에 20빼줌 */
+        /* width: 25%; */
+        /* 4번째, 8번째 오른쪽 여백은 안뺄거라서 60/4=15 */
+        width:calc(25% -15px);
+    }
+
     /* 섹션1 */
     #sec1 div {
         height: 745px;
     }
 
     #sec1 h2 {
-        top: 50%;
+        top: 55%;
     }
 
     
-    #sec2 li {
-        height: 240px;/
-    }
+    /* #sec2 li {
+        height: 240px;
+    } */
 
     #sec4 .map {
         height: 845px;

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- bx슬라이더 라이브러리 - css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
+    <style>
+        body{
+            margin: 0;
+        }
+        #slidewrap{
+            position: relative;
+            margin: 0 auto;
+        }
+        .bx-wrapper {
+            box-shadow: none;
+            border: none;
+            margin-bottom: 0;
+        }
+        /* 인디케이터(페이저)*/
+
+        /* 인디케이터 위치 */
+        .bx-wrapper .bx-pager {
+            bottom: 20px;
+        }
+        
+        /* 인디케이터 전체색상 */
+        .bx-wrapper .bx-pager.bx-default-pager a:focus,
+        .bx-wrapper .bx-pager.bx-default-pager a:hover,
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            background: #999;
+            /* 페이저 아이템의 좌우 간격 */
+            margin: 0 16px;
+        }
+
+
+        /* 현재 보이는 이미지에 해당하는 인디케이터 색상 */
+        .bx-wrapper .bx-pager.bx-default-pager a.active {
+            /* transform: scale(2, 2); */
+            background: #fff;
+        }
+
+        /* 이전/다음 버튼 크기 */
+        .bx-wrapper .bx-controls-direction a {
+            width: 60px;
+            height: 60px;
+        }
+
+        /* 이전 */
+        .bx-wrapper .bx-prev {
+            left: 195px;
+            /* background: url() 반복 x위치 y위치/가로 세로 */
+            background: url(../assets/chevron_left_white_24dp.svg) no-repeat 0px 0px/60px 60px;
+        }
+        /* 다음 */
+        .bx-wrapper .bx-next {
+            right: 195px;
+            background: url(../assets/chevron_right_white_24dp.svg) no-repeat 0px 0px/60px 60px;
+        }
+
+                /* next 버튼 호버시 사라지는 현상 초기화 */
+                .bx-wrapper .bx-next:focus,
+        .bx-wrapper .bx-next:hover {
+            background-position: 0 0;
+        }
+
+        
+
+    </style>
+    <!-- 제이쿼리 라이브러리 파일이 위쪽으로 지정 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bx슬라이더 라이브러리 - js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <script>
+        // bxSlider는 제이쿼리 플러그인 프로그램이니까 제이쿼리 로드이벤트로 써줘야함
+        // window.addEventListener("DOMContentLoaded", ()=>{}); => 이건 자바스크립트
+        // 로드 이벤트
+        //$(document).ready(()=>{});
+        // 더 줄이면 이렇게도 가능
+        $(() => {
+            // $('.bxslider')와 <div class="bxslider"> 이름이 같아야 함
+            $('.slider').bxSlider({
+                // 자동 슬라이드 false가 기본값
+                auto: true,
+                autoControls: false,
+                stopAutoOnClick: true,
+                // pager:true(기본값)
+                pager: true,
+                // 슬라이드 크기  (단위: px)
+                // slideWidth: 1200,
+                // controls: true (기본값) -> next/prev 버튼
+                controls: true
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- https://bxslider.com/ -->
+    <!-- https://bxslider.com/examples/auto-show-start-stop-controls -->
+    <div id="slidewrap">
+        <div class="slider">
+            <div><img src="../assets/kfc1.png" alt="슬라이드 이미지1"></div>
+            <div><img src="../assets/kfc2.png" alt="슬라이드 이미지2"></div>
+            <div><img src="../assets/kfc3.png" alt="슬라이드 이미지3"></div>
+            <div><img src="../assets/kfc4.png" alt="슬라이드 이미지4"></div>
+            <div><img src="../assets/kfc5.png" alt="슬라이드 이미지5"></div>
+
+        </div>
+    </div>
+</body>
+
+</html>

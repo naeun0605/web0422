@@ -14,9 +14,15 @@ ul{
 }
 
 img{
-    /* 얘를 주석처리 하면 좀 비슷해짐 */
     width: 100%;
+    /* height:100%; */
     height:auto;
+    /* 찌그러지지 않게 비율유지 근데 height를 auto로 지정하면 적용안되고 100%로 해야함 */
+    /* contain은 100%이미지가 잘림없이 보여지며, 빈 공간이 생길 수 있다. */
+    /* cover는 빈공간이 생기지 않지만, 이미지 일부가 잘릴 수 있다. */
+    object-fit: cover;
+    /* object-fit썼을때 position 잡는 거 */
+    /* object-position: 50% 50% 이 기본값이자 정중앙 배치*/
     vertical-align:top;
 }
 
