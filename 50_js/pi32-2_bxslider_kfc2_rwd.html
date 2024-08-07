@@ -86,40 +86,36 @@
         }
 
         /* 폰 */
+        #slideWrap img:last-of-type {
+            display: none;
+        }
 
+        /* 이전/다음 버튼 */
         .bx-wrapper .bx-controls-direction a {
             display: none;
         }
 
-        #slidewrap img:first-of-type {
-            display: block;
-        }
 
-        /* 태블릿 */
-        @media(min-width:768px) {
+        @media (min-width: 768px) {
 
-            #slidewrap img:first-of-type {
+
+
+            #slideWrap img:first-of-type {
                 display: none;
             }
-        }
 
-           
-        /* 데스크탑 */
-        @media(min-width:992px) {
+            #slideWrap img:last-of-type {
+                display: block;
+                /* Q. img는 인라인요손데 왜 블록으로 보이게하는지 */
+            }
 
             .bx-wrapper .bx-controls-direction a {
                 display: block;
-            }
-
-
-            #slidewrap img:first-of-type {
-                display: none;
-            }
-
-            #slidewrap img:last-of-type {
-                display: block;
+                /* Q. a는 인라인요손데 왜 블록으로 보이게하는지 */
             }
         }
+
+        @media (min-width: 992px) {}
     </style>
     <!-- 제이쿼리 라이브러리 파일이 위쪽으로 지정 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
