@@ -13,8 +13,9 @@
         }
 
         img {
+            /* %는 일반적으로 부모 기준, vw는 뷰포트기준  */
             width: 100%;
-            min-height: 250px;
+            height: 100vh;
             object-fit: cover;
         }
 
@@ -36,11 +37,14 @@
             height: 100%;
         }
 
-        /* 인디케이터(페이저)********************************/
+        /* indicator(pagenation)********************************/
 
         /* 인디케이터 위치 */
-        .bx-wrapper .bx-pager {
-            bottom: 20px;
+        .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+            width: auto;
+            left: calc(50% - 60px);
+            bottom: 35%;
+            transform: translateX(-50%);
         }
 
         /* 인디케이터 전체색상 */
@@ -48,58 +52,93 @@
         .bx-wrapper .bx-pager.bx-default-pager a:hover,
         .bx-wrapper .bx-pager.bx-default-pager a {
             /* 크기변경 */
-            width: 8px;
-            height: 8px;
-            background: none;
-            border: 2px solid #fff;
-            border-radius: 0;
-            opacity: 0.4;
+            width: 30px;
+            height: 30px;
+            background: url(../assets/lottechilsung/mainRoll_indi.png);
+            border: none;
             /* 페이저 아이템의 좌우 간격 */
-            margin: 0 8px;
+            /* 12로 써야 롯데칠성처럼 24만큼 떨어짐 */
+            margin: 0 12px;
         }
 
 
         /* 현재 보이는 이미지에 해당하는 인디케이터 색상 */
         .bx-wrapper .bx-pager.bx-default-pager a.active {
-            /* transform: scale(2, 2); */
-            width: 12px;
-            height: 18px;
-            background: #009ee3;
-            border: none;
-            opacity: 1;
+            background: url(../assets/lottechilsung/mainRoll_indi_on.png);
+        }
+
+
+        /* 실행/일시정지 버튼 */
+        .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+            height: 30px;
+            right: calc(50% - 60px);
+            bottom: 35%;
+            width: auto;
+        }
+
+        /* 평상 시 실행 버튼 */
+        .bx-wrapper .bx-controls-auto .bx-start {
+            width: 9px;
+            height: 11px;
+            background: url(../assets/lottechilsung/btn_play.png) 0px 0px no-repeat;
+            margin: 0 3px;
+        }
+
+        /* 포커스, 호버, 액티브 시 실행 버튼 */
+        .bx-wrapper .bx-controls-auto .bx-start:focus,
+        .bx-wrapper .bx-controls-auto .bx-start:hover,
+        .bx-wrapper .bx-controls-auto .bx-start.active {
+            /* 실행버튼 사라지는 현상 제거 */
+            background-position: 0px 0px;
+        }
+
+
+        /* 평상 시 일시정지 버튼 */
+        .bx-wrapper .bx-controls-auto .bx-stop {
+            width: 9px;
+            height: 11px;
+            background: url(../assets/lottechilsung/btn_pause.png) 0px 0px no-repeat;
+            margin: 0 3px;
+        }
+
+        /* 포커스, 호버, 액티브 시 일시정지 버튼 */
+
+        .bx-wrapper .bx-controls-auto .bx-stop:focus,
+        .bx-wrapper .bx-controls-auto .bx-stop:hover,
+        .bx-wrapper .bx-controls-auto .bx-stop.active {
+            /* 실행버튼 사라지는 현상 제거 */
+            background-position: 0px 0px;
         }
 
         /* *************************************************** */
 
         /* 이전/다음 버튼 크기 *********************************/
         .bx-wrapper .bx-controls-direction a {
-            width: 50px;
-            height: 76px;
+            width: 40px;
+            height: 79px;
             /* 
             버튼의 수직 중앙배치 
             margin-top: -38px;
             */
-            /* 
-            이렇게 쓰는게 더 좋음, 좌우는 그대로 하려고 y값만 조정
-            transform:translateY(-50%) 
-            기존 bx슬라이더의 여백 초기화 (기본값: -16px)
+            /* 이렇게 쓰는게 더 좋음, 좌우는 그대로 하려고 y값만 조정*/
+            transform: translateY(-50%);
+            /*기존 bx슬라이더의 여백 초기화 (기본값: -16px)*/
             margin-top: 0px;
-            */
             /* display: block; */
             /* background: url() 반복 x위치 y위치/가로 세로 */
-            background: url(../assets/larocheposay/ico_comm_sp.png) no-repeat;
+            background: no-repeat 0 0;
         }
 
         /* 이전 */
         .bx-wrapper .bx-controls-direction a.bx-prev {
-            left: 0px;
-            background-position: 0 -129px;
+            left: 40px;
+            background-image: url(../assets/lottechilsung/white_rollBtn_prev.png);
         }
 
         /* 다음 */
         .bx-wrapper .bx-controls-direction a.bx-next {
-            right: 0px;
-            background-position: -55px -129px;
+            right: 40px;
+            background-image: url(../assets/lottechilsung/white_rollBtn_next.png);
         }
 
         /* next 버튼 호버시 사라지는 현상 초기화 */
@@ -110,10 +149,17 @@
 
         /* ****************************************************** */
 
-        @media(min-width:768px) {
-            img {
-                height: auto;
-            }
+        /* text motion */
+        #slidewrap p{
+            position:absolute;
+            /* z-index: 9999; */
+            color:#fff;
+            font-size: 60px;
+            left:50%;
+            top:35%;
+            transform:translate(-50%,-50%);
+            /* p태그 안에서 글자 가로가운데로 가게 */
+            text-align: center;
         }
     </style>
     <!-- 제이쿼리 라이브러리 파일이 위쪽으로 지정 -->
@@ -131,7 +177,8 @@
             $('.slider').bxSlider({
                 // 자동 슬라이드 false가 기본값
                 auto: true,
-                autoControls: false,
+                // play/ pause 버튼
+                autoControls: true,
                 stopAutoOnClick: true,
                 // pager:true(기본값)
                 pager: true,
@@ -149,22 +196,19 @@
     <div id="slidewrap">
         <div class="slider">
             <div>
-                <img src="../assets/larocheposay/s1.png" alt="슬라이드 이미지1">
+                <img src="../assets/lottechilsung/s1.jpg" alt="슬라이드 이미지1">
+                <p>
+                    언제 어디서나, 모든 순간<br>고객의 곁에서 함께합니다.
+                </p>
             </div>
             <div>
-                <img src="../assets/larocheposay/s2.png" alt="슬라이드 이미지2">
+                <img src="../assets/lottechilsung/s2.jpg" alt="슬라이드 이미지2">
+                <p>맑고 깨끗한 제품으로,<br>건강한 생태계 환경을 만듭니다.</p>
             </div>
             <div>
-                <img src="../assets/larocheposay/s3.jpg" alt="슬라이드 이미지3">
+                <img src="../assets/lottechilsung/s3.jpg" alt="슬라이드 이미지3">
+                <p>끊임없는 혁신과 변화를 통해,<br>더 큰 미래를 향해 나아갑니다.</p>
             </div>
-            <div>
-                <img src="../assets/larocheposay/s4.png" alt="슬라이드 이미지4">
-            </div>
-            <div>
-                <img src="../assets/larocheposay/s5.jpg" alt="슬라이드 이미지5">
-            </div>
-
-
         </div>
     </div>
 </body>
