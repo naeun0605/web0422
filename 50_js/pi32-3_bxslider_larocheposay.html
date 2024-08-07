@@ -5,28 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <!-- bx슬라이더 라이브러리 - css -->
+    <!-- bx슬라이더 라이브러리 - css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
     <style>
-        body{
+        body {
             margin: 0;
         }
-        #slidewrap{
+
+        img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        #slidewrap {
+            border: 1px solid red;
             position: relative;
+            height: 450px;
             margin: 0 auto;
         }
+
         .bx-wrapper {
+            /* 퍼센트는 부모크기의 배수단위 여기선 부모가 450px이라 450px */
+            height: 100%;
             box-shadow: none;
             border: none;
             margin-bottom: 0;
         }
+
+        .bx-viewport {
+            height: 100%;
+        }
+
         /* 인디케이터(페이저)*/
 
         /* 인디케이터 위치 */
         .bx-wrapper .bx-pager {
             bottom: 20px;
         }
-        
+
         /* 인디케이터 전체색상 */
         .bx-wrapper .bx-pager.bx-default-pager a:focus,
         .bx-wrapper .bx-pager.bx-default-pager a:hover,
@@ -45,30 +62,61 @@
 
         /* 이전/다음 버튼 크기 */
         .bx-wrapper .bx-controls-direction a {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 76px;
+            display: none;
+            /* background: url() 반복 x위치 y위치/가로 세로 */
+            background: url(../assets/larocheposay/ico_comm_sp.png) no-repeat;
         }
 
         /* 이전 */
-        .bx-wrapper .bx-prev {
-            left: 195px;
-            /* background: url() 반복 x위치 y위치/가로 세로 */
-            background: url(../assets/chevron_left_white_24dp.svg) no-repeat 0px 0px/60px 60px;
-        }
-        /* 다음 */
-        .bx-wrapper .bx-next {
-            right: 195px;
-            background: url(../assets/chevron_right_white_24dp.svg) no-repeat 0px 0px/60px 60px;
+        .bx-wrapper .bx-controls-direction a.bx-prev {
+            left: 0px;
+            background-position: 0 -129px;
         }
 
-                /* next 버튼 호버시 사라지는 현상 초기화 */
-                .bx-wrapper .bx-next:focus,
+        /* 다음 */
+        .bx-wrapper .bx-controls-direction a.bx-next {
+            right: 0px;
+            background-position: -55px -129px;
+        }
+
+        /* next 버튼 호버시 사라지는 현상 초기화 */
+        .bx-wrapper .bx-next:focus,
         .bx-wrapper .bx-next:hover {
             background-position: 0 0;
         }
 
-        
+        /* 폰 */
+        #slideWrap img:last-of-type {
+            display: none;
+        }
 
+
+
+        @media (min-width: 768px) {
+
+
+
+            #slideWrap img:first-of-type {
+                display: none;
+            }
+
+            #slideWrap img:last-of-type {
+                display: block;
+                /* Q. img는 인라인요손데 왜 블록으로 보이게하는지 */
+            }
+
+
+        }
+
+        @media (min-width: 992px) {
+            .bx-wrapper .bx-controls-direction a {
+                display: block;
+                /* Q. a는 인라인요손데 왜 블록으로 보이게하는지 */
+            }
+
+        }
     </style>
     <!-- 제이쿼리 라이브러리 파일이 위쪽으로 지정 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -99,15 +147,25 @@
 </head>
 
 <body>
-    <!-- https://bxslider.com/ -->
-    <!-- https://bxslider.com/examples/auto-show-start-stop-controls -->
+
     <div id="slidewrap">
         <div class="slider">
-            <div><img src="../assets/kfc1.png" alt="슬라이드 이미지1"></div>
-            <div><img src="../assets/kfc2.png" alt="슬라이드 이미지2"></div>
-            <div><img src="../assets/kfc3.png" alt="슬라이드 이미지3"></div>
-            <div><img src="../assets/kfc4.png" alt="슬라이드 이미지4"></div>
-            <div><img src="../assets/kfc5.png" alt="슬라이드 이미지5"></div>
+            <div>
+                <img src="../assets/larocheposay/s1.png" alt="슬라이드 이미지1">
+            </div>
+            <div>
+                <img src="../assets/larocheposay/s2.png" alt="슬라이드 이미지2">
+            </div>
+            <div>
+                <img src="../assets/larocheposay/s3.jpg" alt="슬라이드 이미지3">
+            </div>
+            <div>
+                <img src="../assets/larocheposay/s4.png" alt="슬라이드 이미지4">
+            </div>
+            <div>
+                <img src="../assets/larocheposay/s5.jpg" alt="슬라이드 이미지5">
+            </div>
+           
 
         </div>
     </div>
