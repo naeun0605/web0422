@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+        #slidewrap {
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            /* (270*4) + (여백 60) = 1140px*/
+            width: 1140px;
+            border: 1px solid red;
+  
+        }
+   
+        /* 이전/다음 버튼 */
+        .bx-wrapper .bx-controls-direction a {
+            /* 크기 */
+            width: 50px !important;
+            height: 50px !important;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            /* 기존 bx슬라이더의 여백 초기화 (기본값: -16px) */
+            margin-top: 0;
+            background: #c0c0c0 url(../assets/dessert39/btn-slider-arrow-white.svg) no-repeat 50%/35px;
+        }
+
+        /* 이전 */
+        .bx-wrapper .bx-controls-direction a.bx-prev {
+            left: -120px;
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        /* 다음 */
+        .bx-wrapper .bx-controls-direction a.bx-next {
+            right: -120px;
+        }
+
+        /* 다음 버튼 호버시 사라지는 현상 초기화 */
+        .bx-wrapper .bx-prev:focus,
+        .bx-wrapper .bx-prev:hover {
+            background-position: 50%;
+        }
+        .bx-wrapper .bx-next:focus,
+        .bx-wrapper .bx-next:hover {
+            background-position: 50%;
+        }
+    </style>
+    
+        <!-- bx슬라이더 라이브러리 - css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
+  
+    <!-- 제이쿼리 라이브러리 파일이 위쪽으로 지정 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bx슬라이더 라이브러리 - js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <script>
+        // bxSlider는 제이쿼리 플러그인 프로그램이니까 제이쿼리 로드이벤트로 써줘야함
+        // window.addEventListener("DOMContentLoaded", ()=>{}); => 이건 자바스크립트
+        // 로드 이벤트
+        //$(document).ready(()=>{});
+        // 더 줄이면 이렇게도 가능
+        $(() => {
+            $('.slider').bxSlider({
+                auto: true,
+                autoControls: false,
+                stopAutoOnClick: true,
+                pager: false,
+                // bx슬라이더의 Carousel Options
+
+                // 슬라이드 이미지 1개 가로크기 (기본값:0)
+                slideWidth: 270,
+                // 반응형에서 최소 슬라이드 수 (기본값:1)
+                minSlides:1,
+                // 반응형에서 최대 슬라이드 수 (기본값:1)
+                maxSlides:5,
+                // 이동 슬라이드 수 (기본값:0)
+                moveSlides:1,
+                // 얘는 General option이고 멀티 슬라이드 일 때, 슬라이드 사이 간격 (기본값:0)
+                slideMargin:20
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- https://bxslider.com/ -->
+    <!-- https://bxslider.com/examples/auto-show-start-stop-controls -->
+    <div id="slidewrap">
+        <div class="slider">
+            <div><img src="../assets/dessert39/s1.png" alt="슬라이드 이미지1"></div>
+            <div><img src="../assets/dessert39/s2.png" alt="슬라이드 이미지2"></div>
+            <div><img src="../assets/dessert39/s3.png" alt="슬라이드 이미지3"></div>
+            <div><img src="../assets/dessert39/s4.png" alt="슬라이드 이미지4"></div>
+            <div><img src="../assets/dessert39/s5.png" alt="슬라이드 이미지5"></div>
+            <div><img src="../assets/dessert39/s6.png" alt="슬라이드 이미지6"></div>
+            <div><img src="../assets/dessert39/s7.png" alt="슬라이드 이미지7"></div>
+            <div><img src="../assets/dessert39/s8.png" alt="슬라이드 이미지8"></div>
+            <div><img src="../assets/dessert39/s9.png" alt="슬라이드 이미지9"></div>
+        </div>
+    </div>
+</body>
+
+</html>
