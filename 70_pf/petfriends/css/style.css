@@ -39,6 +39,14 @@ section li {
     background: lightpink;
 }
 
+#sec1 div {
+    /* 
+        1903 : 745 = 100 : x
+        x = 39.1487...%
+    */
+    height: 39.15vw;
+}
+
 #sec1 h2 {
     position: absolute;
     /* 자식의 왼쪽 상단 모서리를 부모의 중앙에 위치 */
@@ -76,7 +84,15 @@ section li {
     margin-bottom: 48px;
 }
 
-#sec3 h3,li p:last-of-type {
+#sec3 li h3{
+    text-wrap:nowrap;
+    overflow: hidden;
+    /* ...효과 */
+    text-overflow:ellipsis;
+
+}
+
+#sec3 li h3,li p:last-of-type {
     margin: 24px 0;
 }
 
@@ -104,8 +120,16 @@ section li {
     margin: 16px 0 48px;
 }
 
+
 #sec4 .map {
-    height: 260px;
+    /* height: 845px; */
+    /* 
+    1903 : 845 = 100 : x
+    x = 44.4035...%
+    */
+    
+    /* 창 크기의 57.09% */
+    height: 44.4vw;
     margin-bottom: 8px;
 }
 
@@ -201,23 +225,11 @@ nav {
     }
 
     /* 섹션1 */
-    #sec1 div {
-        height: 745px;
-    }
+
 
     #sec1 h2 {
         top: 55%;
     }
 
-    
-    /* #sec2 li {
-        height: 240px;
-    } */
-
-    #sec4 .map {
-        height: 845px;
-    }
-
 }
-
 /* *********************************************************** */

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title>
+
+    <!-- 비율 유지
+      첫번쨰 방법: padding-top/bottom 이용 
+      
+      -->
+    <style>
+
+        *{
+            box-sizing:border-box;
+        }
+
+        /* 
+        width:auto => 블록레벨 요소의 경우 100%(부모크기의 100%) , 인라인요소는 콘텐츠(자식) 크기
+        height:auto => 콘텐츠(자식) 크기
+        */
+        div{
+            border:5px solid red;
+            /* background: url(../assets/etc/car.jpg) no-repeat 0 0/cover; */
+            /* 여기까지만 쓰면 안보임 왜냐면 높이를 안써줘서 그래서 이미지 높이만큼 높이지정 */
+           /* height: 427px; <= 이렇게 쓰면 반응형으로 줄여봤을때 안줄어듦 그래서 패딩으로 지정 가능*/ 
+           /* padding-top이 100%면 가로:세로가 1:1 (padding-bottom도 가능) */
+           /* 따라서 그림폭에 딱 맞춰서 해야함 640:427 = 100:x 따라서 x는 66.718%*/
+           padding-top:66.718%;
+           position:relative;
+        }
+
+        h2{
+            position:absolute;
+            left:0;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>제목 글자 만큼 박스가 커진다.</h2>
+        <!-- <img src="../assets/etc/car.jpg" alt="자동차"> -->
+    </div>
+</body>
+</html>
