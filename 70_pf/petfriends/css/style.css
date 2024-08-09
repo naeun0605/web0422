@@ -183,8 +183,8 @@ nav {
     }
 
     section li {
-        Q! 얘를 하니까 태블릿에서 두줄됨 근데 왜 되는거져???
-        width: calc(50% - 15px);
+        /* Q! 얘를 하니까 태블릿에서 두줄됨 근데 왜 되는거져??? */
+        width: calc(50% - 30px);
     }
 
     section li:not(:nth-of-type(2n)) {

@@ -8,7 +8,7 @@
 #signup h2{
     text-align: center;
     height: 80px;
-    padding:20px 0 0;
+    padding:20px 0;
 }
 
 form{
@@ -19,7 +19,7 @@ form{
     width: 1400px;
     margin: 0 auto;
     border-top:1px solid black;
-    padding: 20px 0;
+    padding: 50px 0;
     
 }
 
@@ -31,11 +31,19 @@ form{
 }
 
 #signup label{
-    background: red;
-    margin-right:300px;
+    /* background: red; */
+    /* margin-right:300px; */
 }
 
-#signup .des_iden{
-    padding-left:360px;
+
+
+#signup .essential::before{
+    content:"◦";
+    color:red;
 }
 
+#signup .input {
+    height: 40px;
+    font-size: 16px;
+    background: yellow;
+}

@@ -73,7 +73,7 @@ form {
 }
 
 .form-input {
-    background-image: url(images/shilla02.jpg);
+
     background-size: cover;
 }
 
@@ -101,12 +101,14 @@ form {
 .input-common {
     height: 40px;
     font-size: 16px;
+    background: red;
 }
 
 .input-boxName {
     width: 490px;
     margin-right: 20px;
     margin-bottom: 20px;
+    background: blue;
 }
 
 .input-box1 {
