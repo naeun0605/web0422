@@ -47,11 +47,12 @@
                 //이벤트 처리
                 collapsedMenuIcon.onclick =(e)=>{
                     // event.currentTarget은 이벤트 함수내에서 객체 자신을 가리킨다.
-                    btnMotion(event.currentTarget);
                     //함수호출
+                    btnMotion(event.currentTarget);
+
+
                     // 화살표 함수 이벤트 안에서의 this는 window이다.
                     // 익명함수 이벤트 내에서 this는 이벤트 객체이다. 
-                    // myFunction(this);
                     // 객체에서의 this와 같은게 event.currentTarget이다.
 
                     // console.log(collapsedMenuIcon);
@@ -86,6 +87,6 @@
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
-      </div>
+    </div>
 </body>
 </html>

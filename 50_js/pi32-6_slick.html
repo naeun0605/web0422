@@ -27,6 +27,9 @@
             font-size: 10px;
         }
 
+        h3{
+            font-size: 1.5rem;
+        }
 
 
         /* slick 슬라이드 */
@@ -40,7 +43,9 @@
             top: 50%;
             transform: translate(-50%, -50%);
             width: 100%;
+            /* 슬라이드 전체크기 */
             max-width: 260px;
+            /* background: red; */
         }
 
 
@@ -60,12 +65,13 @@
         }
 
         /* 이전(prev)/다음(next) */
+
+        /* 이전버튼 */
         .slick-prev{
             z-index: 9999;
-            /* 기본값:-25px인데 버튼의 가로크기가 50px 에다가 70px만큼 더 빠져나오고싶다. */
-            left:min(-7vw,-60px);
-            width: 50px;
-            height: 50px;
+            left:min(-7vw,-40px);
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             background: #ccc;
         }
@@ -74,13 +80,13 @@
             background: #ccc;
         }
         
-        /* 화살표 자체 */
+        /* 좌우 버튼 안에 화살표 자체 */
         .slick-prev::before, .slick-next::before{
             display: block;
-            /* Q. 안보이다가 height 쓰면 화살표 보이는데 왜 보이나요 */
+            /* Q. 안보이다가 height 쓰면 화살표 보이는데 왜 보이나요 영역 확인하려고 bg넣어봤는데 표기안됨*/
+            background: red;
             width: 100%;
             height: 100%;
-            padding:8px;
             font-size: 0;
             background: url(../assets/dessert39/btn-slider-arrow-white.svg);
         }
@@ -89,11 +95,12 @@
             transform:rotate(180deg);
         }
 
+        /* 다음버튼 */
         .slick-next{
             z-index: 9999;
-            right:min(-7vw,-60px);
-            width: 50px;
-            height: 50px;
+            right:min(-7vw,-40px);
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             background: #ccc;
         }
@@ -101,7 +108,7 @@
         
         @media(min-width:768px){
             .slider{
-                max-width: 650px;
+                max-width: 620px;
             }
             .slick-slide{
             margin: 8px 12px;
@@ -155,7 +162,7 @@
                             // arrows:false => next/previous 버튼 숨기기
                             // arrows: false,
                             centerMode: true,
-                            centerPadding: '30px',
+                            centerPadding: '180px',
                             slidesToShow: 1
                         }
                     },
@@ -165,7 +172,7 @@
                         settings: {
                             // arrows: false,
                             centerMode: true,
-                            centerPadding: '40px',
+                            centerPadding: '30px',
                             slidesToShow: 1
                         }
                     }

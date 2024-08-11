@@ -143,12 +143,62 @@ footer {
     padding: 32px 0;
 }
 
+/* 햄버거버튼(모바일버튼) */
+.collapsedMenuIcon {
+    /* 가로를 콘텐츠 크기만큼만 하려고 */
+    /* display: inline-block; */
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    /* 높이가 5px이니까 2.5px 이상만 하면 양끝이 동그래짐 */
+    border-radius: 3px;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
 
 
 /* 폰만 적용**************************************************/
 nav {
-    display: none;
+    position: absolute;
+    z-index: -1;
+    right: -65%;
+    top: 0;
+    width: 65%;
+    height: 100vh;
+    background: #000;
+    /* ease-in-out은 빨라지다가 느려짐, ease-in은 빨라짐 */
+    /* 점점 느려짐 */
+    transition: .3s ease-out;
 }
+
+nav.change {
+    right: 0;
+}
+
+/* 위에  nav~여기까지 추가하니까 왜 데스크탑에서 네비가 사라지나요 */
+/* 테블릿 영역에서 db하니까 다시 보이고 */
+
 
 #sec1 span {
     display: none;
@@ -163,7 +213,14 @@ nav {
     /* 내비게이션 */
     nav {
         display: block;
-    }
+        position: static;
+        width: auto;
+        height: auto;
+        background: transparent;
+        /* ease-in-out은 빨라지다가 느려짐, ease-in은 빨라짐 */
+        /* 점점 느려짐 */
+        transition: none;
+}
 
     nav ul {
         display: flex;
@@ -173,6 +230,9 @@ nav {
         margin-left: 40px;
     }
 
+    .collapsedMenuIcon{
+        display: none;
+      }
     /* 섹션1 */
     #sec1 span {
         display: inline-block;
