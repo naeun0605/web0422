@@ -143,10 +143,15 @@ footer {
     padding: 32px 0;
 }
 
+
+/* 폰만 적용**************************************************/
+
+
 /* 햄버거버튼(모바일버튼) */
 .collapsedMenuIcon {
     /* 가로를 콘텐츠 크기만큼만 하려고 */
     /* display: inline-block; */
+    Q.position안쓰시고 왜 inline-block으로 하셨나요? 차이점
     position: absolute;
     right: 30px;
     cursor: pointer;
@@ -178,7 +183,7 @@ footer {
 }
 
 
-/* 폰만 적용**************************************************/
+
 nav {
     position: absolute;
     z-index: -1;
@@ -203,12 +208,13 @@ nav.change {
 
 /* *************************************************************/
 
-/* 768이상: 테블릿, 데스크탑 ***********************************/
+/* 768이상: 테블릿, 데스크탑 **************************************************************/
 
 @media (min-width: 768px) {
 
     /* 내비게이션 */
     nav {
+        Q. 폰에서 내비를 dn한게 아닌데 왜 db하나요
             display: block;
             position: static;
             width: auto;
@@ -243,8 +249,8 @@ nav.change {
     }
 
     section li {
-        /* Q! 얘를 하니까 태블릿에서 두줄됨 근데 왜 되는거져??? */
-        width: calc(50% - 30px);
+
+        width: calc(50% - 15px);
     }
 
     section li:not(:nth-of-type(2n)) {

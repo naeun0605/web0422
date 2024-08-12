@@ -178,6 +178,7 @@ footer {
 }
 
 
+
 /* 폰만 적용**************************************************/
 nav {
     position: absolute;
@@ -195,10 +196,6 @@ nav {
 nav.change {
     right: 0;
 }
-
-/* 위에  nav~여기까지 추가하니까 왜 데스크탑에서 네비가 사라지나요 */
-/* 테블릿 영역에서 db하니까 다시 보이고 */
-
 
 #sec1 span {
     display: none;
@@ -220,7 +217,11 @@ nav.change {
         /* ease-in-out은 빨라지다가 느려짐, ease-in은 빨라짐 */
         /* 점점 느려짐 */
         transition: none;
-}
+
+        /* background: transparent; */
+
+
+    }
 
     nav ul {
         display: flex;
@@ -296,21 +297,21 @@ nav.change {
 
 }
 
-    /* 1480이상: 데스크탑 */
-    @media (min-width: 1500px) {
+/* 1480이상: 데스크탑 */
+@media (min-width: 1500px) {
 
-        /* 섹션 공통 */
-        section {
-            width: 1480px;
-            /* 데스크탑에서는 좌우 32px 여백 제거 */
-            padding: 96px 0px 0;
-        }
-
-        #sec1 div {
-            width: 1480px;
-            height: 745px;
-        }
-
+    /* 섹션 공통 */
+    section {
+        width: 1480px;
+        /* 데스크탑에서는 좌우 32px 여백 제거 */
+        padding: 96px 0px 0;
     }
+
+    #sec1 div {
+        width: 1480px;
+        height: 745px;
+    }
+
+}
 
 /* *********************************************************** */

@@ -140,7 +140,8 @@ footer {
 /*///////////////// 폰 ////////////////*/
 /* 모바일 버튼 */
 .collapsedMenuIcon {
-    display: inline-block;
+    /* display: inline-block; */
+    position:absolute;
     right: 30px;
     cursor: pointer;
 }
