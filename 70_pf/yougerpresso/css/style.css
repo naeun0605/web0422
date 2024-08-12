@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+/* 사용 후 반드시 지우기 */
+body *{
+    outline:1px solid red;
+}
+
 /* 공통 */
 *{
     box-sizing:border-box;
@@ -29,10 +34,7 @@ a {
     text-decoration: none;
 }
 
-/* 사용 후 반드시 지우기 */
-body *{
-    outline:1px solid red;
-}
+
 
 /* A영역 */
 header{
@@ -54,36 +56,25 @@ nav{
     align-self:flex-end;
 }
 
+/* 1뎁스 */
 .main{
     font-size: 1.8rem;
     font-weight:bold;
     display: flex;
 }
 
-/* Q. li가 a를 감쌌는데 어떻게 a가 더 큰가요?! 
-a가 li자식이니까 자식꺼 늘리면 부모도 늘어남 (블록레벨요소) */
-
-
-/* .main>li{
-    background: blue;
-}
-
-.main>li>a{
-    background: green;
-} */
-
 
 .main>li>a{
     padding:16px 24px;
     display:block;
             /* a가 인라인 요소라서 부모를 벗어남 그래서 인라인요소인 a태그를 block으로 바꿔주기  => 그래야 부모 요소를 벗어나지 않음*/
-        /* Q 근데 nav는 블록이고 a는 인라인인데 nav가 넘쳤다고 보면 안되나요?? */
 }
 
 .main>li>a:hover{
     background: #e31a40;
 }
 
+/* 2뎁스 */
 .sub{
     font-size: 1.4rem;
     font-weight: normal;
@@ -109,13 +100,79 @@ a가 li자식이니까 자식꺼 늘리면 부모도 늘어남 (블록레벨요�
     height: 100px;
     background: #e31a40;
 }
-#banner{
-    height: 150px;
+
+#link ul{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    /* Q. 얘 주석처리하면  위로 붙는데 aic만 하면 교차축 중앙정렬아닌가요?*/
+    height: 100%;
+}
+
+#link li{
+    width: 120px;
+    height: 60px;
+}
+
+#link li img{
+    width: 60px;
+    height: 60px;
+    /* 인라인 요소의 수직 배치 */
+    vertical-align:middle;
+    margin-right: 8px;
 
 }
-#board{
-    height: 300px;
+#banner{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    height: 150px;
+    padding: 0 70px;
+}
 
+#banner img {
+    width: 100px;
+    height: 80px;
+}
+
+#banner .txt {
+    /* 상우하좌 */
+    margin: 0 160px 0 24px;
+}
+
+
+#board{
+    display: flex;
+    height: 300px;
+    padding: 20px 40px;
+
+}
+
+#board>div{
+    width: 600px;
+    height: 260px;
+}
+
+.notice {
+    margin-right: 60px;
+}
+
+Q. 이 부분 질문
+.gallery div {
+    display: flex;
+}
+
+.gallery a{
+    height: 170px;
+    margin:10px;
+}
+
+.gallery img{
+    width: 180px;
+    height: 140px;
+    margin-bottom: 8px;
+    Q. 주석 전후 차이없는데 왜 하는건가요?
+    display: block;
 }
 /* D영역 */
 footer{

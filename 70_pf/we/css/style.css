@@ -2,7 +2,7 @@
 
 /* 사용후 지울것 */
 body * {
-    outline: 1px solid red;
+    outline: 1px solid lime;
 }
 
 /* 공통 */
@@ -22,10 +22,8 @@ ul {
 body {
     color: #333;
     background: #fff;
-    font-family: Arial, 굴림, sans-serif;
-    font-size: 1.5rem;
-    /* 폰트 : [굵기] [기울임] 크기 글꼴; */
-    /* font: 1.5rem Arial, 굴림, sans-serif;*/
+    /* font: [굵기] [기울임] 크기 글꼴; */
+    font: 1.5rem Arial, 굴림, sans-serif;
 }
 
 ul {
@@ -40,69 +38,48 @@ a {
 
 /* A영역 */
 header {
-    height: 100px;
-    width: 1340px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
+    height: 100px;
+    width: 1340px;
+    margin: 0 auto;
 }
 
 /* 로고 */
-.logo{
+.logo {
     width: 190px;
     height: 44px;
 }
 
 /* 내비게이션 */
-nav{
+nav {
     align-self: flex-end;
-    /* 얘를 쓰면 넘침 */
-
 }
 
-/* 1depth */
+/* 1뎁스 */
 .main {
+    display: flex;
     font-size: 1.8rem;
     font-weight: bold;
-    display: flex;
 }
 
-/* Q. li가 a를 감쌌는데 어떻게 a가 더 큰가요?! 
-a가 li자식이니까 자식꺼 늘리면 부모도 늘어남 (블록레벨요소) */
-
-
-.main>li{
-    background: blue;
-}
-
-.main>li>a{
-    background: green;
-}
-
-.main>li>a{
-    display:block;
-        /* a가 인라인 요소라서 부모를 벗어남 그래서 인라인요소인 a태그를 block으로 바꿔주기  => 그래야 부모 요소를 벗어나지 않음*/
-        /* Q 근데 nav는 블록이고 a는 인라인인데 nav가 넘쳤다고 보면 안되나요?? */
+.main>li>a {
+    display: inline-block;
     padding: 16px 24px;
 }
 
-.main>li>a:hover{
+.main>li>a:hover {
     background: #e31a40;
 }
 
-
-
-/* 2depth */
+/* 2뎁스 */
 .sub {
+    display: none;
     font-size: 1.4rem;
     font-weight: normal;
-    display: none;
 }
-
-
-
 
 /* B영역 */
 #slide {
@@ -124,30 +101,87 @@ a가 li자식이니까 자식꺼 늘리면 부모도 늘어남 (블록레벨요�
     background: #e31a40;
 }
 
+#link ul {
+    display: flex;
+    /* 주축(가로) 배치 */
+    justify-content: space-evenly;
+    /* 교차축(세로) 배치 */
+    align-items: center;
+    height: 100%;
+}
+
+#link li {
+    width: 120px;
+    height: 60px;
+}
+
+#link li img {
+    width: 60px;
+    height: 60px;
+    /* 인라인 요소의 수직 배치 */
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
 #banner {
+    display: flex;
+    align-items: center;
     height: 150px;
+    padding: 0 70px;
+}
+#banner img {
+    width: 100px;
+    height: 80px;
+}
+#banner .txt {
+    /* 상우하좌 */
+    margin: 0 160px 0 24px;
 }
 
 #board {
+    display: flex;
     height: 300px;
+    padding: 20px 40px;
 }
+#board>div {
+    width: 600px; 
+    height: 260px;
+}
+.notice {
+    margin-right: 60px;
+}
+.gallery div {
+    display: flex;
+}
+.gallery a {
+    height: 170px;
+    margin: 10px;
+}
+.gallery img {
+    display: block;
+    width: 180px;
+    height: 140px;
+    margin-bottom: 8px;
+}
+
 
 /* D영역 */
 footer {
-    height: 100px;
     display: flex;
     align-items: center;
+    height: 100px;
     padding: 0 30px;
 }
 
-.flogo{
+/* 1340px */
+.flogo {
     width: 200px;
 }
 
-.addr{
+.addr {
     width: 900px;
 }
 
-.fs{
+.fs {
     width: 240px;
 }
