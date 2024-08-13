@@ -96,7 +96,7 @@ nav {
     animation: slide 9s infinite;
 }
 
-/* @keyframes slide {
+@keyframes slide {
     0% {
         left: 0;
     }
@@ -128,7 +128,7 @@ nav {
     100% {
         left: 0;
     }
-} */
+}
 
 #modal {
     display: none;
