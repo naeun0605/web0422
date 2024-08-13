@@ -31,8 +31,9 @@
     header {
       position: fixed;
       z-index: 9999;
-      Q. header너비가 fixed일땐 부모너비 따라가지 않나요? 부모가 body고 너비가 전체인데 왜 100%지정안해주면 콘텐츠 크기만큼 가지나요?
-      width: 100%;
+      /* Q. header너비가 fixed일땐 부모너비 따라가지 않나요? 부모가 body고 너비가 전체인데 왜 100%지정안해주면 콘텐츠 크기만큼 가지나요? */
+      /* fixed면 너비가 자식크기 */
+      /* width: 100%; */
       display: flex;
       justify-content: space-between;
       align-items: center;

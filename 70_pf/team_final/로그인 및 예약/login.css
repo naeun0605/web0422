@@ -1,0 +1,268 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jomolhari&display=swap');
+
+/* reset */
+* {box-sizing: border-box;}
+
+:root {font-size: 12px;}
+
+body,ul {margin: 0 auto;}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+a, p, h1, h2, h3 {
+    margin: 0;
+    text-decoration: none;
+    color: #4A433B;
+    font: 400 16px "Noto Sans KR",sans-serif;
+}
+
+/* //reset */
+
+
+/* 로그인 설명글 */
+.login_des {
+    width: 1903px;
+    height: 178px;
+    padding-left: 350px;
+    padding-top : 80px;
+}
+
+.login_des h2 {
+    width: 1903px;
+    height: 40px;
+    font-weight: 600;
+    color: #856F56;
+}
+
+.login_des p {
+    color:#777;
+    /* padding-bottom:500px; */
+   
+    
+}
+
+/* 로그인 패이지 전체*/
+.full_login {
+    padding : 40px 0 0 40px;
+    width: 1903px;
+    height: 734px;
+    display: flex; 
+    justify-content: space-evenly;
+}
+
+
+/* 로그인 박스 */
+.login_chk {
+    position: relative;
+    width: 480px;
+    height: 240px;
+}
+
+
+/* 회원, 비회원 쓰여진 탭부분 */
+.login_chk>label { /* .login_chk label이라고만 쓰면 login_chk클래스에 있는 label 모두 적용되므로 바로 아래 label만 적용되도록! */
+    position:absolute; /* df를 쓰면 login_chk에 들은 모든것들이 가로 배치 되므로 position사용 */
+    background: #fff; /* 비활성화 상태 */
+    color: #777;
+    cursor: pointer;
+    width: 240px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    /* border-left:1px solid #856F56;
+    border-bottom:1px solid #856F56; */
+    /* border-left:1px solid #856F56;
+    border-top:1px solid #856F56; */
+    z-index:99;
+    font-weight: 600;
+}
+
+/* 비회원 탭을 오른쪽으로 240px만큼 이동 */
+#btn2 + label {
+    left:240px;
+}
+
+/* 탭의 콘텐츠 영역 */
+.login_chk div {
+    display: none; 
+    /* 비회원탭의 콘텐츠 영역을 안보이게함 */
+    position: absolute; /* 로그인 전체 박스랑 겹쳤으므로 */
+    width: 480px;
+    /* border: 1px solid; */
+    padding-top: 48px;
+    top:30px;
+}
+
+.login_chk input[type="radio"] {
+    display: none;
+    /* 탭에 라디오버튼 안보이게 숨김 */
+}
+
+/* 눌러진 탭 */
+.login_chk input:checked+label {
+    background:#fff;
+    color: #856F56;
+    border-left:1px solid #856F56;
+    border-top:1px solid #856F56;
+    border-right:1px solid #856F56;
+}
+
+/* 눌러진 탭의 콘텐츠 영역 */
+.login_chk input:checked+label+div {
+    display: block;
+    /* left:-50px;
+    top:50px; */
+}
+
+
+.member1 {
+    width: 1480px;
+    height:214px;
+    position: relative;
+    z-index: 999;
+    display: block;
+}
+
+/*회원 탭 콘텐츠 안에 아이디, 비밀번호 */
+  .member1 input {
+    width: 480px;
+    height: 48px;
+    border: 0.5px solid #ddd;
+    padding-left:16px;
+}
+
+.id {
+    border: 1px solid #856F56;
+    margin-bottom :8px;
+}
+
+.pw {
+
+    border: 1px solid #856F56;
+    margin-bottom :24px;
+
+}
+
+/* 회원 탭 콘텐츠 안에 로그인버튼 */
+.member1 button {
+    width: 480px;
+    height: 56px;
+    background: #856F56;
+    font-size: 18px;
+    border:none;
+    color:#fff;
+
+}
+
+.member1 button:hover{
+    background: #776655;
+    cursor: pointer;
+}
+
+
+#login_save {
+    height: 30px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative; */
+}
+
+/* 체크박스 */
+#checkbox input{
+    width: 20px;
+    vertical-align: middle; /* check박스랑 로그인 상태유지 일직선으로 정렬 */
+    margin-right:8px;
+}
+
+#login_save p{
+    text-decoration: underline;
+}
+
+/* 비회원 탭 콘텐츠 안에 예약번호, 이름, 010*/
+.member2 input {
+    width: 480px;
+    height: 48px;
+    border: 0.5px solid #ddd;
+    padding-left:16px;
+
+}
+
+.member2 button:hover{
+    background: #776655;
+    cursor: pointer;
+}
+
+.res_num {
+    border: 1px solid #856F56;
+    margin-bottom :8px;
+}
+.name {
+    border: 1px solid #856F56;
+    margin-bottom :8px;
+}
+.phone {
+    border: 1px solid #856F56;
+    margin-bottom :16px;
+}
+
+/* 비회원 탭 콘텐츠 안에 예약내역조회버튼 */
+.member2 button {
+    width: 480px;
+    height: 56px;
+    border:none;
+    color:#fff;
+}
+
+.res_btn {
+    margin: 20px 0 20px 0;
+    background: #856F56;
+    font-size: 18px;
+}
+
+/* 오른쪽에 회원가입 권유 */
+.recommand_join{
+    width: 480px;
+    height: 176px;
+    padding-top : 64px;
+}
+
+.recommand_join h2{
+    font-size: 18px;
+    height: 30px;
+    padding-bottom:24px;
+    color : #856F56;
+    font-weight: 600;
+}
+
+.recommand_join p {
+    height: 70px;
+    font-size: 16px;
+}
+
+/* 회원가입 버튼 */
+
+
+.recommand_join a{
+    color: #856F56; 
+    font-size: 18px;
+    display: inline-block;
+    width: 480px;
+    border : 1px solid #856F56;
+    text-align: center;
+    padding: 12px;
+    margin: 40px 0 64px;
+}
+
+.recommand_join a:hover{
+    background: #776655;
+    color:#fff;
+    cursor: pointer;
+}

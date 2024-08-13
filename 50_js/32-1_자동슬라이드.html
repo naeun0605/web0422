@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기화 */
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: top;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 슬라이드 */
+        #slideWrap {
+            /* fixed는 부모와 관계없이 left, top 기준은 창(뷰포트) */
+            /* absolute의 부모가 없으면 left, top 기준은 창(뷰포트) */
+            /* relative의 left, top 기준은 자기자신 */
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+        }
+
+        #slideWrap ul {
+            display: flex;
+            /* left 기능을 사용하여 좌우 이동하려고 position값을 바꿔준것 */
+            /* relative는 쓰나 안쓰나 위치는 자기자신 */
+            position: relative;
+            left: 0;
+        }
+    </style>
+    <script>
+        // 로드 이벤트
+        window.addEventListener("DOMContentLoaded", () => {
+            // 요소 찾기
+            const slide = document.querySelector("#slideWrap");
+            const slideList = slide.querySelector("ul");
+            const slideListItem = slideList.querySelectorAll("li");
+            const slideListItemImg = slideList.querySelectorAll("img");
+
+            // 요소 순번
+            let idx = 0;
+
+            // 슬라이드 전환 시간
+            const speed = 2000;
+
+            // 슬라이드 개수
+            // length 속성은 nodeList(HTML 컬렉션)의 개수
+            const slideCount = slideListItemImg.length + 1;
+            console.log("슬라이드 개수는?", slideCount);
+
+            // 슬라이드 크기
+            const slideWidth = 50;
+            const slideHeight = 50;
+
+
+            // 슬라이드 크기 함수 호출
+            slideSize();
+
+            function slideSize() {
+                // 슬라이드 크기
+                // 아래 slide는 본문의 div#slideWrap
+                slide.style.width = slideWidth + "%";
+                slide.style.height = slideHeight + "%";
+                // slideList는 <ul>
+                slideList.style.width = 100 * slideCount + "%";
+                slideList.style.height = 100 + "%";
+
+                /* 
+                for(초기식; 조건식; 증감식){
+                    코드;
+                }
+
+                0번 li -> w:100%
+                1번 li -> w:100%
+                2번 li -> w:100%
+                3번 li -> w:100% (0번 li의 복제본)
+
+                결론은 4번 반복
+                */
+
+                // for(let i=0; i<slideListItem.length; i++){
+                //     slideListItem[i].style.width = 100 + "%";
+                // }
+
+                
+
+                // for ~ of 반복문
+                /* 
+                    for(const 변수 of HTML컬렉션)
+                    for(const 변수 of 배열)
+                */
+                
+                // slideListItem 즉, li 수 만큼 반복 (여기서는 3번)
+                for (const x of slideListItem) {
+                    x.style.width = 100 + "%";
+                }
+
+            }
+
+            // ul의 첫 번째 요소 ul끝에 복제 (반드시 크기를 지정하고 복제해야 한다!)
+            /* 
+
+            객체 
+                firstElementChild -> 첫 번째 자식 요소
+                lastElementChild -> 마지막 자식 요소
+            메소드 
+                객체.appendChild(요소) -> 객체의 요소를 잘라서 맨 끝에 추가
+                    EX) ul.appendChild(li) -> ul의 제일 끝에 첫번째 li 요소를 잘라서 추가
+                    위에서 요소 찾은 거로 쓰면
+                    slideList.appendChild(slideListItem[0])
+
+                    객체.insertBefore(새 요소, 기존 요소) -> 맨 앞에 요소 추가
+                    ㄴ 새 요소를 기존 요소 앞에 추가
+                    cloneNode(true) 
+            속성
+            이벤트
+
+
+            첫 번째 li 요소를 잘라서 ul 끝에 추가
+            slideList.appendChild(slideListItem[0]);
+
+            첫 번째 li요소를 복제하여 ul 끝에 추가
+            slideList.appendChild(slideListItem[0].cloneNode(true));
+            slideList.appendChild(slideList.firstElementChild.cloneNode(true));
+
+
+                1. appendChild()
+                2. firstElementChild
+                3. cloneNode(true)
+            */
+            slideList.appendChild(slideList.firstElementChild.cloneNode(true));
+
+            // 핵심!!
+            // 2초 마다 자동 슬라이드 함수 호출
+            setInterval(autoSlide, speed);
+
+            // 자동 슬라이드 함수 선언
+            function autoSlide() {
+                idx++;
+                slideList.style.left = -100 * idx + "%";
+                slideList.style.transition = speed / 2000 + "s";
+
+                if (idx === slideCount) {
+                    idx = 0;
+                    slideList.style.left = "0%";
+                    slideList.style.transition = "0s";
+                    setTimeout(() => {
+                        idx = 1;
+                        slideList.style.left = -100 * idx + "%";
+                        slideList.style.transition = speed / 2000 + "s";
+                    }, 0);
+                }
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="slideWrap">
+        <ul>
+            <li><img src="../assets/pic_1.jpg" alt="이미지1"></li>
+            <li><img src="../assets/pic_2.jpg" alt="이미지2"></li>
+            <li><img src="../assets/pic_3.jpg" alt="이미지3"></li>
+        </ul>
+    </div>
+</body>
+
+</html>

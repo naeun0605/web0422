@@ -150,9 +150,9 @@ footer {
 /* 햄버거버튼(모바일버튼) */
 .collapsedMenuIcon {
     /* 가로를 콘텐츠 크기만큼만 하려고 */
-    /* display: inline-block; */
+    display: inline-block;
     Q.position안쓰시고 왜 inline-block으로 하셨나요? 차이점
-    position: absolute;
+    /* position: absolute; */
     right: 30px;
     cursor: pointer;
 }

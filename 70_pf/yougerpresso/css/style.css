@@ -105,7 +105,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items:center;
-    /* Q. 얘 주석처리하면  위로 붙는데 aic만 하면 교차축 중앙정렬아닌가요?*/
+    /* 부모의 높이를 늘려줘야 교차축정렬됨 */
     height: 100%;
 }
 
@@ -157,7 +157,7 @@ nav{
     margin-right: 60px;
 }
 
-Q. 이 부분 질문
+
 .gallery div {
     display: flex;
 }
@@ -171,8 +171,7 @@ Q. 이 부분 질문
     width: 180px;
     height: 140px;
     margin-bottom: 8px;
-    Q. 주석 전후 차이없는데 왜 하는건가요?
-    display: block;
+
 }
 /* D영역 */
 footer{
