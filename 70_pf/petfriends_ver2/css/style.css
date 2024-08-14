@@ -151,7 +151,7 @@ footer {
 .collapsedMenuIcon {
     /* 가로를 콘텐츠 크기만큼만 하려고 */
     display: inline-block;
-    Q.position안쓰시고 왜 inline-block으로 하셨나요? 차이점
+
     /* position: absolute; */
     right: 30px;
     cursor: pointer;
@@ -214,7 +214,7 @@ nav.change {
 
     /* 내비게이션 */
     nav {
-        Q. 폰에서 내비를 dn한게 아닌데 왜 db하나요
+       
             display: block;
             position: static;
             width: auto;
