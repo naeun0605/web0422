@@ -13,7 +13,8 @@
 */
 
 .box {
-    display: flex; /* flex 방식 쓸거니까 부모에다가 써주기 */
+     /* flex 방식 쓸거니까 부모에다가 써주기 */
+    display: flex;
     background: lightsteelblue;
     height:200px;
     margin:12px;
