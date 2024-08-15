@@ -52,6 +52,7 @@ header .container {
     margin: 0 auto;
     border-bottom: 5px solid #007CFF;
     position:fixed;
+    background: #fff;
 }
 /* 로고 */
 .logo {
@@ -336,6 +337,9 @@ header .container {
 #s3 h2{
     text-align: center;
 }
+
+/* section3 */
+
 
 /* section4 */
 

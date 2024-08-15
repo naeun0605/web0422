@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/* 작업중 */
+body *{
+    outline: 1px solid lime;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+}
+
+/* 상단 영역(헤더, 콘텐츠, 슬라이드) */
+.wrap{
+    /* display:flex의 영향으로 자식요소가 align-items:stretch된 상태
+    그래서 자식 높이 지정안해줘도 알아서 늘어남 */
+    display: flex;
+    height:calc(100% - 120px);
+
+}
+
+/* 헤더 - 로고, 내비게이션*/
+header{
+    width: 200px;
+
+}
+
+/* 공지사항 */
+/* 갤러리 */
+/* 링크 */
+.contents{
+    width: 400px;
+}
+
+/* 슬라이드 */
+#slide{
+    width:calc(100% - 200px - 400px);
+
+}
+
+/* 푸터 */
+footer{
+    /* width는 100퍼라 안씀 */
+    height: 120px;
+}
