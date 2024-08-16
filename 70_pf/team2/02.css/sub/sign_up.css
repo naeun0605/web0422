@@ -24,18 +24,24 @@ form{
 }
 
 
-
 #signup .signup_cnt label{
     display:inline-block;
-    
+    margin-right:150px; 
+    width: 190px; 
+    background: blue;
 }
 
-#signup label{
-    /* background: red; */
-    /* margin-right:300px; */
+/* 평생회원, 약관동의 label은 따로 하고싶음 */
+#signup .signup_cnt .long label{
+    background: orange;
 }
 
 
+/* 얘는 왜 적용이 안되져.. */
+#signup .signup_cnt .des label{
+    margin-left:30px;
+    background: yellow;
+}
 
 #signup .essential::before{
     content:"◦";
@@ -43,8 +49,18 @@ form{
 }
 
 #signup .common {
-    width: 70%;
+    width: 30vw;
     height: 40px;
     font-size: 16px;
-    background: yellow;
+    border:1px solid #ccc;
+    border-radius:10px;    
+}
+
+#signup .tel1{
+    display: flex;
+    background: green;
+}
+
+#signup .agree{
+    background: pink;
 }
