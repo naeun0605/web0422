@@ -114,10 +114,12 @@ form {
 .input-box1 {
     width: 1000px;
     margin-bottom: 20px;
+    background: green;
 }
 
 .input-email {
     width: 300px;
+    background: orange;
 }
 
 #email-select {

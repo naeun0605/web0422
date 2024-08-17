@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 - 가로</title>
+    <style>
+
+        /* 초기화 */
+        body, ul{
+            margin:0;
+        }
+        ul { 
+            padding: 0; 
+            list-style: none; 
+        } 
+        img{
+            width: 100%;
+        }
+
+        /* 슬라이드 */
+        #slide { 
+            width: 400px;
+            /* height: 350px; */
+            /* overflow: hidden;  */
+        } 
+        #slide ul { 
+            position: relative;
+            /* left값이 0 -> -100% -> -200% -> -300% -> 0 */
+            left:0;
+            display: flex; 
+            width: 400%; 
+        } 
+
+    </style>
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="jquery-3.7.1.min.js"></script>
+    <!-- 제이쿼리 UI 라이브러리  => animate 메소드의 가속도, 배경색 사용시 필요-->
+     <script src="jquery-ui.min.js"></script>
+    <script>
+        // 준비이벤트
+        $(function(){
+
+            // 요소찾기
+            const slideList = $("#slide li");
+
+            /* 
+            객체.animate({속성:값, 속성:값,...}, 시간, 가속도, 콜백함수);
+            여기서 값은 "문자열", 숫자
+            시간은 400이 기본값 (단위는 ms(밀리초))
+            가속도(easing) : 33가지 easing 종류!
+            콜백함수는 animate 진행 후 바로 이어서 실행한 내용 기록
+
+            https://api.jqueryui.com/easings/  
+            */
+            
+            slideList.animate({left: "-100%"}, 1000, "easeOutBack"); 
+        });
+    </script>
+</head>
+
+<body>
+    <div id="slide">
+        <ul>
+            <a><a href="#"><img src="slide1.jpg" alt="슬라이드 이미지1"></a></li>
+            <a><a href="#"><img src="slide2.jpg" alt="슬라이드 이미지2"></a></li>
+            <a><a href="#"><img src="slide3.jpg" alt="슬라이드 이미지3"></a></li>
+            <a><a href="#"><img src="slide1.jpg" alt="슬라이드 이미지1"></a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
