@@ -39,6 +39,7 @@ body{
 
 /* header */
 header{
+    /* Q1. 얘를 해주니까 이미지 밑으로 가려졌던 네비게이션 메뉴들이 이미지 위로 올라왔는데 왜 그런건가요 z-index하기 전부터 z-index를 하려고 position을 써준건가요 ??*/
     position:relative;
     z-index: 1;
     display: flex;
@@ -56,6 +57,7 @@ header{
     font-weight: bold;
 }
 
+/* Q2. 얘는 메인메뉴 li만 말하는거아닌가요?? 서브메뉴 li도 tac가 적용되는건 상속받아서 그런가요? */
 #gnb .main>li{
     width: 160px;
     height: 30px;
@@ -73,10 +75,13 @@ header{
 
 /* 2depth */
 #gnb .sub{
+    /* Q3. height:0하고 overflow:hidden하는거랑 visibility:hidden하는거랑 opacity:0하는거랑 다 똑같은 기능인데 왜 세개 다 쓰나요 */
     height: 0;
+    /* Q4. height:0하고 overflow:hidden하기 전에 왜 높이 조금 가지나요? */
     overflow:hidden;
     visibility:hidden;
     opacity:0;
+
     padding: 10px 0 20px;
     background: rgba(0, 0, 0, .5);
     transition: .3s;
@@ -108,6 +113,7 @@ header{
 }
 
 #slide ul{
+    /* Q5. 이건 왜 쓰신거져?? */
     position: relative;
     top:0;
     animation: slide 6s infinite;
