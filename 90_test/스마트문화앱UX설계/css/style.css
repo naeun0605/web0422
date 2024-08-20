@@ -19,7 +19,7 @@ section{
 }
 
 section h2{
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--pink);
     padding-bottom:24px;
     margin-bottom:24px;
 }
@@ -53,6 +53,8 @@ section li{
 #sec2 h2{
     margin-bottom: 48px;
 }
+
+
 
 #sec2 h3{
     position:absolute;

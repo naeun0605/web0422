@@ -9,6 +9,8 @@
     --gray3: #333;
     --graya: #aaa;
     --grayc:#ccc;
+    --pink:#F0A7AA;
+    --s_pink:#E16C71;
 }
 
 body{
@@ -31,7 +33,8 @@ h1{
 /* h2의 글자 크기 기본값은 부모 요소 크기의 1.5배(1.5em) */
 h2{
     /* 2.4rem은 html(:root)의 2.4배, 따라서 :root에서 font-size 10px로 지정했으므로 2.4rem은 24px */
-    font-size: 2.4rem;
+    font-size: 3.6rem;
+    color:var(--pink);
 }
 
 /* a태그는 글자색 상속받지 않으므로 따로 지정 */
@@ -43,6 +46,7 @@ a{
 input{
     font-size: 1.5rem;
     font-family: "Noto Sans KR", sans-serif;
+    border:1px solid var(--pink);
 }
 
 ::placeholder {
@@ -68,18 +72,26 @@ button {
 #sec1 h2{
     letter-spacing:4px;
     font-weight: 400;
-    font-size: 3.6rem;
+    color:var(--white);
 }
+
 #sec1 b{
     color:var(--white);
 }
+
 /* section2 */
 #sec2 h3{
-    color:var(--white);
+    color:var(--pink);
+}
+
+/* section 3,4 */
+#sec3 p, #sec4 p{
+    color:var(--s_pink);
 }
 /* section3 */
 #sec3 h3{
     font-size: 2.4rem;
+    color:var(--s_pink);
 }
 
 #sec3 p:first-of-type{
@@ -92,6 +104,10 @@ button {
             x = 0.788...
     */
     font-size: max(0.8vw,1.2rem);
+}
+
+#sec3 a{
+    color:var(--white);
 }
 
 @media (min-width:768px){
@@ -131,22 +147,22 @@ header{
 
 
 /* section2 */
-#sec2 h3{
-    background: var(--black);
+#sec2 h3:hover{
+    background: #f0a7a967;
+    color:var(--white);
 }
-
 
 /* section3 */
 #sec3 a{
-    background: var(--grayc);
+    background: var(--pink);
 }
 
 /* section4 */
 #sec4 button{
-    background: var(--black);
+    background: var(--pink);
 }
 
 /* footer */
 footer{
-    background: var(--black);
+    background: var(--pink);
 }
