@@ -232,7 +232,7 @@ header{
     background: #fff;
 }
 
-/* tabs common contents */
+/* 탭 안에 컨텐츠들*/
 #tabs>div{
     position:absolute;
     width: 100%;

@@ -183,7 +183,6 @@ header{
 #tabs{
     position:relative;
     width: 400px;
-    background: red;
 }
 
 #tabs>ul{
@@ -215,5 +214,10 @@ header{
     width: 100%;
     top:38px;
     border:1px solid #ccc;
+    padding: 16px 20px;
     
+}
+
+#tabs>div.on{
+    display: block; 
 }
