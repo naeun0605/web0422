@@ -1,60 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
+        @import url(reset.css);
+        @import url(typo.css);
 
-        #tabs>div{
-            font-size: 50px;
-            display: none;
+        /* .main li:hover a {
+            color: #fff;
+        } */
+
+        header{
+            display: flex;
         }
 
-        #tabs>div.on{
-            display: block;
+        .gnb{
+            margin-top: 20px;
+            background: #111;
+        }
+
+        .main{
+            display: flex;
+        }
+
+        .main>li{
+            width: 160px;
+            
         }
 
     </style>
 </head>
+
 <body>
-    <h1>탭</h1>
-    <p>나는 단락이다.</p>
-    
-    <div id="tabs">
-
-        <ul>
-            <li><a href="#tab1">공지사항</a></li>
-            <li><a href="#tab2">갤러리</a></li>
-        </ul>
-
-        <div class="on" id="tab1">첫번째</div>
-        <div id="tab2">두번째</div>
-
-    </div>
-
-    <script>
-
-        const btn1 = document.querySelectorAll('a')[0];
-        const btn2 = document.querySelectorAll('a')[1];
-        const con1 = document.querySelector('.on');
-        const con2 = document.querySelector('#tab2');
-        
-        console.log(btn1, btn2);
-        console.log(con1, con2);
-
-        btn1.onclick = function(){
-            con1.classList.add('on');
-            con2.classList.remove('on');
-        };
-
-        btn2.onclick = function(){
-            con2.classList.add('on');
-            con1.classList.remove('on');
-        };
-
-    </script>
+    <header>
+        <nav class="gnb">
+            <!-- 1depth -->
+            <ul class="main">
+                <li>
+                    <a href="#">메인메뉴1</a>
+                    <!-- 2depth -->
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴2</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴3</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴4</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
 </body>
+
 </html>
