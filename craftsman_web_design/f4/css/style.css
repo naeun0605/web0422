@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+body *{
+    outline:1px solid red;
+}
+
+body{
+    margin: 0;
+    color:#333;
+    background: #fff;
+}
+
+a{
+    color:#333;
+}
+
+header{
+    height: 100px;
+    width: 1340px;
+    margin: 0 auto;
+}
+
+#slide{
+    height: 350px;
+}
+
+.container{
+    position: relative;
+    top: -100px;
+    width: 1340px;
+    margin: 0 auto;
+}
+
+#link{
+    height: 100px;
+    background: red;
+}
+
+#banner{
+    height: 150px;
+}
+
+#board{
+    height: 300px;
+}
+
+footer{
+    height: 100px;
+}

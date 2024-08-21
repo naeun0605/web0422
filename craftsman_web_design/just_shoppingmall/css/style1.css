@@ -57,7 +57,6 @@ header{
     font-weight: bold;
 }
 
-/* Q2. 얘는 메인메뉴 li만 말하는거아닌가요?? 서브메뉴 li도 tac가 적용되는건 상속받아서 그런가요? */
 #gnb .main>li{
     width: 160px;
     height: 30px;
@@ -75,9 +74,9 @@ header{
 
 /* 2depth */
 #gnb .sub{
-    /* Q3. height:0하고 overflow:hidden하는거랑 visibility:hidden하는거랑 opacity:0하는거랑 다 똑같은 기능인데 왜 세개 다 쓰나요 */
+    /* Q2. height:0하고 overflow:hidden하는거랑 visibility:hidden하는거랑 opacity:0하는거랑 다 똑같은 기능인데 왜 세개 다 쓰나요 */
     height: 0;
-    /* Q4. height:0하고 overflow:hidden하기 전에 왜 높이 조금 가지나요? */
+    /* Q3. height:0하고 overflow:hidden하기 전에 왜 높이 조금 가지나요? */
     overflow:hidden;
     visibility:hidden;
     opacity:0;
@@ -113,7 +112,7 @@ header{
 }
 
 #slide ul{
-    /* Q5. 이건 왜 쓰신거져?? 누구랑 짝궁인지.. */
+    /* Q4. 이건 왜 쓰신거져?? 주석처리하니까 슬라이드가 멈추고 absolute하니까 사진 네개가 한번에 움직여요 , 밑에 top값을 바꿔줘도 차이가 없어요*/
     position: relative;
     top:0;
     animation: slide 6s infinite;
@@ -193,8 +192,10 @@ header{
 }
 
 /* tabs */
-/* tabs button */
+
+/* 탭 전체*/
 #tabs{
+   /* Q5. left,top같은 값도 안주는데 position왜 주신걸까요? */
     position:relative;
     width: 400px;
 }
@@ -211,11 +212,7 @@ header{
 
 /* 공지사항, 갤러리 탭 */
 #tabs>ul li{
-    /* Q6. 두개가 겹쳤을떄 밑에 있는애가 relative고 위에있는 애가 absolute잖아요 근데 밑에보니까 tabs>div가 absolute던데 둘은 안겹치지 않았나요 ? 
-
-    얘랑 저 위에있는 tabs의 position:relative가 짝인가요? 만약에 그렇다면 어떻게 둘다 rel인가요
-    
-    공지사항 컨텐츠랑 갤러리 컨텐츠가 겹치잖아요 그럼 공지사항컨텐츠가 ab, 갤러리가 rel 아닌가요?*/
+    /* Q6. 얘도 left, top같은거 안주셨는데 왜 주신거져 */
     position:relative;
     z-index: 0;
     border: 1px solid #ccc;
@@ -227,7 +224,7 @@ header{
 
 /* 공지사항 탭 */
 #tabs>ul li.on{
-    /* q9. 차이가 없음 */
+    /* Q7. 차이가 없는데 position줘야 쓸수있지않나요?*/
     z-index: 1;
     background: #fff;
 }

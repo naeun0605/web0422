@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+img{
+    max-width: 100%;
+    /* 이미지 아래 빈틈 사라짐 */
+    vertical-align: top;
+}
+
+table{
+    width: 100%;
+    /* 테이블 간 선들이 겹쳐서 2px이 되므로 1px로 바꿔줌*/
+    border-collapse:collapse;
+}
+
+button{
+    cursor:pointer;
+}
+
+body{
+    background: #fff;
+    color:#333;
+}
+
+.inner{
+    width: 1200px;
+    margin:auto;
+}
+
+header{
+    height: 100px;
+    background: pink;
+    padding-top: 35px;
+    padding-left: 10px;
+    position: relative;
+}
+
+nav{
+    position: absolute;
+    top:40px;
+    right:0;
+    z-index: 10;
+}
+
+nav>ul{
+    display: flex;
+}
+
+nav>ul>li>a{
+    /* a는 인라인 요소라 width, height 적용안되니까 display:block으로 바꿔주고 w,h,padding 등등 지정*/
+    display: block;
+    width: 120px;
+    background:#fff;
+    text-align:center;
+    font-weight:bold;
+    color:hotpink;
+    padding:10px;
+}
+
+/* focus는 키보드Tab */
+/* focus는 a. input, button, select태그에게 focus감 */
+nav>ul>li:hover>a,
+nav>ul>li>a:focus,
+nav>ul>li.on>a{
+    background: skyblue;
+    color:#fff;
+}
+
+.sub{
+    display: none;
+}
+
+.sub li a{
+    display: block;
+    padding:5px;
+    text-align: center;
+    font-size: 14px;
+    background:#fff;
+}
+
+.sub li a:hover,
+.sub li a:focus{
+    background: rgb(181, 224, 241);
+}
+
+
+.slide{
+    height: 300px;
+    background: rgb(214, 68, 92);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 슬라이드 띠는 공중에 띄우는 것이 좋음 */
+.slide ul{
+    position: absolute;
+    /* absoulute는 높이값도 적어주는 것이 좋음 */
+    /* slide높이가 300px이니까 li각각 높이는 300 따라서 300*3*/
+    height:900px;
+}
+
+.slide ul li{
+    width: 1200px;
+    height: 300px;
+    position: relative;
+
+}
+
+.slide ul li a{
+    display: block;
+    height: 100%;
+}
+
+.slide ul li.s1{
+    background: url(../images/m1.jpg) no-repeat center/cover;
+}
+
+.slide ul li.s2{
+    background: url(../images/m2.jpg) no-repeat center/cover;
+}
+
+.slide ul li.s3{
+    background: url(../images/m3.jpg) no-repeat center/cover;
+}
+
+.slide ul li h2{
+    background: #fff;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size: 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    padding:20px;
+
+}
+.con{
+    height: 200px;
+    background:#369;
+    /* con1,2,3 가로배치 하기 위해 부모인 .con에 df */
+    /* 부모에게 df쓰면 자식들에게 height값 주지 않아도 
+    stretch되어서 부모높이만큼 꽉 채워짐*/
+    display: flex;
+}
+
+.con article{
+    width: 400px;
+}
+
+.con article:nth-child(2){
+    background: #fff;
+}
+
+.con1{
+        /* .tabcon을 absolute처리했으므로 기준인 relatice가 필요한데 tabcon의 부모인 li는 영역이 너무 작아서 조상인 com1에게 */
+    position: relative;
+}
+.con1 .tabmenu{
+    display:flex;
+}
+
+.con1 .tabmenu>li{
+    width: 150px;
+    background: #fcf0ea;
+}
+.con1 .tabcon{
+    position:absolute;
+}
+
+footer{
+    height: 100px;
+    background: #000;
+}
