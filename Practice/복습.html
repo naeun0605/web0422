@@ -1,85 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        @import url(reset.css);
-        @import url(typo.css);
-
-        /* .main li:hover a {
-            color: #fff;
-        } */
-
-        header{
-            display: flex;
-        }
-
-        .gnb{
-            margin-top: 20px;
-            background: #111;
-        }
-
-        .main{
-            display: flex;
-        }
-
-        .main>li{
-            width: 160px;
-            
-        }
-
-    </style>
 </head>
-
 <body>
+
     <header>
-        <nav class="gnb">
-            <!-- 1depth -->
-            <ul class="main">
-                <li>
-                    <a href="#">메인메뉴1</a>
-                    <!-- 2depth -->
-                    <ul class="sub">
-                        <li><a href="#">서브메뉴1</a></li>
-                        <li><a href="#">서브메뉴2</a></li>
-                        <li><a href="#">서브메뉴3</a></li>
-                        <li><a href="#">서브메뉴4</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">메인메뉴2</a>
-                    <ul class="sub">
-                        <li><a href="#">서브메뉴1</a></li>
-                        <li><a href="#">서브메뉴2</a></li>
-                        <li><a href="#">서브메뉴3</a></li>
-                        <li><a href="#">서브메뉴4</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">메인메뉴3</a>
-                    <ul class="sub">
-                        <li><a href="#">서브메뉴1</a></li>
-                        <li><a href="#">서브메뉴2</a></li>
-                        <li><a href="#">서브메뉴3</a></li>
-                        <li><a href="#">서브메뉴4</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">메인메뉴4</a>
-                    <ul class="sub">
-                        <li><a href="#">서브메뉴1</a></li>
-                        <li><a href="#">서브메뉴2</a></li>
-                        <li><a href="#">서브메뉴3</a></li>
-                        <li><a href="#">서브메뉴4</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1 class="logo"><a href="#"><img src="./../craftsman_web_design/f4/images/logo2.png" alt="로고"></a></h1>
+            nav.gnb>ul.main>li*4+
+        </div>
     </header>
 
-</body>
+    <div class="slide"></div>
 
+    <div id="main_contents">
+
+        <div id="link"></div>
+        <div id="banner"></div>
+        <div id="tab_wrap">
+
+            <div class="tabs">
+                <div class="tab1"></div>
+                <div class="tab2"></div>
+            </div>
+            
+        </div>
+
+        <footer>
+            <!-- <div class="flogo"><a href="#"><img src="./../craftsman_web_design/f4/images/logo2.png" alt="하단로고"></a></div>
+            <div class="fcon">
+                <ul>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                    <li><a href="#">menu4</a></li>
+                    <li><a href="#">menu5</a></li>
+                    <li><a href="#">menu6</a></li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab accusantium itaque reiciendis fugit autem
+                    quod tempora doloremque quasi! Quam reiciendis commodi nobis aperiam optio itaque?</p>
+            </div> -->
+        </footer>
+        
+    </div><!-- main_contents -->
+</body>
 </html>
