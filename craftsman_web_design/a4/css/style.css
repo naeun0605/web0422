@@ -36,16 +36,21 @@ img{
 header{
     height: 100px;
     display: flex;
-    position: relative;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav{
+.logo{
+    text-align: center;
+    border:1px solid red;
+}
+/* nav{
     text-align: center;
     align-content: flex-end;
     position: absolute;
     right:0;
     top:80px;
-}
+} */
 
 .main{
     display: flex;
