@@ -36,4 +36,23 @@ FTP(File transfer protocol) 프로그램
 
 무료: 파일질라, 알FTP(기업은 유료)
 
-SFTP
+SFTP 사용법
+1. 업로드/다운로드할 폴더를 VScode 작업영역 폴더로 지정
+2. VScode에서 F1을 누른 후 검색창에 sftp를 검색한다.
+3. sftp.config 선택한다.
+4. 아래 내용으로 셋팅한다.
+{
+    "name": "닷홈서버",
+    "host": "id.dothome.co.kr",
+    "protocol": "ftp",
+    "port": 21,
+    "username": "id",
+    "remotePath": "/html/",
+    "uploadOnSave": true, => 저장하면 자동 업로드
+    "password": "web0422!",
+    "useTempFile": false,
+    "openSsh": false
+}
+
+5. 업로드/다운로드
+    가.web0422
