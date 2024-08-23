@@ -64,7 +64,7 @@ header .container {
     width: 160px;
     height: 30px;
     text-align: center;
-    /* line-height: 30px;  주석처리 하니까 오히려 정중앙배치되는데 왜 쓴거에요 ?*/
+
 }
 
 .main>li:hover {
@@ -132,7 +132,7 @@ header .container {
     } 
 
 .slide ul { 
-    position: relative;
+    /* position: relative; */
     display: flex; 
     width: 400%; 
     animation: slide 10s infinite;

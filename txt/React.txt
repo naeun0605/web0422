@@ -1,0 +1,39 @@
+#2024.08.23
+
+URL; https://www.dothime.co.kr/web/free/index.php
+URL(Uniform Resource Locator); 웹 주소
+www(world wide web)
+
+프로토콜://서비스.회사.기관성격.국가/폴더/파일명.확장자
+
+클라이언트 언어 => 프론트엔드 언어
+서버 언어 => 백엔드 언어(php, jsp, asp)
+
+Domain : 문자 주소
+IP : 숫자 주소, 192.168.2.26
+
+홈페이지는 처음 보이는 메인 화면
+웹페이지 : 홈, 메인, 서브
+웹사이트 제작
+메인페이지
+서브페이지
+
+속도(bit, 비트)
+저장용량 단위 : Byte(바이트)
+KB - MB - GB - TB
+
+web0422 폴더 용량 : 2.07GB
+
+
+깃의 하나의 레파지토리에 2G
+레파지토리 개수는 제한 없음
+
+닷홈은 한글 파일명, 폴더명 다 꺠짐
+
+FTP(File transfer protocol) 프로그램
+- 파일을 서버에 업로드하거나
+- 파일을 내 컴퓨터에 다운로드
+
+무료: 파일질라, 알FTP(기업은 유료)
+
+SFTP
