@@ -34,13 +34,14 @@ img{
 header{
     position: relative;
 }
+
 header .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #000;
-    height: 100px;
-    width: 100%;
+    background:skyblue;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:100px;
+    padding:0 24px;
 }
 
 nav{
@@ -49,83 +50,53 @@ nav{
 
 .main{
     display: flex;
-    height: 30px;
-    font: size 16px;
-    font-weight:bold;
 }
 
 .main>li{
     width: 160px;
-    height: 30px;
-    background: #fff;
-    padding:10px;
+    height: 40px;
+    padding:8px;
+    /* font-size: 20px; */
+    font-weight: bold;
     text-align: center;
+    border:1px solid red;
+}
+
+.main>li>a{
+    color:#fff;
 }
 
 .main>li:hover{
-    background: #ccc;
+    background: #fff;
 }
 
-.main>li:hover>a{
-    color:#fff;
+.main>li:hover a{
+    color:#000;
 }
 
 
-
-.main::before{
-    content:"";
-    position: absolute;
-    top: 100px;
-    left:0;
-    background: #3d3c3c96;
-    height: 0;
-    opacity: 0;
-    /* 얘를 자꾸 빼먹음!!!!! */
-    width: 100%;
-    visibility: hidden;
-}
-
-.main:hover::before{
-    height: 150px;
-    opacity: 1;
-    z-index: 100;
-    visibility: visible;
-}
 
 .sub{
-    position:relative;
-    z-index:99;
-    height:0;
-    opacity:0;
-    font-size:14px;
-    font-weight:normal;
-
-}
-
-
-.main:hover .sub{
-    z-index:101;
-    opacity:1;
-}
-
-.sub li:hover a{
-    color:pink;
-}
-
-.sub li:hover{
-    background:#ccc;
+    position: relative;
+    z-index: 99;
+    opacity: 0; 
+    border:3px dotted lime;
 }
 
 .sub li{
-    padding:8px;
+    padding:8px 0;
 }
 
-.sub li a{
-    color:#fff;
-
+.main>li:hover .sub {
+    z-index: 101;
+    opacity: 1;
+    background: #fff;
 }
 
-    
+.sub li:hover a{
+    border-bottom:5px solid skyblue;
+}
+
 #slide{
     /* width: 100%; */
     height: 300px;
@@ -146,7 +117,7 @@ nav{
     10%{
         left:-100%;
     }
-    33%{
+    33%{  
         left:-100%;
     }
     43%{
@@ -191,7 +162,7 @@ nav{
 .bottom{
     height: 100px;
     display: flex;
-    background: black;
+    background: skyblue;
 }
 
 .left{
