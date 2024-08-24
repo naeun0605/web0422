@@ -77,7 +77,8 @@ header .container {
     top: 100px;
     left: 0;
     width: 100%;
-    height: 0px;
+    /* Q 서브바를 마우스 호버 안한 상태에서 볼 순 없나요?*/
+    height: 0;
     opacity: 0;
     transition: .3s;
     background: rgba(230, 114, 114, 0.5);
@@ -111,6 +112,7 @@ header .container {
     opacity: 1;
 }
 
+
 .sub li a {
     padding: 4px 16px;
 }
@@ -128,7 +130,7 @@ header .container {
     } 
 
 .slide ul { 
-    /* position: relative; */
+    position: relative;
     display: flex; 
     width: 400%; 
     animation: slide 10s infinite;
@@ -332,3 +334,4 @@ footer ul li:last-child a::after {
 footer p {
     width: 850px;
 }
+
