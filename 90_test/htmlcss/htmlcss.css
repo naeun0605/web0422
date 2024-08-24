@@ -27,14 +27,13 @@ a {
 
 /* header */
 header {
-    position: relative; /* Q.이렇게 하면 자기자신이 기준인데 이걸 왜 해준거에요 ? */
+    position: relative;
 }
 
 header .container {
     display: flex;  
     justify-content: space-between;
-    align-items: center; /* 주석으로 없애면 LOGO글자만 왼쪽으로 치우치는데 LOGO글자 가운데 배치는 밑에 .logo에서 했잖아요  */
-    /* 블록레벨요소의 가로 가운데 배치: width, margin */
+    align-items: center;
     width: 100%;
     height: 100px;
     margin: 0 auto;
@@ -51,7 +50,7 @@ header .container {
 /* 내비게이션 */
 .gnb {
     align-self: flex-end;
-    background: lightpink;
+    background: lightcoral;
 }
 
 /* 1depth */
@@ -74,7 +73,7 @@ header .container {
 /* 서브바 */
 .main::before {
     content: "";
-    position: absolute; /* Q */
+    position: absolute;
     top: 100px;
     left: 0;
     width: 100%;
@@ -89,21 +88,18 @@ header .container {
     z-index: 100;
     height: 150px;
     opacity: 1;
-    /* width: 1200px;
-    margin: 0 auto; */
-    /* header만큼만 보이게 하고싶은데 header width인 1200에 맞추니까 왼쪽에 치우쳐서  가운데 정렬하려는데 margin:0auto 안통함*/
 }
 
 /* 2depth */
 .sub {
     z-index: 99;
-    position: relative; /* Q */
+    position: relative;
     height: 0;
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
-    padding: 10px 0 20px;/* 상 좌우 하 인데 좌우에도 border그어보면  상, 하 여백 10차이가 왜이렇게 큰지*/
-    /* transition: .3s; */
+    padding: 10px 0 20px;
+    transition: .3s;
     line-height: 2;
 }
 
