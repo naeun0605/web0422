@@ -66,6 +66,10 @@ nav{
     background: #ccc;
 }
 
+.main>li:hover>a{
+    color:#fff;
+}
+
 
 
 .main::before{
@@ -90,11 +94,10 @@ nav{
 .sub{
     position:relative;
     z-index:99;
-    height:0%;
+    height:0;
     opacity:0;
     font-size:14px;
     font-weight:normal;
-    color:red;
 
 }
 
@@ -104,13 +107,20 @@ nav{
     opacity:1;
 }
 
+.sub li:hover a{
+    color:pink;
+}
+
+.sub li:hover{
+    background:#ccc;
+}
 
 .sub li{
     padding:8px;
 }
 
 .sub li a{
-    color:red;
+    color:#fff;
 
 }
 
