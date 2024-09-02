@@ -18,8 +18,8 @@ form{
 #signup .signup_cnt{
     width: 1400px;
     margin: 0 auto;
-    border-top:1px solid black;
-    padding: 50px 0;
+    border-top:1px solid #ccc;
+    padding: 20px 0;
     
 }
 
@@ -27,25 +27,36 @@ form{
 #signup .signup_cnt label{
     display:inline-block;
     margin-right:150px; 
-    width: 190px; 
-    background: blue;
+    padding: 16px;
+    width: 250px; 
+    /* background: lightblue; */
 }
 
-/* 평생회원, 약관동의 label은 따로 하고싶음 */
-#signup .signup_cnt .long label{
-    background: orange;
+#signup .signup_cnt .non_padding{
+    padding: 0;
+}
+
+#signup .signup_cnt .des_iden{
+    display: inline;
 }
 
 
-/* 얘는 왜 적용이 안되져.. */
-#signup .signup_cnt .des label{
-    margin-left:30px;
-    background: yellow;
-}
 
 #signup .essential::before{
-    content:"◦";
+    content:"▪";
     color:red;
+}
+
+#signup button{
+    cursor: pointer;
+}
+#signup .identify_btn{
+    padding:8px;
+    border-radius: 10px;
+    border:1px solid #876E66;
+    background: #876E66;
+    color:#fff;
+
 }
 
 #signup .common {
@@ -53,14 +64,62 @@ form{
     height: 40px;
     font-size: 16px;
     border:1px solid #ccc;
-    border-radius:10px;    
+    border-radius:10px; 
+    padding:10px;
 }
 
-#signup .tel1{
-    display: flex;
-    background: green;
+#signup .search_ad{
+    padding: 10px;
+    border:1px solid #ccc;
+    border-radius:10px; 
+    background: #fff;
 }
 
-#signup .agree{
-    background: pink;
+#signup .signup_cnt .right{
+    margin-left: 403px;
+    margin-bottom: 6px;
+}
+
+#signup .common_tel {
+    width: 10vw;
+    height: 40px;
+    font-size: 16px;
+    border:1px solid #ccc;
+    border-radius:10px; 
+    padding:10px;
+}
+
+#signup .signup_cnt .life_des{
+    /* background: red; */
+    margin-left: 410px;
+}
+
+/* 약관동의 */
+#signup #agree label{
+    padding: 16px;
+    width: 100%; 
+}
+
+#signup #agree .op{
+    margin-left: 50px;
+}
+
+#signup #agree span{
+    padding-left: 16px;
+}
+
+#signup #agree .red{
+    color:red;
+}
+
+#signup .signup_btn{
+    /* display: block; */
+    width: 100%;
+    padding:8px;
+    border-radius: 10px;
+    border:1px solid #876E66;
+    background: #876E66;
+    color:#fff;
+    font-size: 30px;
+    margin-top: 100px;
 }
