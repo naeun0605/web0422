@@ -1,6 +1,10 @@
 @charset "utf-8";
 
 
+@import url(./reset.css);
+@import url(./style_guide.css);
+@import url(./typo.css);
+
 header.mb.tb,
 header.pc {
     width: 100%;

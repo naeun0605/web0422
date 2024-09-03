@@ -39,8 +39,8 @@ img{
 
 }
 
-#inner .top div{
-    font-size: 100px;
+#inner .top h1{
+    font-size: 150px;
     margin: 0 100px;
 }
 
@@ -83,3 +83,6 @@ img{
     width: 100%;
 }
 
+#inner p{
+    margin-top: 40px;
+}
