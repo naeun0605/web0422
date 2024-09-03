@@ -68,6 +68,7 @@ header {
 section {
     width: 940px;
     margin: 0 auto;
+    border:1px solid red;
 }
 
 h2 {
@@ -88,7 +89,8 @@ h2 {
 
 .home-description
 {
-    width: 790px;
+    /* width: 790px; */
+    border:1px solid lime;
 }
 
 /* .home-description span{
@@ -105,7 +107,7 @@ header
 {
     /* 패럴랙스 스크롤링 기법 */
     /* 핵심사항 ; background-attachment를 fixed로 하는 것! */
-    background: url(./../70_pf/evan/assets/evan_bg.jpg) no-repeat 50% 50% /cover fixed;
+    background: url(./../evan/assets/evan_bg.jpg) no-repeat 50% 50% /cover fixed;
 }
 
 /* section */
