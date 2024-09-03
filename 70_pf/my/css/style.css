@@ -1,20 +1,129 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-
-/* typo */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+/* common */
 html {
+    scroll-behavior: smooth;
     font-size:10px;
 }
 body {
     /* font: 굵기 크기/줄간격 글꼴1, 글꼴2 */
     font:300 1.5rem/1.6 "Noto Sans KR", sans-serif;
 }
-h2, h3 {
+h2{
     font-weight: 300;
+    text-align: center;
+    margin: 90px 0 30px;
 }
+
+h3{
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 10px;
+    margin:16px 0;
+}
+
+
 /* 반응형에서 img 초기값 */
 img, video{
     /* width: 100%; */
     max-width: 100%;
     height: auto;
+    object-fit: cover;
+}
+
+.btn{
+    margin-top: 24px;
+    padding: 16px;
+}
+
+
+p{
+    margin-bottom: 48px;
+}
+
+.container{
+    margin-bottom: 60px;
+}
+
+.container>p{
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.container-fluid{
+    background: no-repeat 50% 50%/cover fixed;
+}
+
+#s1 .container-fluid{
+    height: 100vh;
+    background-image: url(../assets/parallax1.jpg);
+}
+
+#s2 .container-fluid{
+    height: 400px;
+    background-image: url(../assets/parallax2.jpg);
+}
+
+#s3 .container-fluid{
+    height: 400px;
+    background-image: url(../assets/parallax3.jpg);
+}
+
+
+/* progress */
+
+.progress{
+    height: 30px;
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+.progress:nth-of-type(1) .progress-bar{
+    width: 85%;
+}
+.progress:nth-of-type(2) .progress-bar{
+    width: 90%;
+}
+.progress:nth-of-type(3) .progress-bar{
+    width: 80%;
+}
+.progress:nth-of-type(4) .progress-bar{
+    width: 70%;
+}
+
+/* counter */
+.counter{
+    background: #6e6e6d;
+    color:#fff;
+    text-align: center;
+    padding: 32px;
+}
+
+.counter span{
+    display: block;
+    font-size: 2.4rem;
+}
+
+/* section3 */
+
+#s3{
+    text-align: center;
+}
+#s3 .col{
+    padding: 8px;
+}
+
+
+/* footer */
+footer{
+    background: #000;
+    text-align: center;
+    color:#fff;
+}
+
+footer a{
+    padding: 60px 0;
+    color: #fff;
 }
