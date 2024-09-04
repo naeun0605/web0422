@@ -59,6 +59,7 @@ section li{
 #sec2 h3{
     position:absolute;
     padding:8px 24px;
+    border-bottom:3px solid lightpink;
 }
 
 #sec3 li{

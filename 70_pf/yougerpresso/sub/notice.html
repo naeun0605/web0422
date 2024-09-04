@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요거프레소</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.svg">
+    <link rel="stylesheet" href="../css/notice.css">
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <!-- 로고 -->
+        <h1 class="logo">
+            <a href="./../index.html"><b>YP</b>YOGERPRESSO</a>
+        </h1>
+        <!-- 내비게이션 -->
+        <nav>
+            <ul>
+                <li><a href="#sec2">메뉴</a></li>
+                <li><a href="#sec3">이벤트</a></li>
+                <li><a href="#sec4">고객센터</a></li>
+                <li><a href="sub/notice.html">공지사항</a></li>
+            </ul>
+        </nav>
+
+        <!-- 모바일 버튼 -->
+        <div class="collapsedMenuIcon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </header>
+
+    <!-- 탑 영역 -->
+    <div id="top">
+        <!-- #top을 flex적용하면 .inner을 수직 중앙 배치할 수 있다. -->
+        <div class="inner">
+            <span>NEWS</span>
+            <h2>NOTICES</h2>
+            <!-- 브레드 크럼(Breadcrumb)이란 주로 페이지 상단 좌측에 자리하여 유저가 웹사이트 내에서 어디에 있는지 알려주는 네비게이션 텍스트 입니다 -->
+            <div>
+                <a href="../index.html">홈</a>
+                <a href="notice.html">뉴스</a>
+                <a href="notice.html">공지사항</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 섹션 영역 -->
+    <section id="notice">
+        <h2>요거프레소 공지사항</h2>
+        <p>요거프레소 소식을 알려드립니다.</p>
+
+        <!-- 검색 영역 -->
+        <!-- *.jsp(자바 서버 페이지)는 백앤드 개발자 -->
+        <form action="notice.jsp">
+            <div>
+                <select name="" id="">
+                    <option value="">제목</option>
+                    <option value="">내용</option>
+                    <option value="">작성자</option>
+                </select>
+                <input type="search" placeholder="검색어를 입력하세요">
+            </div>
+            <input type="submit" value="검색">
+        </form>
+
+        <!-- 공지사항 게시판 -->
+        <table id="board">
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>날짜</th>
+                <th>조회</th>
+            </tr>
+            <tr>
+                <td>공지</td>
+                <td><a href="#">[오픈] 1473th 고덕어반브릿지점 OPEN</a></td>
+                <td>요거프레소</td>
+                <td>2024.08.14</td>
+                <td>1703</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="#">	요거프레소, 4월 한정메뉴 ‘쿨앤코튼 시리즈’ 출시</a></td>
+                <td>요거프레소</td>
+                <td>2024.05.23</td>
+                <td>359</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="#">요거프레소, 예비 가맹점주 위해 24년도 상생 지원 프로모션 진행</a></td>
+                <td>요거프레소</td>
+                <td>2024.03.08</td>
+                <td>601</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="">7월 여름 개설 프로모션 진행…”소자본 지원정책 활발”</a></td>
+                <td>요거프레소</td>
+                <td>2023.06.28</td>
+                <td>1812</td>
+            </tr>
+        </table>
+        <div class="paging">
+            <a href="#">처음</a>
+            <a href="#">1</a>
+            <a href="#">마지막</a>
+        </div>
+    </section>
+    
+    <!-- 푸터 -->
+    <footer>
+        <p>Copyright Hanatour. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
