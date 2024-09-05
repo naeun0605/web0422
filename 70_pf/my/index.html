@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naeun</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.0/jquery-ui.min.js"></script>
     <script scr="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
-    <script src="script/clock.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -66,7 +70,7 @@
             <!-- 프로필1 : 보편적 -->
             <div class="row">
                 <div class="col">
-                    <p>웹퍼블리싱에 새롭게 도전하는 [이름]입니다. 어린 시절부터 컴퓨터와 인터넷에 대한 호기심이 많았던 저는, 웹 디자인과 개발에 매력을 느끼며 자연스럽게 이 분야에 관심을 가지게
+                    <p class="profile1">웹퍼블리싱에 새롭게 도전하는 [이름]입니다. 어린 시절부터 컴퓨터와 인터넷에 대한 호기심이 많았던 저는, 웹 디자인과 개발에 매력을 느끼며 자연스럽게 이 분야에 관심을 가지게
                         되었습니다. 대학에서는 [전공]을 전공하며 디자인 원리와 프로그래밍 기초를 학습했습니다. 이 과정에서 웹 페이지 제작과 관련된 기술에 대한 이해를 넓혔고, 웹퍼블리싱에 대한
                         열정을 더욱 키우게 되었습니다. 저는 HTML과 CSS를 활용한 웹 페이지 구조 및 스타일링, JavaScript를 이용한 기본적인 동적 기능 구현에 익숙합니다. 또한,
                         반응형 웹 디자인을 통해 다양한 디바이스에서 최적화된 사용자 경험을 제공하는 데 중점을 두고 있습니다. 최근에는 웹 접근성 표준과 SEO 기본 원칙을 이해하고, 웹사이트의
@@ -78,10 +82,10 @@
             <div class="row">
                 <div class="col-md">
                     <div class="text-center mb-5">Kim Na Eun</div>
-                    <div><img src="https://www.w3schools.com/w3images/avatar_hat.jpg" alt="사진"></div>
+                    <div class="photo"><img src="https://www.w3schools.com/w3images/avatar_hat.jpg" alt="사진"></div>
                 </div>
                 <div class="col-md mt-5">
-                    <p>창의적이고 세심한 접근 방식을 중요하게 생각합니다. 웹 페이지를 디자인할 때, 단순히 보기 좋은 것뿐만 아니라 사용자의 편의성과 접근성을 고려한 디자인을 지향하고 있습니다.
+                    <p class="profile2">창의적이고 세심한 접근 방식을 중요하게 생각합니다. 웹 페이지를 디자인할 때, 단순히 보기 좋은 것뿐만 아니라 사용자의 편의성과 접근성을 고려한 디자인을 지향하고 있습니다.
                         이를 통해 더 나은 사용자 경험을 제공하고, 웹사이트가 가진 목적을 효과적으로 달성할 수 있도록 노력하고 있습니다. 팀워크와 협업의 중요성도 잘 알고 있습니다. 대학 시절,
                         다양한 프로젝트와 팀 활동을 통해 협업의 가치를 깊이 이해하게 되었고, 다양한 배경을 가진 사람들과의 협업을 통해 보다 혁신적이고 실용적인 솔루션을 제시할 수 있다고
                         믿습니다. 앞으로의 목표는 웹퍼블리싱 분야에서의 전문성을 더욱 키우고, 다양한 프로젝트를 통해 실무 경험을 쌓는 것입니다. 다양한 도전과 경험을 통해 성장하며,
@@ -122,30 +126,30 @@
                     </div>
                 </div>
 
-            </div>
+            </div><!-- .row -->
         </div><!-- .container -->
 
         <!-- counter -->
          <div class="container-fluid counter">
             <div class="row">
                 <div class="col-sm">
-                    <span>2+</span>
+                    <span><b>2</b>+</span>
                     Team Projects
                 </div>
                 <div class="col-sm">
-                    <span>3+</span>
+                    <span><b>3</b>+</span>
                     Personal Projects
                 </div>
                 <div class="col-sm">
-                    <span>5+</span>
+                    <span><b>5</b>+</span>
                     Total Projects
                 </div>
                 <div class="col-sm">
-                    <span>3+</span>
+                    <span><b>3</b>+</span>
                     National technical certification
                 </div>
             </div>
-         </div>
+         </div><!-- .counter -->
     </div><!-- #s2 -->
 
     <!-- portfolio -->
@@ -158,25 +162,31 @@
             <p class="mb-5">최신 작업 중 일부입니다.<br> 이미지를 클릭하시면 자세히 보실 수 있습니다.</p>
             <div class="row">
                 <div class="col-sm">
-                    <img src="./../gs25/images/gs25_thumb2.svg" alt="gs25">
+                    <!-- <a href="큰이미지" data-lightbox="roadtrip" -->
+                    <a href="assets/yogerpresso.png" data-lightbox="roadtrip" data-title="http://kne.dothome.co.kr/yogerpresso">
+                        <img src="./assets/thumbnail/gs25_thumb2.svg" alt="gs25">
+                    </a>
                 </div>
                 <div class="col-sm">
-                    <img src="./../team/images/shilla_thumb2.svg" alt="신라호텔">
+                    <a href="assets/bench.png" data-lightbox="roadtrip">
+                        <img src="./assets/thumbnail/shilla_thumb2.svg" alt="신라호텔">
+                    </a>
+                    
                 </div>
                 <div class="col-sm">
-                    <img src="./../yougerpresso/assets/yoger_thumb2.svg" alt="요거프레소">
+                    <img src="./assets/thumbnail/yoger_thumb2.svg" alt="요거프레소">
                 </div>
                 <div class="col-sm">
-                    <img src="../team2/03.assets/index/sulbing_thumb2.svg" alt="설빙">
+                    <img src="./assets/thumbnail/sulbing_thumb2.svg" alt="설빙">
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-sm">
-                    <img src="./../my/assets/my_thumb2.svg" alt="개인사이트">
+                    <img src="./assets/thumbnail/my_thumb2.svg" alt="개인사이트">
                 </div>
                 <div class="col-sm">
-                    <img src="./../aritaum/aritaum_thumb2.svg" alt="아리따움">
+                    <img src="./assets/thumbnail/aritaum_thumb2.svg" alt="아리따움">
                 </div>
                 <div class="col-sm">
                     <img src="assets/p7.jpg" alt="작품7">

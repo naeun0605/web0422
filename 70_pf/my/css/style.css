@@ -110,6 +110,23 @@ iframe {
     color: #fff;
 }
 
+/* section2: profile */
+
+#s2 .row{
+    overflow: hidden;
+}
+.profile1{
+    transform: translateY(300px);
+    transition: transform .5s .2s;
+}
+.photo{
+    transform: translateY(300px);
+    transition: .5s .4s;
+}
+.profile2{
+    transform: translateY(300px);
+    transition: .5s .6s;
+}
 
 
 /* progress */
@@ -119,7 +136,7 @@ iframe {
     padding: 0;
 }
 
-.progress:nth-of-type(1) .progress-bar {
+/* .progress:nth-of-type(1) .progress-bar {
     width: 90%;
 }
 
@@ -133,7 +150,7 @@ iframe {
 
 .progress:nth-of-type(4) .progress-bar {
     width: 75%;
-}
+} */
 
 /* counter */
 .counter {

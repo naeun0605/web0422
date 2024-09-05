@@ -22,7 +22,7 @@ body {
 #clock .ddate {
     font-size: 1.8rem;
     margin-bottom: 8px;
-    color: #9b9b9b;
+    color: #ccc8c8;
     text-shadow: 0 0 2px #290101;
     font-family: "HSSanTokki20-Regular", sans-serif;
 
@@ -31,7 +31,7 @@ body {
 #clock .dtime {
     font-size: 3rem;
     font-weight: 300;
-    color: #9b9b9b;
+    color: #ccc8c8;
     text-shadow: 0 0 2px #290101;
     font-family: "HSSanTokki20-Regular", sans-serif;
 }
