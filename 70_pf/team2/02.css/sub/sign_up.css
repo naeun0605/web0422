@@ -7,10 +7,11 @@
 
 #signup{
     padding-top: 100px;
-    width: 400px;
-    padding:70px;
-    background: pink;
+    font-size: 11px;
+}
 
+#signup ::placeholder{
+    font-size: 9px;
 }
 
 #signup h2{
@@ -19,29 +20,37 @@
     padding:20px 0;
 }
 
+
+
 #signup h3{
     margin: 70px 0 30px 0;
 }
-form{
-    /* font-size: 15px; */
-}
+
 
 #signup .signup_cnt{
-    width: 400px;
+    width: 470px;
     margin: 0 auto;
     border-top:1px solid #ccc;
-    padding: 20px 0;
-    background: skyblue;
+    /* background: skyblue; */
+    padding:0px 20px 50px; 
 }
+
 
 
 #signup .signup_cnt label{
     display:inline-block;
-    margin-right:150px; 
-    padding: 16px;
-    width: 250px; 
-    /* background: lightblue; */
+    /* margin-right:20px;  */
+    padding: 8px 8px 8px 15px;
+    width: 100px; 
+    /* background: red; */
 }
+
+#signup .signup_cnt .sm{
+    width: 150px;
+    /* background: blue; */
+
+}
+
 
 #signup .signup_cnt .non_padding{
     padding: 0;
@@ -58,6 +67,7 @@ form{
     color:red;
 }
 
+
 #signup button{
     cursor: pointer;
 }
@@ -71,7 +81,7 @@ form{
 }
 
 #signup .common {
-    width: 30vw;
+    width: 170px;
     height: 40px;
     /* font-size: 16px; */
     border:1px solid #ccc;
@@ -87,12 +97,12 @@ form{
 }
 
 #signup .signup_cnt .right{
-    margin-left: 403px;
-    margin-bottom: 6px;
+    margin-left: 100px;
+    /* background: red; */
 }
 
 #signup .common_tel {
-    width: 10vw;
+    width: 100px;
     height: 40px;
     /* font-size: 16px; */
     border:1px solid #ccc;
@@ -102,7 +112,7 @@ form{
 
 #signup .signup_cnt .life_des{
     /* background: red; */
-    margin-left: 410px;
+    margin-left: 110px;
 }
 
 /* 약관동의 */
@@ -131,7 +141,6 @@ form{
     border:1px solid #876E66;
     background: #876E66;
     color:#fff;
-    /* font-size: 30px; */
     margin-top: 100px;
 }
 
@@ -139,18 +148,172 @@ form{
 @media (min-width:768px){
     #signup{
         width: 100%;
-        padding:100px;
     }
 
+    #signup .signup_cnt{
+        width: 100%;
+        margin: 0 auto;
+        border-top:1px solid #ccc;
+        /* background: skyblue; */
+        padding:0px 20px 50px; 
+
+    }
     
 
 
 }
 
 
-@media (min-width:1400px){
-    section{
-        width: 1480px;
-        padding: 96px 0 0;
+@media (min-width:992px){
+    #signup{
+        width: 1200px;
+        font-size: 15px;
+        margin: 0 auto;
     }
+
+    #signup ::placeholder{
+        font-size: 13px;
+    }
+
+    #signup .signup_cnt{
+        width: 100%;
+        margin: 0 auto;
+        border-top:1px solid #ccc;
+        padding-bottom: 50px;
+        /* background: skyblue; */
+    }
+    
+    #signup h2{
+        text-align: center;
+        height: 80px;
+        padding:50px 0;
+    }
+
+    #signup .signup_cnt .sm{
+        width: 200px;
+        /* background: blue; */
+    
+    }
+
+    /* *********************************************************************** */
+
+    #signup{
+        padding-top: 100px;
+        /* width: 400px; */
+        /* padding:70px; */
+        /* background: pink; */
+    
+    }
+    
+    #signup h2{
+        text-align: center;
+        height: 80px;
+        padding:20px 0;
+    }
+    
+    
+    
+    #signup h3{
+        margin: 70px 0 30px 0;
+    }
+    
+
+    
+    
+    #signup .signup_cnt label{
+        display:inline-block;
+        margin-right:150px; 
+        padding: 16px;
+        width: 250px; 
+    }
+    
+    #signup .signup_cnt .non_padding{
+        padding: 0;
+    }
+    
+    #signup .signup_cnt .des_iden{
+        display: inline;
+    }
+    
+    
+    
+    #signup .essential::before{
+        content:"▪";
+        color:red;
+    }
+    
+    #signup button{
+        cursor: pointer;
+    }
+    #signup .identify_btn{
+        padding:8px;
+        border-radius: 10px;
+        border:1px solid #876E66;
+        background: #876E66;
+        color:#fff;
+    
+    }
+    
+    #signup .common {
+        width: 30vw;
+        height: 40px;
+        border:1px solid #ccc;
+        border-radius:10px; 
+        padding:10px;
+    }
+    
+    #signup .search_ad{
+        padding: 10px;
+        border:1px solid #ccc;
+        border-radius:10px; 
+        background: #fff;
+    }
+    
+    #signup .signup_cnt .right{
+        margin-left: 403px;
+        margin-bottom: 6px;
+    }
+    
+    #signup .common_tel {
+        width: 10vw;
+        height: 40px;
+        border:1px solid #ccc;
+        border-radius:10px; 
+        padding:10px;
+    }
+    
+    #signup .signup_cnt .life_des{
+        margin-left: 410px;
+    }
+    
+    /* 약관동의 */
+    #signup #agree label{
+        padding: 16px;
+        width: 100%; 
+    }
+    
+    #signup #agree .op{
+        margin-left: 50px;
+    }
+    
+    #signup #agree span{
+        padding-left: 16px;
+    }
+    
+    #signup #agree .red{
+        color:red;
+    }
+    
+    #signup .signup_btn{
+        /* display: block; */
+        width: 100%;
+        padding:8px;
+        border-radius: 10px;
+        border:1px solid #876E66;
+        background: #876E66;
+        color:#fff;
+        /* font-size: 30px; */
+        margin-top: 100px;
+    }
+    
 }

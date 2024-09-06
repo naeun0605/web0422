@@ -43,6 +43,7 @@ video {
     max-width: 100%;
     object-fit: cover;
     height: auto;
+    vertical-align: top;
 }
 
 input {
@@ -112,20 +113,46 @@ iframe {
 
 /* section2: profile */
 
-#s2 .row{
+#s2 .row {
     overflow: hidden;
 }
-.profile1{
+
+.profile1 {
     transform: translateY(300px);
     transition: transform .5s .2s;
 }
-.photo{
+
+.photo {
     transform: translateY(300px);
     transition: .5s .4s;
 }
-.profile2{
+
+.profile2 {
     transform: translateY(300px);
     transition: .5s .6s;
+}
+
+/* video play */
+#s2 .vid {
+    position: relative;
+}
+
+
+/* video 재생 버튼 */
+#s2 .vid i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    opacity: 0;
+    transition: .3s;
+    cursor: pointer;
+}
+
+#s2 .vid:hover i {
+    opacity: 1;
+
 }
 
 
@@ -228,6 +255,32 @@ footer .sns {
     font-size: 2.4rem;
 }
 
+/* mouse pointer motion */
+.mp {
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* 큰 원 */
+.mp1 {
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid black; */
+    background: url(../assets/pointer.png) no-repeat 50%/50%;
+    /* ease-out을 사용! */
+    transition: .7s ease-out;
+}
+
+/* 작은 원 */
+.mp2 {
+    width: 10px;
+    height: 10px;
+    background: #000;
+    /* ease-out을 사용! */
+    transition: .1s ease-out;
+    opacity: 0;
+}
+
 
 @media (min-width: 992px) {
 
@@ -237,8 +290,8 @@ footer .sns {
 
     /* section4: contact */
 
-    
-    #s4 form div{
+
+    #s4 form div {
         display: flex;
         justify-content: space-between;
     }
@@ -263,6 +316,8 @@ footer .sns {
         background: #000;
         text-align: center;
         color: #fff;
+        background: url(./../assets/pattern3.png) 0 0/100%;
+
     }
 
     footer a {
