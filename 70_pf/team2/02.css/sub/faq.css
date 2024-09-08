@@ -243,8 +243,12 @@ input[type="checkbox"]:checked+label div.box_open {
 }
 
 @media (max-width: 576px) {
-    #faqCategory {
-        width: 100%;
+    #sectionFAQ {
+        overflow: hidden;
+    }
+
+    #FAQ_top>div {
+        background: #000;
     }
 
     #faqCategory label {
