@@ -198,14 +198,18 @@ header .container {
     left: 160px;
     background: url(./../images/prev.png) no-repeat 0px 0px;
 }
+
+/* prev버튼과 다르게 잘려보이는 현상을 위치를 지정해 보완함 */
 .bx-wrapper .bx-next {
     right: 160px;
-    background: url(./../images/next.png) no-repeat 0px 0px;
+    background: url(./../images/next.png) no-repeat -10px -10px;
 }
 /* next 버튼 호버시 사라지는 현상 초기화 */
 .bx-wrapper .bx-next:focus, .bx-wrapper .bx-next:hover {
-    background-position: 0 0;
+    background-position: -10px -10px;
 }
+
+
 
 /* 슬라이드 중앙 텍스트 */
 #s1 .slideWrap p {
@@ -337,9 +341,28 @@ header .container {
 
 /* section3 */
 
+/* 제목을 지정하고 position을 주어 위치 조정함 */
+#s3 h2{
+    width: 2000px;
+    padding-left: 50px;
+    position: absolute;
+    top:100px;
+   
+}
+/* 크기를 직접 조정하여 화면의 중간쯤에 오도록 position이용함 */
+#s3 .vid{
+    position: absolute;
+    left:50%;
+    top:60%;
+    transform: translate(-50%,-50%);
+    width: 1500px;
+    height: 700px;
+    object-fit: cover;
+
+}
 
 
-/* section4 */
+/* section4 */ 
 
 #s4 {
     height: 100vh;
