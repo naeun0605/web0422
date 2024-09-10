@@ -157,12 +157,19 @@ header .container {
 
 /* 섹션1 */
 
+#s1 .slideWrap img{
+    margin-top: 50px;
+    border:1px solid red;
+    height: 900px;
+    width: 1920px;
+}
+
 /* 슬라이드 */
 .bx-wrapper {
     box-shadow: none;
     border: none;
     margin-bottom: 0;
-    border:1px solid red;
+
 }   
 /* ////////////////////////////////////////////// */
 /* 
@@ -172,6 +179,11 @@ header .container {
 .bx-viewport {
     height: 100% !important;
 
+
+}
+
+#s1 .slideWrap{
+    height: 100%;
 }
 
 .bx-wrapper li {

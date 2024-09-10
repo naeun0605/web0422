@@ -268,18 +268,18 @@ footer .sns {
     /* border: 1px solid black; */
     background: url(../assets/pointer.png) no-repeat 50%/50%;
     /* ease-out을 사용! */
-    transition: .7s ease-out;
+    transition: .8s ease-out;
 }
 
 /* 작은 원 */
-.mp2 {
+/* .mp2 {
     width: 10px;
     height: 10px;
     background: #000;
-    /* ease-out을 사용! */
+    
     transition: .1s ease-out;
     opacity: 0;
-}
+} */
 
 
 @media (min-width: 992px) {
