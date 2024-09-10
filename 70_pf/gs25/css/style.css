@@ -24,7 +24,7 @@
 .fp-auto-height div {
     height: 200px;
     color: white;
-    background: #000;
+    background: #007CFF;
 }
 
 /* 푸터 영역 - 오른쪽 중앙에 있는 인디케이션 숨김 */
@@ -456,5 +456,4 @@ footer{
     text-align: center;
     height: 200px;
     line-height: 200px;
-    /* background: #007CFF */
 }
