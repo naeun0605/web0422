@@ -234,44 +234,5 @@ p:not(footer p) {
         height: 500px;
     }
 
-    /* .s1 .photo {
-        transform: translateY(300px);
-        transition: transform .5s .2s;
-    }
-    
-    .s1 .info {
-        transform: translateY(300px);
-        transition: .5s .4s;
-    }
-
-    .s2 .photo {
-        transform: translateY(600px);
-        transition: transform .5s .6s;
-    }
-    
-    .s2 .info {
-        transform: translateY(600px);
-        transition: .5s .8s;
-    }
-
-    .s3 .photo {
-        transform: translateY(300px);
-        transition: transform .5s .12s;
-    }
-    
-    .s3 .info {
-        transform: translateY(300px);
-        transition: .5s .15s;
-    }
-
-    .bottom_image {
-        transform: translateY(300px);
-        transition: transform .5s .25s;
-    }
-    
-    .bottom {
-        transform: translateY(300px);
-        transition: .5s .30s;
-    } */
     
 }

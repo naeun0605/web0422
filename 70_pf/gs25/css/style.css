@@ -162,6 +162,7 @@ header .container {
     box-shadow: none;
     border: none;
     margin-bottom: 0;
+    border:1px solid red;
 }   
 /* ////////////////////////////////////////////// */
 /* 
@@ -170,6 +171,7 @@ header .container {
 */
 .bx-viewport {
     height: 100% !important;
+
 }
 
 .bx-wrapper li {
@@ -218,6 +220,7 @@ header .container {
     left:50%; top:50%;
     transform: translate(-50%, -50%);
 }
+
 
 /* section 2 */
 #s2 {

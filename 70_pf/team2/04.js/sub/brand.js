@@ -13,7 +13,7 @@ $(() => {
         let st = $(this).scrollTop();
         console.log(st);
     
-        if (st >= 100) {
+        if (st >= 100) { 
             photo1.css({ transform: "translateY(0)" });
             info1.css({ transform: "translateY(0)" });
         } else {
