@@ -6,8 +6,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css");
 @import url(https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css);
 
-
-
 /* fullpage */
 
 /* 풀페이지 왼쪽 하단 네비메뉴 */
@@ -18,14 +16,15 @@
     bottom:0;
 }
 
-/* 복붙------------------------------------------------------------- */
+
 
 /* 푸터에 있는 p의 높이 */
-.fp-auto-height div {
+.fp-auto-height p{
     height: 200px;
     color: white;
     background: #007CFF;
 }
+
 
 /* 푸터 영역 - 오른쪽 중앙에 있는 인디케이션 숨김 */
 #fp-nav.right li:last-child {
@@ -48,7 +47,7 @@ header .container {
     justify-content: space-between;
     align-items: center; 
     width: 100%;
-    height: 100px;
+    height: 130px;
     margin: 0 auto;
     border-bottom: 5px solid #007CFF;
     position:fixed;
@@ -105,7 +104,7 @@ header .container {
 .main::before {
     content: "";
     position: absolute;
-    top: 95px;
+    top: 130px;
     left: 0;
     width: 100%;
     /* Q질문, height는 왜 적용안되는지  */
@@ -159,7 +158,6 @@ header .container {
 
 #s1 .slideWrap img{
     margin-top: 50px;
-    border:1px solid red;
     height: 900px;
     width: 1920px;
 }
@@ -171,7 +169,7 @@ header .container {
     margin-bottom: 0;
 
 }   
-/* ////////////////////////////////////////////// */
+
 /* 
     현재 사용한 이미지 크기: 2000 * 1100
     뷰포트 크기에 맞게 이미지 채우기
@@ -237,15 +235,13 @@ header .container {
 /* section 2 */
 #s2 {
     padding: 72px 0;
+    text-align:center;
 }
+ 
 
-#s2>.ibx>h2 {
-    text-align: center;
-}
-
-#s2>.ibx>h2+p {
-    text-align: center;
+#s2 p {
     margin: 24px 0 48px;
+    font-size:2rem;
 }
 
 /* 탭(버튼, 콘텐츠) 공통*/
@@ -273,10 +269,20 @@ header .container {
     margin-right:24px;
 }
 
+#s2 #tabs>ul>li>a{
+    padding-right:20px;
+
+}
+
+
 /* #s2 #tabs>ul>li:not(:first-child){
     margin: 0 16px;
 } */
 
+#s2 #tabs>ul>li:not(:last-child){
+    border-right:1px solid #ccc;
+
+}
 
 /* 탭의 콘텐츠*/
 
@@ -293,12 +299,16 @@ header .container {
 
 /* 2위 사진 */
 #s2 #tabs>div ul li:nth-child(2){
-    margin: 0 30px -30px 75px;
+    margin: 0 30px 0 75px;
+}
+
+#s2 #tabs>div ul li:nth-child(2) h3{
+    padding-top:20px;
 }
 
 /* 3위 사진 */
-#s2 #tabs>div ul li:nth-child(3){
-    margin-bottom: -30px;
+#s2 #tabs>div ul li:nth-child(3) h3{
+    padding-top:20px;
 }
 
 /* Q질문 이렇게 해서 한번에 2,3위 사진 밑으로 내리려했는데 왜 적용안되나요*/
@@ -359,19 +369,19 @@ header .container {
 /* 제목을 지정하고 position을 주어 위치 조정함 */
 #s3 h2{
     width: 2000px;
-    padding-left: 50px;
     position: absolute;
     top:100px;
+    text-align:center;
    
 }
 /* 크기를 직접 조정하여 화면의 중간쯤에 오도록 position이용함 */
 #s3 .vid{
     position: absolute;
     left:50%;
-    top:60%;
+    top:63%;
     transform: translate(-50%,-50%);
-    width: 1500px;
-    height: 700px;
+    width: 1200px;
+    height: 600px;
     object-fit: cover;
 
 }
@@ -432,7 +442,7 @@ header .container {
 #s4 h3::after{
     content:"";
     z-index: -1;
-    width: 200px;
+    width: 240px;
     height: 40px;
     background: #007CFF;
     position:absolute;
@@ -472,3 +482,5 @@ footer{
     height: 200px;
     line-height: 200px;
 }
+
+

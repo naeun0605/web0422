@@ -125,7 +125,7 @@ footer{
 .bar3{
     width: 35px;
     height: 5px;
-    background: #333;
+    background: lightpink;
     border-radius: 3px;
     margin:6px 0;
     transition: 0.4s;
@@ -133,6 +133,7 @@ footer{
 
 .change .bar1{
     transform: translate(0,11px) rotate(-45deg);
+    background:#fff;
 }
 
 .change .bar2{
@@ -141,17 +142,32 @@ footer{
 
 .change .bar3{
     transform: translate(0, -11px) rotate(45deg);
+    background: #fff;
 }
 
 nav{
     position: absolute;
-    z-index: -1;
     right:-65%;
     top:0;
     width:65%;
     height: 100vh;
     background: lightpink;
     transition: .3s ease-out;
+}
+
+.gnb ul li{
+    padding:20px;
+}
+
+.gnb ul li a{
+    font-weight: 600;
+    font-size: 20px;
+    color:#fff;
+    border-bottom:1px solid #fff;
+}
+
+.gnb ul li:hover{
+    background: rgba(214, 125, 137, 0.582)
 }
 
 nav.change{

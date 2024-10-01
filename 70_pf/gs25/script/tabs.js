@@ -6,10 +6,6 @@ window.addEventListener("DOMContentLoaded", function(){
     const btn4 = document.querySelectorAll('#tabs a').item(3);
     console.log(btn1,btn2,btn3,btn4);
 
-    // 왜 안되지
-    // for(let i=0; i<4; i++){
-    //     const btn(`${i+1}`) = document.querySelectorAll('#tabs a').item(`${i}`);
-    // }
 
     const cont1 = document.querySelector('#tab1');
     const cont2 = document.querySelector('#tab2');

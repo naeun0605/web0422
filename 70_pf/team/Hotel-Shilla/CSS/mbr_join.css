@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;    
+}
+
+a {
+    text-decoration: none;
+}
+.container {
+    width: 1903px;
+    margin: 0 auto;
+}
+h1 {
+    margin-top: -7px;
+}
+footer p {
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* reward 내용 start */
+.rwd-wrap p {
+    text-align: center;
+    font-size: 24px;
+}
+
+.rwd-wrap a {
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.rwd-icons {
+    margin-top: 50px;
+}
+
+.icons-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.icons-list>ul>li {
+    background: #eee;
+}
+
+.icons-list>li>a {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+
+/* form */
+form {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.form-input {
+
+    background-size: cover;
+}
+
+.form-input form {
+    display: flex;
+    flex-direction: column;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.form-input form p::before {
+    content: "*";
+}
+
+.form-data label {
+    display: inline-block;
+    width: 190px;
+    margin-right: 80px;
+}
+
+.must-item::before {
+    content: "*";
+}
+
+.input-common {
+    height: 40px;
+    font-size: 16px;
+}
+
+.input-boxName {
+    width: 490px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.input-box1 {
+    width: 1000px;
+    margin-bottom: 20px;
+}
+
+.input-email {
+    width: 300px;
+}
+
+#email-select {
+    width: 200px;
+}
+
+.at-mark {
+    color: #000;
+    font-weight: 900;
+}
+
+.input-gender {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    vertical-align: bottom;
+}
+
+.form-input form p {
+    border-bottom: 2px solid #bbb;
+    padding-bottom: 10px;
+}
+
+.form-data {
+    margin: 20px 0;
+    display: flex;
+}
+
+.email-before {
+    margin-right: 20px;
+}
+
+.form-textarea {
+    display: flex;
+}
+
+.form-textarea label {
+    display: inline-block;
+    width: 190px;
+    margin-right: 80px;
+}
+
+.form-textarea textarea {
+    width: 700px;
+    height: 300px;
+}
+
+.inputCheck {
+    width: 30px;
+    height: 30px;
+}
+
+/* button */
+.btn {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-submit {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #2d2d2d;
+}
+
+.btn-submit:hover {
+    background: #856f56;
+}
