@@ -4,6 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jomolhari&display=swap');
 
+/* *{
+    outline:1px solid red;
+} */
+
 /* reset */
 * {box-sizing: border-box;}
 
@@ -30,8 +34,7 @@ a, p, h1, h2, h3 {
 .login_des {
     width: 1903px;
     height: 178px;
-    padding-left: 350px;
-    padding-top : 80px;
+    padding: 130px 0 150px 350px;
 }
 
 .login_des h2 {
@@ -50,21 +53,38 @@ a, p, h1, h2, h3 {
 
 /* 로그인 패이지 전체*/
 .full_login {
-    padding : 40px 0 0 40px;
+    padding-top: 100px;
     width: 1903px;
-    height: 734px;
+    /* height: 734px; */
+    height: 600px;
     display: flex; 
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
 }
 
+.login_main{
+    display: flex;
+    width: 1500px;
+    position: absolute;
+    left:220px;
+    justify-content: space-evenly;
+}
 
 /* 로그인 박스 */
 .login_chk {
     position: relative;
     width: 480px;
     height: 240px;
+
 }
 
+
+
+hr{
+    margin:0;
+    height: 330px;
+    border:1px solid #856f5631;
+}
 
 /* 회원, 비회원 쓰여진 탭부분 */
 .login_chk>label { /* .login_chk label이라고만 쓰면 login_chk클래스에 있는 label 모두 적용되므로 바로 아래 label만 적용되도록! */
@@ -114,12 +134,18 @@ a, p, h1, h2, h3 {
     border-right:1px solid #856F56;
 }
 
+.login_chk input:not(:checked)+label {
+    border-bottom:1px solid #856F56; 
+}
+
 /* 눌러진 탭의 콘텐츠 영역 */
 .login_chk input:checked+label+div {
     display: block;
     /* left:-50px;
     top:50px; */
 }
+
+
 
 
 .member1 {
@@ -144,10 +170,8 @@ a, p, h1, h2, h3 {
 }
 
 .pw {
-
     border: 1px solid #856F56;
     margin-bottom :24px;
-
 }
 
 /* 회원 탭 콘텐츠 안에 로그인버튼 */
@@ -208,9 +232,14 @@ a, p, h1, h2, h3 {
     border: 1px solid #856F56;
     margin-bottom :8px;
 }
-.phone {
+/* .phone {
     border: 1px solid #856F56;
     margin-bottom :16px;
+} */
+
+.member2 .common_tel{
+    width: 157px;
+    /* width: 32.74%; */
 }
 
 /* 비회원 탭 콘텐츠 안에 예약내역조회버튼 */

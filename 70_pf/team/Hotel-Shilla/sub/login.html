@@ -21,7 +21,8 @@
             <h1><a href="https://oceanflavorstarcandy.github.io/web0422/70_pf/team/index.html">THE SHILLA</a></h1>
             <div class="Rtop">
                 <ul class="top">
-                    <li><a href="https://naeun0605.github.io/web0422/70_pf/team/Hotel-Shilla/sub/login.html">로그인</a></li>
+                    <li><a href="https://naeun0605.github.io/web0422/70_pf/team/Hotel-Shilla/sub/login.html">로그인</a>
+                    </li>
                     <li><a href="https://ninkotek.github.io/web0422/70_pf/team/join_Shilla/mbr_join.html">회원가입</a></li>
                     <li>
                         <a href="#">Language</a>
@@ -43,7 +44,8 @@
                     </li>
                     <li>
                         <div><!-- 아이콘 자리 --></div>
-                        <a href="https://naeun0605.github.io/web0422/70_pf/team/Hotel-Shilla/sub/reservation.html">예약</a>
+                        <a
+                            href="https://naeun0605.github.io/web0422/70_pf/team/Hotel-Shilla/sub/reservation.html">예약</a>
                     </li>
                     <li>
                         <a href="#">호텔신라 소개</a>
@@ -93,59 +95,51 @@
         <!-- full-login -->
         <div class="full_login">
 
-            <div class="login_chk">
-
-                <!-- 회원 탭 -->
-                <input type="radio" name="btn" id="btn1" checked>
-                <label for="btn1">회원</label>
-                <div class="member1">
-
-                    <form action="login.jsp">
-                        <input type="text" class="id" name="user_id" placeholder="아이디">
-                        <input type="password" class="pw" name="user_pw" placeholder="비밀번호">
-                        <button type="submit">로그인</button>
-
-                        <!-- 로그인 상태유지, 아이디/비밀번호 찾기 -->
-                        <section id="login_save">
-
-                            <section id="checkbox">
-                                <label><input type="checkbox" id="loginchk" name="loginchk">로그인 상태 유지</label>
+            <diiv class="login_main">
+                <div class="login_chk">
+                    <!-- 회원 탭 -->
+                    <input type="radio" name="btn" id="btn1" checked>
+                    <label for="btn1">회원</label>
+                    <div class="member1">
+                        <form action="login.jsp">
+                            <input type="text" class="id" name="user_id" placeholder="아이디">
+                            <input type="password" class="pw" name="user_pw" placeholder="비밀번호">
+                            <button type="submit">로그인</button>
+                            <!-- 로그인 상태유지, 아이디/비밀번호 찾기 -->
+                            <section id="login_save">
+                                <section id="checkbox">
+                                    <label><input type="checkbox" id="loginchk" name="loginchk">로그인 상태 유지</label>
+                                </section>
+                                <p class="findpw"><a href="#">아이디/비밀번호 찾기</a></p>
                             </section>
-                            
-                            <p class="findpw"><a href="#">아이디/비밀번호 찾기</a></p>
-                            
-                        </section>
-
-                    </form>
-
+                        </form>
+                    </div>
+                    <!-- 비회원 탭 -->
+                    <input type="radio" name="btn" id="btn2">
+                    <label for="btn2">비회원(예약확인)</label>
+                    <div class="member2">
+                        <form action="login.jsp">
+                            <input type="text" class="res_num" name="user_number" placeholder="예약번호">
+                            <input type="text" class="name" name="user_name" placeholder="이름">
+                            <!-- <input type="text" class="phone" name="user_phone" placeholder="010"> -->
+                
+                                <input type="tel" placeholder="010" class="common_tel">
+                                <input type="tel" class="common_tel">
+                                <input type="tel" class="common_tel">
+                
+                            <button type="submit" class="res_btn">예약내역조회</button>
+                        </form>
+                    </div>
                 </div>
 
-                <!-- 비회원 탭 -->
-                <input type="radio" name="btn" id="btn2">
-                <label for="btn2">비회원(예약확인)</label>
-                <div class="member2">
-                    <form action="login.jsp">
-                        <input type="text" class="res_num" name="user_number" placeholder="예약번호">
-                        <input type="text" class="name" name="user_name" placeholder="이름">
-                        <input type="text" class="phone" name="user_phone" placeholder="010">
-                        <button type="submit" class="res_btn">예약내역조회</button>
-                    </form>
-
+                <hr>
+                
+                <div class="recommand_join">
+                    <h2>아직 회원이 아니신가요?</h2>
+                    <p>신라호텔 회원이 되시면 신라리워즈 회원으로서 더 큰 혜택과 편리함을 누리실 수 있습니다.</p>
+                    <a href="https://ninkotek.github.io/web0422/70_pf/team/join_Shilla/mbr_join.html">회원가입</a>
                 </div>
-
-
-
-            </div>
-
-            <div class="recommand_join">
-                <h2>아직 회원이 아니신가요?</h2>
-                <p>신라호텔 회원이 되시면 신라리워즈 회원으로서 더 큰 혜택과 편리함을 누리실 수 있습니다.</p>
-                
-                <a href="https://ninkotek.github.io/web0422/70_pf/team/join_Shilla/mbr_join.html">회원가입</a>
-               
-                    
-                
-            </div>
+            </diiv>
 
         </div>
         <!-- login-full end -->
